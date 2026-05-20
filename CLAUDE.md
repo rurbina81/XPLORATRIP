@@ -888,3 +888,414 @@ Por eso, el contenido de la marca debe moverse sobre estos ejes:
 Idea central permanente:
 
 **Tu ruta depende de tu documento. XPLORATRIP te ayuda a entenderla y organizarla.**
+
+---
+
+## XPLORATRIP: contexto operativo actualizado para regreso a Venezuela desde Estados Unidos
+
+Esta sección es base de conocimiento operativa del negocio. No es configuración de agente conversacional. Contiene la información técnica y logística que Claude debe usar para orientar correctamente a un pasajero venezolano que vive en Estados Unidos y desea regresar a Venezuela. Si hay contradicción entre esta sección y una sección anterior del archivo, prevalece esta sección.
+
+---
+
+## XPLORATRIP: propósito del negocio
+
+XPLORATRIP es una agencia de viajes especializada en ayudar principalmente a venezolanos que viven en Estados Unidos y desean regresar a Venezuela.
+
+El servicio consiste en orientar al pasajero según su situación documental, ciudad de salida en Estados Unidos, destino final en Venezuela, fecha estimada de viaje, composición del grupo familiar y necesidades especiales de viaje.
+
+XPLORATRIP ayuda a diseñar rutas viables desde cualquier ciudad de Estados Unidos hacia Venezuela, Colombia o puntos de conexión según el caso del pasajero. También ofrece cotización de tiquetes, orientación logística y acompañamiento general cuando el pasajero requiere Documento Electrónico de Viaje, antes llamado comúnmente salvoconducto.
+
+El negocio debe comunicar confianza, claridad y experiencia. El enfoque principal es evitar que el pasajero compre una ruta que luego no pueda usar por falta de documento, vencimiento del pasaporte, ausencia de identificación válida para vuelos internos en USA, menores nacidos en Estados Unidos o necesidad de Documento Electrónico de Viaje.
+
+---
+
+## Tipos de pasajeros que atiende XPLORATRIP
+
+XPLORATRIP atiende principalmente a venezolanos que viven en Estados Unidos y desean regresar a Venezuela.
+
+Los pasajeros pueden estar en estas situaciones:
+
+- Venezolano con pasaporte venezolano vigente.
+- Venezolano con pasaporte venezolano vencido.
+- Venezolano con solo cédula venezolana.
+- Venezolano sin pasaporte físico.
+- Venezolano con pasaporte extraviado, hurtado o deteriorado.
+- Padre o madre venezolano que viaja con hijos menores nacidos en Estados Unidos.
+- Pasajero que necesita tomar vuelos internos dentro de Estados Unidos antes de salir del país.
+- Pasajero que necesita Documento Electrónico de Viaje para ingresar a Venezuela.
+- Pasajero que pregunta por CBP Home o salida voluntaria de Estados Unidos.
+
+---
+
+## Datos básicos que XPLORATRIP debe conocer antes de orientar una ruta
+
+Antes de recomendar una ruta o cotizar, XPLORATRIP debe conocer:
+
+- Ciudad actual del pasajero en Estados Unidos.
+- Ciudad destino en Venezuela.
+- Fecha estimada de viaje.
+- Tipo de documento disponible.
+- Si el pasaporte está vencido, mes y año exacto de vencimiento.
+- Cantidad total de pasajeros.
+- Si viajan menores nacidos en Estados Unidos.
+- Si el pasajero necesita tomar vuelo interno dentro de Estados Unidos.
+- Si el pasajero adulto tiene identificación aceptable para TSA.
+- Correo electrónico para seguimiento.
+- Número de WhatsApp disponible en la conversación si el contacto llega por WhatsApp.
+
+---
+
+## Documentos que puede tener un venezolano en Estados Unidos para regresar a Venezuela
+
+XPLORATRIP debe reconocer estos escenarios documentales:
+
+### Pasaporte venezolano vigente
+
+Es el escenario más flexible.
+
+El pasajero puede viajar por rutas disponibles hacia Venezuela o por rutas de ingreso vía Colombia, según destino final y disponibilidad.
+
+Generalmente no requiere Documento Electrónico de Viaje para ingresar a Venezuela.
+
+### Pasaporte venezolano vencido
+
+Debe evaluarse con más cuidado.
+
+Es necesario conocer el mes y año exacto de vencimiento.
+
+Si el pasaporte vencido tiene menos de 10 años confirmado, puede evaluarse ingreso por Colombia, siempre que el pasajero tenga el pasaporte físico y el asesor confirme que la ruta aplica.
+
+Si el pasajero desea ingresar directamente por Venezuela con pasaporte vencido, debe gestionar Documento Electrónico de Viaje.
+
+Si el pasaporte tiene 10 años o más de vencido, no se debe recomendar ingreso por Colombia. La opción viable es ingresar por Venezuela y gestionar Documento Electrónico de Viaje.
+
+Si el pasaporte está cerca del límite de 10 años, por ejemplo vencido en 2016 o fecha similar, el caso debe tratarse como revisión especial. No se debe confirmar ruta por Colombia sin validar mes exacto, fecha de viaje y criterio del asesor.
+
+### Solo cédula venezolana
+
+El pasajero no debe ser orientado por ruta Colombia.
+
+La opción es ingresar por Venezuela y gestionar Documento Electrónico de Viaje.
+
+### Sin documento físico
+
+El pasajero no debe ser orientado por ruta Colombia.
+
+La opción debe revisarse para ingreso por Venezuela con Documento Electrónico de Viaje.
+
+Este caso requiere revisión humana obligatoria.
+
+### Pasaporte extraviado, hurtado o deteriorado
+
+El pasajero debe evaluarse para Documento Electrónico de Viaje.
+
+No debe recomendarse ruta Colombia sin revisión documental.
+
+---
+
+## Rutas principales para regresar a Venezuela
+
+### Ruta directa o vía conexión hacia Venezuela
+
+Aplica para pasajeros que pueden ingresar a Venezuela directamente.
+
+Puede aplicar para:
+
+- Pasaporte venezolano vigente.
+- Pasaporte venezolano vencido con Documento Electrónico de Viaje.
+- Solo cédula venezolana con Documento Electrónico de Viaje.
+- Pasaporte extraviado, hurtado o deteriorado con Documento Electrónico de Viaje.
+- Casos especiales revisados por asesor.
+
+Ruta general:
+
+Ciudad en USA → conexión disponible → Venezuela.
+
+El destino habitual puede ser Caracas u otra ciudad disponible según operación aérea y disponibilidad.
+
+### Ruta por Colombia vía Riohacha para destino Zulia
+
+Aplica cuando el destino final del pasajero está en el estado Zulia.
+
+Ruta general:
+
+Ciudad en USA → Riohacha, Colombia → cruce fronterizo hacia Venezuela → destino final en Zulia.
+
+Puede aplicar para:
+
+- Pasajero con pasaporte venezolano vigente.
+- Pasajero con pasaporte venezolano vencido con menos de 10 años confirmado.
+
+No aplica para:
+
+- Pasajero con solo cédula venezolana.
+- Pasajero sin documento físico.
+- Pasaporte vencido con 10 años o más.
+- Menor nacido en USA que solo tiene partida de nacimiento y no tiene pasaporte americano físico.
+- Casos donde el asesor determine que la documentación no permite ruta Colombia.
+
+### Ruta por Colombia vía Cúcuta y Táchira
+
+Aplica cuando el pasajero puede ingresar por Colombia y su destino final está en Táchira u otro estado de Venezuela.
+
+Ruta para destino Táchira:
+
+Ciudad en USA → Cúcuta, Colombia → cruce fronterizo hacia Venezuela → destino final en Táchira.
+
+Ruta para otros estados de Venezuela:
+
+Ciudad en USA → Cúcuta, Colombia → cruce fronterizo hacia San Antonio del Táchira → Aeropuerto de San Antonio del Táchira → vuelo interno hacia el destino final en Venezuela.
+
+Puede aplicar para:
+
+- Pasajero con pasaporte venezolano vigente.
+- Pasajero con pasaporte venezolano vencido con menos de 10 años confirmado.
+
+No aplica para:
+
+- Pasajero con solo cédula venezolana.
+- Pasajero sin documento físico.
+- Pasaporte vencido con 10 años o más.
+- Menor nacido en USA que solo tiene partida de nacimiento y no tiene pasaporte americano físico.
+- Casos que requieran Documento Electrónico de Viaje para ingreso por Venezuela.
+
+---
+
+## Documento Electrónico de Viaje
+
+El salvoconducto venezolano debe explicarse como Documento Electrónico de Viaje.
+
+Es un instrumento oficial que autoriza el traslado a la República Bolivariana de Venezuela cuando el pasajero venezolano no cuenta con pasaporte venezolano válido.
+
+El trámite se realiza en línea a través del portal oficial del Ministerio del Poder Popular para Relaciones Exteriores:
+
+https://documentodeviaje.mppre.gob.ve/portal-ciudadano/login
+
+El Documento Electrónico de Viaje aplica para ciudadanos venezolanos en el exterior que viajan a Venezuela sin pasaporte venezolano válido porque el pasaporte está vencido, extraviado, hurtado o deteriorado.
+
+### Casos donde puede aplicar Documento Electrónico de Viaje
+
+- Pasaporte venezolano vencido y pasajero desea ingresar directamente por Venezuela.
+- Pasaporte venezolano vencido con 10 años o más de vencimiento.
+- Solo cédula venezolana.
+- Pasaporte extraviado, hurtado o deteriorado.
+- Pasajero sin pasaporte físico.
+- Menores nacidos en Estados Unidos que solo tienen partida de nacimiento y requieren registro previo como venezolanos para gestionar documento de viaje, según revisión del asesor.
+
+### Rol de XPLORATRIP con el Documento Electrónico de Viaje
+
+Una vez el pasajero adquiere sus tiquetes con XPLORATRIP, se le brinda asesoría y asistencia para realizar la solicitud online del Documento Electrónico de Viaje.
+
+XPLORATRIP puede orientar sobre los pasos generales y ayudar a revisar la ruta, fecha, itinerario y documentación necesaria para preparar la solicitud.
+
+La validación, aprobación y emisión del Documento Electrónico de Viaje corresponden a la autoridad oficial.
+
+XPLORATRIP debe evitar prometer aprobación, emisión garantizada, descarga inmediata o precio fijo del trámite.
+
+Es recomendable iniciar la solicitud con un mínimo de 15 días antes del viaje.
+
+El trámite requiere información del itinerario de viaje, por eso el asesor debe revisar ruta, fecha y boleto antes de orientar la solicitud.
+
+### Paso a paso general del Documento Electrónico de Viaje
+
+- Entrar al portal oficial del Documento Electrónico de Viaje.
+- Crear cuenta en el Portal Ciudadano del MPPRE.
+- Registrar datos personales.
+- Usar cédula, correo electrónico, contraseña y validación de seguridad.
+- Activar la cuenta desde el correo enviado por el sistema.
+- Iniciar sesión con correo y contraseña.
+- Crear una nueva solicitud de Documento de Viaje.
+- Revisar o completar datos del titular.
+- Seleccionar misión diplomática responsable.
+- Seleccionar motivo de emisión.
+- Cargar fotografía tipo carnet con fondo blanco, sin lentes ni accesorios, en formato JPG o PNG.
+- Cargar documentos de soporte según el caso.
+- Completar información del itinerario, incluyendo aerolínea, número de vuelo, origen, destino, fecha y hora de salida, fecha y hora de llegada.
+- Agregar rutas de escala si aplica.
+- Agregar contacto de emergencia si el sistema lo solicita o permite.
+- Realizar pago seguro en la plataforma cuando corresponda.
+- Esperar validación y aprobación.
+- Descargar el PDF del Documento de Viaje cuando aparezca aprobado.
+- Verificar que el documento tenga código QR de validación.
+
+### Mensaje comercial recomendado sobre Documento Electrónico de Viaje
+
+Usar esta idea como base:
+
+"Actualmente el salvoconducto se gestiona online como Documento Electrónico de Viaje a través del portal oficial del Ministerio del Poder Popular para Relaciones Exteriores. Después de comprar tus tiquetes con XPLORATRIP, podemos asesorarte y acompañarte con los pasos generales para completar la solicitud online. Es recomendable iniciar el proceso con mínimo 15 días antes del viaje."
+
+También puede usarse:
+
+"XPLORATRIP te brinda asesoría y asistencia para realizar la solicitud online del Documento Electrónico de Viaje una vez adquieres tus tiquetes con nosotros. La validación y emisión del documento corresponden a la autoridad oficial."
+
+---
+
+## Menores nacidos en Estados Unidos
+
+Algunos pasajeros viajan con niños menores nacidos en Estados Unidos.
+
+Estos casos requieren revisión cuidadosa, porque pueden cambiar la ruta y la necesidad de Documento Electrónico de Viaje.
+
+XPLORATRIP debe preguntar si viaja algún menor nacido en Estados Unidos.
+
+### Menor nacido en USA con pasaporte americano físico
+
+Si el niño nació en Estados Unidos, tiene pasaporte americano físico y viaja con al menos uno de sus padres venezolanos, puede evaluarse ingreso a Venezuela con entrada de gracia, sin necesidad de gestionar Documento Electrónico de Viaje para el menor.
+
+Puede ingresar por Venezuela.
+
+También puede evaluarse ruta por Colombia, pero los padres deben tener pasaporte venezolano físico, vigente o vencido con menos de 10 años confirmado.
+
+El caso debe ser revisado por asesor humano antes de confirmar ruta.
+
+### Menor nacido en USA solo con partida de nacimiento
+
+Si el niño nació en Estados Unidos y solo tiene partida de nacimiento de USA, sin pasaporte americano físico, no debe recomendarse ruta por Colombia.
+
+La opción sería ingresar por Venezuela y gestionar Documento Electrónico de Viaje para el menor.
+
+Antes de gestionar ese documento, el menor debe registrarse en Venezuela como venezolano.
+
+De forma general, se requiere la partida de nacimiento de USA legalizada o apostillada y traducida cuando aplique.
+
+El trámite de registro se realiza en el registro principal de la ciudad correspondiente en Venezuela, mediante un familiar directo de uno de los padres o persona autorizada según el caso.
+
+Una vez registrada la partida de nacimiento en Venezuela, puede evaluarse la gestión del Documento Electrónico de Viaje del menor.
+
+Este caso debe transferirse a asesor humano para revisión documental.
+
+---
+
+## Vuelos internos dentro de Estados Unidos y requisitos TSA
+
+Muchos pasajeros de XPLORATRIP no salen directamente desde Miami o desde una ciudad con conexión internacional adecuada. Pueden necesitar tomar vuelos domésticos dentro de Estados Unidos antes de conectar hacia Venezuela o Colombia.
+
+Ejemplos:
+
+- Dallas → Miami → Caracas.
+- Houston → Miami → Caracas.
+- Orlando → Miami → Caracas.
+- Dallas → Cúcuta.
+- Houston → Riohacha.
+- Cualquier ciudad de USA → conexión doméstica en USA → destino internacional.
+
+### Identificación aceptable para adultos en vuelos domésticos dentro de USA
+
+Los pasajeros adultos de 18 años o más deben presentar una identificación aceptable en el punto de control TSA para vuelos dentro de Estados Unidos.
+
+Desde el 7 de mayo de 2025, si el pasajero usa licencia de conducir o ID estatal, debe ser REAL ID compliant o debe presentar otra identificación aceptada por TSA.
+
+Ejemplos generales de documentos aceptables:
+
+- Licencia de conducir o ID estatal REAL ID.
+- Pasaporte de Estados Unidos.
+- Pasaporte extranjero vigente.
+- Green Card.
+- Employment Authorization Document, EAD.
+- Tarjetas DHS Trusted Traveler, como Global Entry, NEXUS, SENTRI o FAST.
+- U.S. Passport Card.
+- Identificación militar u otros documentos aceptados por TSA.
+
+### Pasajero adulto sin identificación aceptable para TSA
+
+Si el pasajero adulto no tiene una identificación aceptable para TSA, puede existir la opción TSA ConfirmID.
+
+TSA ConfirmID permite intentar verificación de identidad en el aeropuerto.
+
+Puede requerir una tarifa de $45.
+
+El pago permite intentar la verificación, pero no garantiza que TSA permita pasar el control de seguridad.
+
+El pasajero debe llegar con más tiempo al aeropuerto y revisar la información oficial antes de viajar.
+
+Antes de cotizar una ruta con vuelo interno dentro de USA, XPLORATRIP debe revisar si el pasajero tiene identificación aceptable para TSA.
+
+### Menores de 18 años en vuelos internos dentro de USA
+
+TSA indica que menores de 18 años no necesitan presentar identificación para vuelos domésticos dentro de Estados Unidos.
+
+Sin embargo, la aerolínea puede tener políticas propias.
+
+XPLORATRIP debe recomendar llevar documentos del menor si están disponibles, especialmente si el itinerario incluye conexión internacional, cruce fronterizo o documentación adicional.
+
+---
+
+## CBP Home
+
+CBP Home debe tratarse como un proceso separado del gobierno de Estados Unidos relacionado con la intención de salida voluntaria.
+
+XPLORATRIP solo debe hablar de CBP Home cuando el pasajero lo pregunte específicamente.
+
+CBP Home no debe presentarse como requisito para viajar con XPLORATRIP.
+
+Pasos generales de CBP Home:
+
+- Descargar la aplicación CBP Home.
+- Pulsar "Continuar".
+- Seleccionar idioma.
+- Elegir la opción relacionada con estar listo para salir de Estados Unidos.
+- Completar información personal y de contacto.
+- Tomar la foto solicitada por la aplicación.
+- Revisar y enviar la solicitud.
+- Esperar comunicación o seguimiento del proceso correspondiente.
+
+Correo oficial mencionado en materiales informativos: CBPHome@cbp.dhs.gov
+
+XPLORATRIP debe aclarar:
+
+- XPLORATRIP no es autoridad migratoria.
+- XPLORATRIP no gestiona CBP Home.
+- XPLORATRIP no garantiza bonos, beneficios, pagos, aprobaciones ni resultados migratorios.
+- Si el pasajero tiene asilo pendiente, TPS, parole, corte de inmigración, orden de deportación, ajuste de estatus, petición familiar, petición laboral o caso migratorio activo, debe consultar con un abogado de inmigración antes de usar CBP Home o salir de Estados Unidos.
+
+---
+
+## Comunidad de WhatsApp XPLORATRIP
+
+XPLORATRIP cuenta con una comunidad en WhatsApp para pasajeros venezolanos que viven en Estados Unidos y desean regresar a Venezuela.
+
+La comunidad sirve para compartir:
+
+- Información actualizada sobre rutas.
+- Promociones.
+- Avisos importantes.
+- Orientación general sobre documentos.
+- Cambios relevantes sobre opciones de regreso a Venezuela.
+
+La invitación a la comunidad debe funcionar como canal adicional de seguimiento e información.
+
+La comunidad no reemplaza la cotización ni la atención del asesor.
+
+Después de invitar al pasajero a la comunidad, XPLORATRIP debe continuar con la revisión del caso y la cotización.
+
+Mensaje modelo:
+
+"También te invito a unirte a la Comunidad de XPLORATRIP en WhatsApp, donde compartimos información actualizada, promociones y avisos importantes para venezolanos que desean regresar a Venezuela desde Estados Unidos. Ahora te voy a conectar con un asesor para continuar con tu cotización."
+
+---
+
+## Riesgos operativos que XPLORATRIP debe evitar
+
+XPLORATRIP debe evitar:
+
+- Cotizar ruta Colombia a pasajeros que solo tienen cédula venezolana.
+- Cotizar ruta Colombia a pasajeros sin documento físico.
+- Cotizar ruta Colombia a pasajeros con pasaporte vencido con 10 años o más.
+- Asumir que un pasaporte vencido en 2016 todavía está dentro del límite sin validar mes exacto.
+- Recomendar ruta Colombia para menores nacidos en USA que solo tienen partida de nacimiento.
+- Prometer aprobación del Documento Electrónico de Viaje.
+- Decir que XPLORATRIP emite el Documento Electrónico de Viaje.
+- Garantizar entrada de gracia para menores nacidos en USA sin revisión documental.
+- Cotizar vuelo interno dentro de Estados Unidos sin revisar identificación TSA cuando el pasajero indique que no tiene ID válida.
+- Presentar CBP Home como requisito para viajar.
+- Dar asesoría legal migratoria sobre consecuencias de salir de Estados Unidos.
+
+---
+
+## Mensaje inicial recomendado para comunicaciones de XPLORATRIP
+
+"¡Hola! Bienvenido a la Comunidad de XPLORATRIP.
+
+Qué bueno que nos escribiste. Regresar a Venezuela desde Estados Unidos es una decisión importante, y estamos aquí para orientarte de forma segura según tu documento, ciudad de salida y destino final.
+
+Para comenzar, ¿me indicas tu ciudad actual en Estados Unidos y a qué ciudad de Venezuela deseas llegar?"
