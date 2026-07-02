@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.xploratrip.com/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/og.jpg</image:loc>
+      <image:title>XploraTrip — Agencia de Viajes en Plano, Texas</image:title>
+      <image:caption>Cancún desde Texas — paquetes de viaje completos</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/nosotros/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/nosotros/FotoRomer.jpg</image:loc>
+      <image:title>Romer Urbina — Fundador de XploraTrip, Agencia de Viajes en Plano, Texas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/venezuela/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/venezuela/og-venezuela.jpg</image:loc>
+      <image:title>Regresar a Venezuela desde USA — XploraTrip</image:title>
+      <image:caption>Servicios de regreso a Venezuela con o sin pasaporte vigente</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/og-blog.jpg</image:loc>
+      <image:title>Blog de Viajes XploraTrip — Guías y Consejos desde Texas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/viajar-cancun-desde-texas/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/viajar-cancun-desde-texas/thumb.jpg</image:loc>
+      <image:title>Cómo viajar a Cancún desde Texas en 2026 — Vuelos y Precios</image:title>
+      <image:caption>Cancún desde Dallas, Houston y San Antonio — guía completa 2026</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/regresar-venezuela-desde-usa/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/regresar-venezuela-desde-usa/thumb.jpg</image:loc>
+      <image:title>Cómo regresar a Venezuela desde USA en 2026 — Guía completa</image:title>
+      <image:caption>Opciones de regreso a Venezuela con pasaporte, cédula o salvoconducto</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/mejores-destinos-luna-de-miel-caribe/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/mejores-destinos-luna-de-miel-caribe/thumb.jpg</image:loc>
+      <image:title>Mejores Destinos para Luna de Miel en el Caribe 2026</image:title>
+      <image:caption>Cancún, Punta Cana, Jamaica y más — luna de miel desde Texas</image:caption>
+    </image:image>
+  </url>
+</urlset>

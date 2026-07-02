@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#303030"/>
+<text x="540" y="320" fill="#00c2cb" font-family="Inter, sans-serif" font-size="38" font-weight="500" text-anchor="middle" letter-spacing="6">ESTA SEMANA</text>
+<line x1="400" y1="370" x2="680" y2="370" stroke="#00c2cb" stroke-width="3"/>
+<text x="540" y="620" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="74" font-weight="800" text-anchor="middle">Coordinamos salida</text>
+<text x="540" y="720" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="74" font-weight="800" text-anchor="middle">desde [CIUDAD] con</text>
+<text x="540" y="820" fill="#eabe48" font-family="Inter, sans-serif" font-size="74" font-weight="800" text-anchor="middle">[DOCUMENTO].</text>
+<line x1="380" y1="930" x2="700" y2="930" stroke="#eabe48" stroke-width="4"/>
+<text x="540" y="1070" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="48" font-weight="800" text-anchor="middle">Llegada confirmada</text>
+<text x="540" y="1140" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="48" font-weight="800" text-anchor="middle">a [DESTINO].</text>
+<text x="540" y="1380" fill="#00c2cb" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">¿Tu caso se parece?</text>
+<text x="540" y="1440" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="34" font-weight="500" text-anchor="middle" opacity="0.7">→ Desliza arriba</text>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

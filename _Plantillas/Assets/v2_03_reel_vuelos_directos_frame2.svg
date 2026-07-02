@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#303030"/>
+<text x="540" y="720" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="76" font-weight="500" text-anchor="middle">Eso cambió el</text>
+<text x="540" y="900" fill="#eabe48" font-family="Inter, sans-serif" font-size="140" font-weight="800" text-anchor="middle">30 de abril</text>
+<text x="540" y="1040" fill="#eabe48" font-family="Inter, sans-serif" font-size="140" font-weight="800" text-anchor="middle">de 2026.</text>
+<line x1="380" y1="1130" x2="700" y2="1130" stroke="#FFFFFF" stroke-width="4"/>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#303030"/>
+<text x="540" y="780" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="92" font-weight="800" text-anchor="middle">Escríbenos.</text>
+<line x1="380" y1="870" x2="700" y2="870" stroke="#eabe48" stroke-width="5"/>
+<text x="540" y="1020" fill="#eabe48" font-family="Inter, sans-serif" font-size="50" font-weight="500" text-anchor="middle">Necesitamos tres datos:</text>
+<circle cx="180" cy="1170" r="14" fill="#eabe48"/>
+<text x="220" y="1182" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="46" font-weight="500">Tu ciudad en EE.UU.</text>
+<circle cx="180" cy="1280" r="14" fill="#eabe48"/>
+<text x="220" y="1292" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="46" font-weight="500">Tu fecha tentativa</text>
+<circle cx="180" cy="1390" r="14" fill="#eabe48"/>
+<text x="220" y="1402" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="46" font-weight="500">Tu documento</text>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

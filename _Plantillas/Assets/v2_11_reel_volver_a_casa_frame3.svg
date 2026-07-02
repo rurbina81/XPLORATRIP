@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#1a1a1a"/>
+<text x="540" y="780" fill="#eabe48" font-family="Inter, sans-serif" font-size="60" font-weight="500" text-anchor="middle">Con orden.</text>
+<text x="540" y="900" fill="#eabe48" font-family="Inter, sans-serif" font-size="60" font-weight="500" text-anchor="middle">Con ruta clara.</text>
+<text x="540" y="1020" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="60" font-weight="500" text-anchor="middle">Sin sorpresas.</text>
+<line x1="380" y1="1110" x2="700" y2="1110" stroke="#eabe48" stroke-width="3"/>
+<text x="540" y="1240" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="50" font-weight="800" text-anchor="middle">Eso es lo que hacemos.</text>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

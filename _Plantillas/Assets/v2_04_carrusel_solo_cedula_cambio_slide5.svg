@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+<rect width="1080" height="1350" fill="#FFFFFF"/>
+<text x="900" y="100" fill="#00c2cb" font-family="Inter, sans-serif" font-size="32" font-weight="500" text-anchor="end" letter-spacing="3">05 / 07</text>
+<text x="540" y="500" fill="#303030" font-family="Inter, sans-serif" font-size="72" font-weight="800" text-anchor="middle">Te asesoramos</text>
+<text x="540" y="600" fill="#303030" font-family="Inter, sans-serif" font-size="72" font-weight="800" text-anchor="middle">paso a paso.</text>
+<line x1="380" y1="680" x2="700" y2="680" stroke="#eabe48" stroke-width="5"/>
+<text x="540" y="820" fill="#eabe48" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">Una vez compras tus tiquetes</text>
+<text x="540" y="880" fill="#eabe48" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">con nosotros.</text>
+<text x="540" y="1000" fill="#888880" font-family="Inter, sans-serif" font-size="32" font-weight="500" text-anchor="middle">La autoridad oficial valida y aprueba.</text>
+<text x="540" y="1280" fill="#eabe48" font-family="Inter, sans-serif" font-size="36" font-weight="400" text-anchor="middle" letter-spacing="5">XPLORATRIP</text>
+</svg>

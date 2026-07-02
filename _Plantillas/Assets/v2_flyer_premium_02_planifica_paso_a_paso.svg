@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<!-- Fondo blanco para variar dentro del sistema -->
+<rect width="1080" height="1920" fill="#FFFFFF"/>
+
+<!-- ZONA 1 — Marca (banda grafito superior con dorado a la derecha) -->
+<rect x="0" y="0" width="1080" height="120" fill="#303030"/>
+<text x="540" y="76" fill="#eabe48" font-family="Inter, sans-serif" font-size="32" font-weight="800" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+<line x1="0" y1="140" x2="1080" y2="140" stroke="#eabe48" stroke-width="3"/>
+
+<!-- ZONA 2 — Visual emocional (3 íconos en fila: documento + ruta + familia) -->
+<g transform="translate(540, 360)">
+  <!-- Documento -->
+  <g transform="translate(-280, 0)">
+    <rect x="-50" y="-60" width="100" height="120" fill="none" stroke="#eabe48" stroke-width="5" rx="8"/>
+    <circle cx="-15" cy="-25" r="12" fill="#eabe48"/>
+    <line x1="-30" y1="5" x2="30" y2="5" stroke="#eabe48" stroke-width="3"/>
+    <line x1="-30" y1="25" x2="30" y2="25" stroke="#eabe48" stroke-width="3"/>
+  </g>
+  <!-- Ruta avión -->
+  <g transform="translate(0, 0)">
+    <circle cx="-40" cy="0" r="10" fill="#00c2cb"/>
+    <line x1="-30" y1="0" x2="20" y2="0" stroke="#00c2cb" stroke-width="4" stroke-dasharray="8 6"/>
+    <circle cx="40" cy="0" r="10" fill="#00c2cb"/>
+    <g transform="translate(0, -45)">
+      <path d="M -30 0 L 30 -6 L 35 0 L 30 6 L -30 0 Z" fill="#eabe48"/>
+    </g>
+  </g>
+  <!-- Familia -->
+  <g transform="translate(280, 0)">
+    <circle cx="-25" cy="-30" r="18" fill="#eabe48"/>
+    <circle cx="25" cy="-30" r="18" fill="#eabe48"/>
+    <circle cx="0" cy="20" r="12" fill="#eabe48"/>
+    <path d="M -50 60 Q -25 5 0 30 Q 25 5 50 60 Z" fill="#eabe48"/>
+  </g>
+</g>
+
+<!-- Línea cian divisora -->
+<line x1="180" y1="500" x2="900" y2="500" stroke="#00c2cb" stroke-width="3"/>
+
+<!-- ZONA 3 — Titular principal -->
+<text x="540" y="680" fill="#303030" font-family="Inter, sans-serif" font-size="86" font-weight="800" text-anchor="middle" letter-spacing="2">PLANIFICA TU</text>
+<text x="540" y="790" fill="#303030" font-family="Inter, sans-serif" font-size="86" font-weight="800" text-anchor="middle" letter-spacing="2">REGRESO</text>
+<text x="540" y="900" fill="#eabe48" font-family="Inter, sans-serif" font-size="86" font-weight="800" text-anchor="middle" letter-spacing="2">PASO A PASO.</text>
+
+<!-- ZONA 4 — Subtítulo aclaratorio -->
+<text x="540" y="1030" fill="#303030" font-family="Inter, sans-serif" font-size="38" font-weight="500" text-anchor="middle" opacity="0.75">Recibe orientación según tu documento</text>
+<text x="540" y="1080" fill="#303030" font-family="Inter, sans-serif" font-size="38" font-weight="500" text-anchor="middle" opacity="0.75">y la ciudad desde donde viajas.</text>
+
+<!-- ZONA 5 — Caja de confianza (sobre fondo grafito para contraste) -->
+<rect x="120" y="1180" width="840" height="200" fill="#303030" rx="20"/>
+<line x1="180" y1="1230" x2="900" y2="1230" stroke="#eabe48" stroke-width="2"/>
+<text x="540" y="1290" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="32" font-weight="500" text-anchor="middle">Vuelos directos · ruta por Colombia</text>
+<text x="540" y="1335" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="32" font-weight="500" text-anchor="middle">Apoyo con Documento Electrónico de Viaje</text>
+
+<!-- ZONA 6 — Pie de CTA -->
+<rect x="190" y="1500" width="700" height="140" fill="#303030" rx="70"/>
+<rect x="190" y="1500" width="700" height="140" fill="none" stroke="#eabe48" stroke-width="4" rx="70"/>
+<text x="540" y="1590" fill="#eabe48" font-family="Inter, sans-serif" font-size="46" font-weight="800" text-anchor="middle">ESCRÍBENOS POR WHATSAPP</text>
+
+<text x="540" y="1730" fill="#303030" font-family="Inter, sans-serif" font-size="30" font-weight="500" text-anchor="middle" opacity="0.7">Ciudad EE.UU. · fecha tentativa · documento</text>
+<text x="540" y="1860" fill="#888880" font-family="Inter, sans-serif" font-size="22" font-weight="400" text-anchor="middle">Precio sujeto a cambios. XPLORATRIP asesora, no emite trámites oficiales.</text>
+</svg>

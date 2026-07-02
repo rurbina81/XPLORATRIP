@@ -1,0 +1,81 @@
+[build]
+  functions = "netlify/functions"
+
+# Security headers — all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+
+# Destination card images — immutable (filenames don't change)
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Logos and OG image — 30 days
+[[headers]]
+  for = "/logo.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/logo.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/og.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Blog thumbnails — 30 days
+[[headers]]
+  for = "/blog/viajar-cancun-desde-texas/thumb.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/blog/viajar-cancun-desde-texas/thumb.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/blog/regresar-venezuela-desde-usa/thumb.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/blog/regresar-venezuela-desde-usa/thumb.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/blog/mejores-destinos-luna-de-miel-caribe/thumb.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/blog/mejores-destinos-luna-de-miel-caribe/thumb.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Nosotros photo
+[[headers]]
+  for = "/nosotros/FotoRomer.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# HTML — always revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

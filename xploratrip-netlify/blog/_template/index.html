@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ══════════════════════════════════════════════════════
+  TEMPLATE PARA NUEVO ARTÍCULO DE BLOG — XploraTrip
+  ══════════════════════════════════════════════════════
+
+  INSTRUCCIONES:
+  1. Duplica esta carpeta "_template" y renómbrala con el slug del artículo
+     Ejemplo: "viaje-punta-cana-2026" → /blog/viaje-punta-cana-2026/
+
+  2. Edita el index.html dentro de la nueva carpeta
+
+  3. Reemplaza todos los textos marcados con [TEXTO] o comentarios <!-- CAMBIAR -->
+
+  4. Sube la carpeta completa a Netlify
+  ══════════════════════════════════════════════════════
+-->
+<title>[TÍTULO DEL ARTÍCULO] | XploraTrip</title>
+<meta name="description" content="[META DESCRIPTION — máximo 155 caracteres. Describe el artículo con las palabras clave principales.]">
+<link rel="canonical" href="https://www.xploratrip.com/blog/[SLUG-DEL-ARTICULO]/">
+<link rel="icon" type="image/jpeg" href="/logo.jpg">
+<meta property="og:title" content="[TÍTULO DEL ARTÍCULO] | XploraTrip">
+<meta property="og:description" content="[META DESCRIPTION]">
+<meta property="og:image" content="https://www.xploratrip.com/og.jpg">
+<meta property="og:url" content="https://www.xploratrip.com/blog/[SLUG-DEL-ARTICULO]/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex, nofollow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[TÍTULO DEL ARTÍCULO]",
+  "description": "[META DESCRIPTION]",
+  "datePublished": "[FECHA: 2026-07-01]",
+  "dateModified": "[FECHA MODIFICACIÓN: 2026-07-01]",
+  "author": {"@type": "Organization", "name": "XploraTrip", "url": "https://www.xploratrip.com"},
+  "publisher": {"@type": "Organization", "name": "XploraTrip", "logo": {"@type": "ImageObject", "url": "https://www.xploratrip.com/logo.jpg"}},
+  "mainEntityOfPage": "https://www.xploratrip.com/blog/[SLUG-DEL-ARTICULO]/"
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0G4DLPE9ZL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0G4DLPE9ZL');</script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','251873825469297');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=251873825469297&ev=PageView&noscript=1"/></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root{--navy:#0b1d3a;--gold:#c8890a;--gold2:#eabe48;--goldbg:#fffbef;--cyan:#0891b2;--cyan2:#00c2cb;--cyanbg:#e8f9fb;--white:#fff;--bg:#f7f9ff;--txt2:#374151;--txt3:#6b7280;--line:#e2e8f0;--radius:20px;--shadow:0 2px 20px rgba(11,29,58,.07);--shadow-hover:0 10px 40px rgba(11,29,58,.14);--transition:all .25s cubic-bezier(.4,0,.2,1)}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--txt2);background:var(--white);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{max-width:1160px;margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:800;color:var(--navy)}
+.nav-logo img{height:36px;width:36px;border-radius:10px;object-fit:cover}
+.nav-logo .accent{color:var(--gold2)}
+.nav-back{font-size:14px;color:var(--txt3);display:flex;align-items:center;gap:6px;transition:var(--transition)}
+.nav-back:hover{color:var(--navy)}
+.nav-cta{background:var(--gold2);color:var(--navy);font-weight:700;font-size:14px;padding:10px 20px;border-radius:999px;transition:var(--transition)}
+.nav-cta:hover{background:var(--gold)}
+
+/* HERO DEL ARTÍCULO — cambia el gradiente según el tema */
+.art-hero{
+  /* OPCIONES DE GRADIENTE:
+     Playas/Cancún:    linear-gradient(135deg,#00b4d8,#0077b6)
+     Venezuela:        linear-gradient(135deg,#ffd166,#ef476f)
+     Luna de miel:     linear-gradient(135deg,#f72585,#7209b7)
+     Europa/Ciudades:  linear-gradient(135deg,#4361ee,#3a0ca3)
+     Cruceros:         linear-gradient(135deg,#023e8a,#0096c7)
+     Disney/Familia:   linear-gradient(135deg,#7b2d8b,#c77dff)
+     General/Dorado:   linear-gradient(135deg,#f59e0b,#d97706)
+  */
+  background:linear-gradient(135deg,#00b4d8,#0077b6); /* CAMBIAR SEGÚN TEMA */
+  padding:80px 0 72px;position:relative;overflow:hidden
+}
+.art-hero::after{content:'';position:absolute;inset:0;background:rgba(11,29,58,.45)}
+.art-hero-inner{position:relative;z-index:1;max-width:780px}
+.art-cat{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.art-hero h1{font-size:clamp(28px,5vw,48px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:16px}
+.art-hero-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.75)}
+.art-layout{display:grid;grid-template-columns:1fr 320px;gap:60px;padding:64px 0 100px;align-items:start}
+.art-body h2{font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-.5px;margin:40px 0 14px;line-height:1.2}
+.art-body h3{font-size:18px;font-weight:700;color:var(--navy);margin:28px 0 10px}
+.art-body p{font-size:16px;color:var(--txt2);line-height:1.8;margin-bottom:18px}
+.art-body ul,.art-body ol{padding-left:22px;margin-bottom:18px}
+.art-body li{font-size:16px;color:var(--txt2);line-height:1.75;margin-bottom:8px}
+.art-body strong{color:var(--navy);font-weight:700}
+.art-body a{color:var(--cyan);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+/* Caja dorada para tips/highlights */
+.highlight{background:var(--goldbg);border:1px solid rgba(234,190,72,.3);border-radius:16px;padding:20px 24px;margin:24px 0}
+.highlight p{color:#7a5500;margin:0;font-size:15px}
+/* Caja cyan para info importante */
+.info-box{background:var(--cyanbg);border:1px solid rgba(0,194,203,.25);border-radius:16px;padding:20px 24px;margin:24px 0}
+.info-box p{color:#0e5f6e;margin:0;font-size:15px}
+/* CTA dentro del artículo */
+.art-cta{border-radius:20px;padding:36px;text-align:center;margin:40px 0}
+.art-sidebar{position:sticky;top:90px}
+.sidebar-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px}
+.sidebar-card h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.sidebar-card p{font-size:13px;color:var(--txt3);line-height:1.6;margin-bottom:16px}
+.btn-wa-full{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#fff;font-weight:700;font-size:14px;padding:13px 20px;border-radius:999px;width:100%;transition:var(--transition)}
+.btn-wa-full:hover{background:#1fba58}
+.toc{list-style:none;padding:0}
+.toc li{border-bottom:1px solid var(--line);padding:10px 0}
+.toc li:last-child{border-bottom:none}
+.toc a{font-size:14px;color:var(--txt3);transition:var(--transition);display:block}
+.toc a:hover{color:var(--navy);padding-left:4px}
+footer{background:#060f1f;padding:32px 0}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-bottom a{color:rgba(255,255,255,.4);font-size:12px;margin-left:20px;transition:var(--transition)}
+.footer-bottom a:hover{color:var(--gold2)}
+@media(max-width:900px){.art-layout{grid-template-columns:1fr}.art-sidebar{position:static}}
+@media(max-width:600px){.art-hero{padding:60px 0 56px}}
+.xt-brand{font-weight:800;color:#0b1d3a}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <picture style="display:contents"><source srcset="/logo.webp" type="image/webp"><img src="/logo.jpg" alt="XploraTrip"></picture>
+      <span>XPLORA<span class="accent">TRIP</span></span>
+    </a>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="/blog/" class="nav-back">← Blog</a>
+      <!-- CAMBIAR el texto del botón y el link de WhatsApp según el tema del artículo -->
+      <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" class="nav-cta">💬 Cotizar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO: cambia el gradiente en el CSS arriba (.art-hero) -->
+<div class="art-hero">
+  <div class="container">
+    <div class="art-hero-inner">
+      <!-- CAMBIAR: categoría del artículo -->
+      <span class="art-cat">Categoría · Subcategoría</span>
+      <!-- CAMBIAR: mismo título que el <title> del head -->
+      <h1>[TÍTULO PRINCIPAL DEL ARTÍCULO]</h1>
+      <div class="art-hero-meta">
+        <span>✍ XploraTrip</span>
+        <!-- CAMBIAR: mes y año de publicación -->
+        <span>📅 Julio 2026</span>
+        <!-- CAMBIAR: tiempo estimado de lectura (~1 min por cada 200 palabras) -->
+        <span>🕐 5 min de lectura</span>
+        <span>📍 Plano, Texas</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="art-layout">
+    <article class="art-body">
+
+      <!-- PÁRRAFO INTRO: 2-3 oraciones que enganchan al lector y presentan el artículo -->
+      <p>[Párrafo de introducción que enganche al lector y presente el tema principal del artículo. Incluye la palabra clave principal aquí.]</p>
+
+      <!-- TIP BOX (opcional) -->
+      <div class="highlight">
+        <p>⚡ <strong>Dato rápido:</strong> [Incluye aquí un dato sorprendente o tip útil relacionado con el tema]</p>
+      </div>
+
+      <!-- SECCIÓN 1 -->
+      <h2>[Título de la primera sección — incluye palabras clave]</h2>
+      <p>[Contenido de la sección. Usa párrafos cortos (3-4 líneas máximo). El lector de blogs no lee paredes de texto.]</p>
+      <ul>
+        <li><strong>Punto clave 1:</strong> Explicación</li>
+        <li><strong>Punto clave 2:</strong> Explicación</li>
+        <li><strong>Punto clave 3:</strong> Explicación</li>
+      </ul>
+
+      <!-- SECCIÓN 2 -->
+      <h2>[Título de la segunda sección]</h2>
+      <p>[Contenido...]</p>
+
+      <!-- INFO BOX (opcional) -->
+      <div class="info-box">
+        <p>💡 <strong>Importante:</strong> [Información destacada, aviso legal, o consejo importante]</p>
+      </div>
+
+      <!-- SECCIÓN 3 -->
+      <h2>[Título de la tercera sección]</h2>
+      <p>[Contenido...]</p>
+
+      <!-- Subsecciones (opcional) -->
+      <h3>[Subtítulo dentro de la sección]</h3>
+      <p>[Contenido del subtítulo...]</p>
+
+      <!-- CTA DENTRO DEL ARTÍCULO — cambia el gradiente y colores según el tema -->
+      <div class="art-cta" style="background:linear-gradient(135deg,#00b4d8,#0077b6)">
+        <p style="color:rgba(255,255,255,.85);font-size:15px;margin-bottom:8px">[Texto secundario del CTA]</p>
+        <h3 style="color:#fff;font-size:22px;font-weight:800;margin-bottom:20px">[Llamada a la acción principal]</h3>
+        <!-- CAMBIAR el href de WhatsApp con el texto pre-llenado correcto -->
+        <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0077b6;font-weight:800;font-size:15px;padding:14px 28px;border-radius:999px">💬 Cotizar por WhatsApp</a>
+      </div>
+
+    </article>
+
+    <aside class="art-sidebar">
+      <div class="sidebar-card">
+        <!-- CAMBIAR: título y texto del sidebar según el tema -->
+        <h4>💬 ¿Interesado?</h4>
+        <p>Cotiza gratis — te respondemos en menos de 1 hora con opciones reales.</p>
+        <!-- CAMBIAR: el link de WhatsApp -->
+        <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" class="btn-wa-full">💬 Cotizar ahora gratis</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>📋 En este artículo</h4>
+        <!-- CAMBIAR: lista de secciones del artículo para navegación -->
+        <ul class="toc">
+          <li><a href="#" onclick="return false">[Sección 1]</a></li>
+          <li><a href="#" onclick="return false">[Sección 2]</a></li>
+          <li><a href="#" onclick="return false">[Sección 3]</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 XploraTrip · <a href="/">Inicio</a> · <a href="/blog/">Blog</a></p>
+      <div>
+        <a href="/privacidad/">Privacidad</a>
+        <a href="/terminos/">Términos</a>
+        <a href="https://wa.me/14696798282" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/xploratrip" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/xploratrip" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tiktok.com/@xploratrip" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function hxt(n){
+    if(n.nodeType===3&&n.nodeValue.indexOf('XploraTrip')>-1){
+      var f=document.createDocumentFragment(),pts=n.nodeValue.split('XploraTrip');
+      pts.forEach(function(p,i){
+        f.appendChild(document.createTextNode(p));
+        if(i<pts.length-1){var s=document.createElement('strong');s.className='xt-brand';s.textContent='XploraTrip';f.appendChild(s);}
+      });
+      n.parentNode.replaceChild(f,n);
+    } else if(n.nodeType===1&&!/^(SCRIPT|STYLE|TITLE|META|LINK|H[1-6])$/.test(n.tagName)&&!n.closest('nav,.nav-logo,.n-logo,.logo-wrap,.ft-logo,.logo-wrap')){
+      Array.from(n.childNodes).forEach(hxt);
+    }
+  }
+  document.addEventListener('DOMContentLoaded',function(){hxt(document.body);});
+})();
+</script>
+</body>
+</html>

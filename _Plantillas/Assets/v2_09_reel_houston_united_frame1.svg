@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#303030"/>
+<text x="540" y="780" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="76" font-weight="800" text-anchor="middle">¿Vives en Texas?</text>
+<text x="540" y="880" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="76" font-weight="800" text-anchor="middle">Esto te interesa.</text>
+<line x1="380" y1="970" x2="700" y2="970" stroke="#eabe48" stroke-width="5"/>
+<text x="540" y="1100" fill="#00c2cb" font-family="Inter, sans-serif" font-size="50" font-weight="500" text-anchor="middle">Houston · Dallas · Austin</text>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

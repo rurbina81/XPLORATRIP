@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#303030"/>
+<text x="540" y="700" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="68" font-weight="800" text-anchor="middle">Al día siguiente,</text>
+<line x1="380" y1="780" x2="700" y2="780" stroke="#eabe48" stroke-width="5"/>
+<text x="540" y="940" fill="#eabe48" font-family="Inter, sans-serif" font-size="68" font-weight="800" text-anchor="middle">conexión aérea</text>
+<text x="540" y="1030" fill="#eabe48" font-family="Inter, sans-serif" font-size="68" font-weight="800" text-anchor="middle">a tu destino final</text>
+<text x="540" y="1180" fill="#00c2cb" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">Caracas · Valencia</text>
+<text x="540" y="1240" fill="#00c2cb" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">Barquisimeto · Porlamar</text>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

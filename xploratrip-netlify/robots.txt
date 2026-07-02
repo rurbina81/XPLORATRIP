@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /privacidad/
+Disallow: /terminos/
+Disallow: /404.html
+Sitemap: https://www.xploratrip.com/sitemap.xml

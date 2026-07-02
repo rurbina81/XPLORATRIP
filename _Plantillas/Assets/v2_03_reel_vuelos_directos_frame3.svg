@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+<rect width="1080" height="1920" fill="#303030"/>
+<text x="540" y="620" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="60" font-weight="500" text-anchor="middle">Hoy operan dos:</text>
+<line x1="380" y1="680" x2="700" y2="680" stroke="#eabe48" stroke-width="4"/>
+<text x="540" y="860" fill="#eabe48" font-family="Inter, sans-serif" font-size="92" font-weight="800" text-anchor="middle">AMERICAN</text>
+<text x="540" y="960" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">Envoy Air · diario</text>
+<text x="540" y="1130" fill="#eabe48" font-family="Inter, sans-serif" font-size="92" font-weight="800" text-anchor="middle">LASER</text>
+<text x="540" y="1230" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="40" font-weight="500" text-anchor="middle">Global X · diario</text>
+<text x="540" y="1380" fill="#00c2cb" font-family="Inter, sans-serif" font-size="44" font-weight="800" text-anchor="middle">Desde $499</text>
+<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
+</svg>

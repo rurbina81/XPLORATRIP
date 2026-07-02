@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+<rect width="1080" height="1350" fill="#303030"/>
+<text x="900" y="100" fill="#00c2cb" font-family="Inter, sans-serif" font-size="32" font-weight="500" text-anchor="end" letter-spacing="3">07 / 07</text>
+<text x="540" y="420" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="90" font-weight="800" text-anchor="middle">Escríbenos</text>
+<text x="540" y="530" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="90" font-weight="800" text-anchor="middle">por WhatsApp.</text>
+<line x1="380" y1="600" x2="700" y2="600" stroke="#eabe48" stroke-width="5"/>
+<text x="540" y="720" fill="#eabe48" font-family="Inter, sans-serif" font-size="38" font-weight="500" text-anchor="middle">Con tu ciudad en EE.UU.,</text>
+<text x="540" y="770" fill="#eabe48" font-family="Inter, sans-serif" font-size="38" font-weight="500" text-anchor="middle">fecha tentativa y documento.</text>
+<rect x="290" y="920" width="500" height="120" fill="#eabe48" rx="60"/>
+<text x="540" y="1000" fill="#303030" font-family="Inter, sans-serif" font-size="44" font-weight="800" text-anchor="middle">EMPEZAR</text>
+<text x="540" y="1280" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="34" font-weight="400" text-anchor="middle" letter-spacing="5">XPLORATRIP</text>
+</svg>
