@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.xploratrip.com/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/nosotros/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/venezuela/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -45,7 +45,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/viajar-cancun-desde-texas/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/regresar-venezuela-desde-usa/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -67,13 +67,46 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/mejores-destinos-luna-de-miel-caribe/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.xploratrip.com/blog/mejores-destinos-luna-de-miel-caribe/thumb.jpg</image:loc>
       <image:title>Mejores Destinos para Luna de Miel en el Caribe 2026</image:title>
       <image:caption>Cancún, Punta Cana, Jamaica y más — luna de miel desde Texas</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/punta-cana-todo-incluido-desde-texas/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/punta-cana-todo-incluido-desde-texas/thumb.jpg</image:loc>
+      <image:title>Punta Cana Todo Incluido desde Texas 2026 — Guía y Precios</image:title>
+      <image:caption>Resorts todo incluido en Punta Cana con vuelo desde Dallas y Houston</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/visa-americana-venezolanos/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/visa-americana-venezolanos/thumb.jpg</image:loc>
+      <image:title>Visa Americana para Venezolanos 2026 — Requisitos y Proceso</image:title>
+      <image:caption>Guía completa para venezolanos que solicitan visa americana B1/B2</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/crucero-desde-galveston/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/crucero-desde-galveston/thumb.jpg</image:loc>
+      <image:title>Crucero MSC Seascape desde Galveston 2026 — Caribe Occidental</image:title>
+      <image:caption>7 noches en el MSC Seascape desde Galveston TX — Costa Maya, Roatán, Cozumel</image:caption>
     </image:image>
   </url>
 </urlset>
