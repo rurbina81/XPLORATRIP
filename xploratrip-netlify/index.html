@@ -45,6 +45,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","TravelAgency"],"@id":"https://www.xploratrip.com/#business","name":"XploraTrip","description":"Agencia de viajes en Plano, Texas. Vuelos, hoteles, cruceros y paquetes a Cancún, Punta Cana, Europa y Disney. Especialistas en logística para venezolanos en USA que desean regresar a Venezuela.","url":"https://www.xploratrip.com/","logo":"https://www.xploratrip.com/logo.jpg","image":"https://www.xploratrip.com/logo.jpg","telephone":"+14696798282","email":"info@xploratrip.com","address":{"@type":"PostalAddress","addressLocality":"Plano","addressRegion":"TX","postalCode":"75074","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":33.0198,"longitude":-96.6989},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"22:00"},"sameAs":["https://www.instagram.com/xploratrip","https://www.facebook.com/xploratrip","https://www.tiktok.com/@xploratrip"],"priceRange":"$$","currenciesAccepted":"USD","areaServed":{"@type":"Country","name":"United States"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":200,"bestRating":"5","worstRating":"1"}},{"@type":"WebSite","@id":"https://www.xploratrip.com/#website","url":"https://www.xploratrip.com/","name":"XploraTrip","description":"Agencia de viajes en Plano, Texas","publisher":{"@id":"https://www.xploratrip.com/#business"},"inLanguage":"es"}]}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Necesito pasaporte para viajar a Cancún o el Caribe desde Texas?","acceptedAnswer":{"@type":"Answer","text":"Sí, necesitas pasaporte vigente. Para Cancún (México) y Punta Cana (República Dominicana) no necesitas visa adicional si tienes residencia o visa americana válida. Te ayudamos a revisar tus documentos antes de reservar."}},{"@type":"Question","name":"¿Puedo viajar si tengo visa americana pero no soy ciudadano?","acceptedAnswer":{"@type":"Answer","text":"Sí. Con visa americana vigente puedes entrar a México, República Dominicana y varios destinos del Caribe sin trámite adicional. Si tienes dudas sobre tu situación migratoria y los destinos disponibles, escríbenos y te orientamos sin compromiso."}},{"@type":"Question","name":"¿Cómo funciona la cotización? ¿Tiene algún costo?","acceptedAnswer":{"@type":"Answer","text":"Es 100% gratis. Me escribes por WhatsApp con tu destino, fechas y número de personas — en menos de 1 hora te mando 3 opciones con precios reales de vuelo + hotel. Sin spam, sin llamadas, sin compromiso."}},{"@type":"Question","name":"¿Aceptan pagos en cuotas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes reservar con un depósito inicial para asegurar tu precio y pagar el resto antes del viaje. Los detalles del plan de pago los coordinamos por WhatsApp según el destino y las fechas."}},{"@type":"Question","name":"¿Qué incluye un paquete de viaje?","acceptedAnswer":{"@type":"Answer","text":"Vuelo redondo, hotel, traslados aeropuerto-hotel-aeropuerto y asistencia durante todo el viaje. Los paquetes todo incluido también cubren comidas, bebidas y actividades en el resort. Las excursiones son opcionales y las cotizamos aparte."}},{"@type":"Question","name":"¿Solo atienden viajeros en Texas?","acceptedAnswer":{"@type":"Answer","text":"Principalmente atendemos viajeros en Dallas, Houston, San Antonio y Austin, pero también trabajamos con clientes en toda Latinoamérica para cualquier destino en el mundo. El proceso es 100% por WhatsApp, así que la distancia no es problema."}}]}
+</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -496,6 +499,18 @@ footer{background:#060f1f;padding:60px 0 32px}
 .nosotros-badge strong{display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px}
 .nosotros-badge span{font-size:13px;color:var(--txt3);line-height:1.5}
 @media(max-width:860px){.nosotros-grid{grid-template-columns:1fr;gap:48px}}
+/* ── FAQ ─────────────────────────── */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:22px 48px 22px 0;font-size:17px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;align-items:center;position:relative;font-family:inherit;line-height:1.35}
+.faq-q::after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--gold);transition:transform .25s ease;line-height:1}
+.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
+.faq-q:focus-visible{outline:2px solid var(--gold2);outline-offset:2px;border-radius:4px}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a p{padding:0 48px 22px 0;color:var(--txt2);line-height:1.75;margin:0;font-size:15.5px}
+@media(max-width:600px){.faq-q{font-size:15px;padding:18px 38px 18px 0}.faq-a p{font-size:15px;padding:0 38px 18px 0}}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>
@@ -1084,6 +1099,42 @@ footer{background:#060f1f;padding:60px 0 32px}
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2>Todo lo que necesitas saber<br>antes de viajar</h2>
+    </div>
+    <div class="faq-list" role="list">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">¿Necesito pasaporte para viajar a Cancún o el Caribe desde Texas?</button>
+        <div class="faq-a" id="faq-a1" aria-hidden="true"><p>Sí, necesitas pasaporte vigente. Para Cancún (México) y Punta Cana (República Dominicana) no necesitas visa adicional si tienes residencia o visa americana válida. Te ayudamos a revisar tus documentos antes de reservar.</p></div>
+      </div>
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">¿Puedo viajar si tengo visa americana pero no soy ciudadano?</button>
+        <div class="faq-a" id="faq-a2" aria-hidden="true"><p>Sí. Con visa americana vigente puedes entrar a México, República Dominicana y varios destinos del Caribe sin trámite adicional. Si tienes dudas sobre tu situación migratoria y los destinos disponibles, escríbenos y te orientamos sin compromiso.</p></div>
+      </div>
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">¿Cómo funciona la cotización? ¿Tiene algún costo?</button>
+        <div class="faq-a" id="faq-a3" aria-hidden="true"><p>Es 100% gratis. Me escribes por WhatsApp con tu destino, fechas y número de personas — en menos de 1 hora te mando 3 opciones con precios reales de vuelo + hotel. Sin spam, sin llamadas, sin compromiso.</p></div>
+      </div>
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a4">¿Aceptan pagos en cuotas?</button>
+        <div class="faq-a" id="faq-a4" aria-hidden="true"><p>Sí. Puedes reservar con un depósito inicial para asegurar tu precio y pagar el resto antes del viaje. Los detalles del plan de pago los coordinamos por WhatsApp según el destino y las fechas.</p></div>
+      </div>
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a5">¿Qué incluye un paquete de viaje?</button>
+        <div class="faq-a" id="faq-a5" aria-hidden="true"><p>Vuelo redondo, hotel, traslados aeropuerto↔hotel y asistencia durante todo el viaje. Los paquetes todo incluido también cubren comidas, bebidas y actividades en el resort. Las excursiones (Xcaret, Chichén Itzá, etc.) son opcionales y las cotizamos aparte.</p></div>
+      </div>
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a6">¿Solo atienden viajeros en Texas?</button>
+        <div class="faq-a" id="faq-a6" aria-hidden="true"><p>Principalmente atendemos viajeros en Dallas, Houston, San Antonio y Austin, pero también trabajamos con clientes en toda Latinoamérica para cualquier destino en el mundo. El proceso es 100% por WhatsApp, así que la distancia no es problema.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-section" id="contacto">
   <div class="container" style="position:relative;z-index:1">
@@ -1345,6 +1396,9 @@ document.addEventListener('keydown',function(e){if(!mobMenu||!mobMenu.classList.
   watchSection('.stats','.stats [data-count]');
   watchSection('.nosotros-stats','.nosotros-stats [data-count]');
 })();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.closest('.faq-item');var open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');i.querySelector('.faq-a').setAttribute('aria-hidden','true');});if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true');btn.nextElementSibling.setAttribute('aria-hidden','false');}});});
 
 // CAPI relay — fire-and-forget server-side mirror of each fbq event
 function _xcapi(en,eid,cd){try{fetch('/.netlify/functions/capi',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_name:en,event_id:eid,event_source_url:location.href,custom_data:cd||{}}),keepalive:true});}catch(e){}}

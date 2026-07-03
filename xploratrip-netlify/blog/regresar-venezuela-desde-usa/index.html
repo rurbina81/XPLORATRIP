@@ -112,7 +112,7 @@ a{text-decoration:none;color:inherit}
 .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .rel-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;transition:var(--transition)}
 .rel-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:transparent}
-.rel-img{width:100px;height:100px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:36px}
+.rel-img{width:100px;height:100px;flex-shrink:0;overflow:hidden}
 .rel-body{padding:16px}
 .rel-cat{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
 .rel-body h4{font-size:14px;font-weight:700;color:var(--navy);line-height:1.35}
@@ -396,7 +396,7 @@ footer{background:#060f1f;padding:60px 0 32px}
     <h3>También te puede interesar</h3>
     <div class="related-grid">
       <a href="/blog/viajar-cancun-desde-texas/" class="rel-card" style="color:inherit">
-        <div class="rel-img" style="background:linear-gradient(135deg,#00b4d8,#0077b6)" aria-hidden="true">🏖</div>
+        <div class="rel-img" aria-hidden="true"><picture><source srcset="/blog/viajar-cancun-desde-texas/thumb.webp" type="image/webp"><img src="/blog/viajar-cancun-desde-texas/thumb.jpg" alt="" loading="lazy" width="100" height="100" style="width:100%;height:100%;object-fit:cover;display:block"></picture></div>
         <div class="rel-body">
           <div class="rel-cat">Destinos</div>
           <h4>Cómo viajar a Cancún desde Texas en 2026</h4>
@@ -404,7 +404,7 @@ footer{background:#060f1f;padding:60px 0 32px}
         </div>
       </a>
       <a href="/blog/mejores-destinos-luna-de-miel-caribe/" class="rel-card" style="color:inherit">
-        <div class="rel-img" style="background:linear-gradient(135deg,#f72585,#7209b7)" aria-hidden="true">💑</div>
+        <div class="rel-img" aria-hidden="true"><picture><source srcset="/blog/mejores-destinos-luna-de-miel-caribe/thumb.webp" type="image/webp"><img src="/blog/mejores-destinos-luna-de-miel-caribe/thumb.jpg" alt="" loading="lazy" width="100" height="100" style="width:100%;height:100%;object-fit:cover;display:block"></picture></div>
         <div class="rel-body">
           <div class="rel-cat">Luna de miel</div>
           <h4>Los 5 mejores destinos del Caribe para luna de miel</h4>
