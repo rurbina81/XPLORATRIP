@@ -1,5 +1,5 @@
 const PIXEL_ID = '251873825469297';
-const API_URL = `https://graph.facebook.com/v19.0/${PIXEL_ID}/events`;
+const API_URL = `https://graph.facebook.com/v21.0/${PIXEL_ID}/events`;
 
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') {

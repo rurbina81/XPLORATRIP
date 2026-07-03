@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /privacidad/
-Disallow: /terminos/
 Disallow: /404.html
+Disallow: /blog/_template/
 Sitemap: https://www.xploratrip.com/sitemap.xml
