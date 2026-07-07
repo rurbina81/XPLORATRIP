@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.xploratrip.com/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/nosotros/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/regresar-venezuela-desde-usa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/mejores-destinos-luna-de-miel-caribe/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/punta-cana-todo-incluido-desde-texas/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -89,7 +89,7 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/visa-americana-venezolanos/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -100,13 +100,46 @@
   </url>
   <url>
     <loc>https://www.xploratrip.com/blog/crucero-desde-galveston/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.xploratrip.com/blog/crucero-desde-galveston/thumb.jpg</image:loc>
       <image:title>Crucero MSC Seascape desde Galveston 2026 — Caribe Occidental</image:title>
       <image:caption>7 noches en el MSC Seascape desde Galveston TX — Costa Maya, Roatán, Cozumel</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/disney-orlando-desde-texas/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/disney-orlando-desde-texas/thumb.jpg</image:loc>
+      <image:title>Disney World desde Texas 2026 — Paquetes, Precios y Consejos</image:title>
+      <image:caption>Vuelos directos desde Dallas y Houston a Disney World Orlando — guía completa para familias</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/miami-desde-texas/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/miami-desde-texas/thumb.jpg</image:loc>
+      <image:title>Miami desde Texas 2026 — Vuelos, Barrios y Dónde Quedarse</image:title>
+      <image:caption>Guía completa para viajar a Miami desde Dallas o Houston — South Beach, Wynwood y más</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.xploratrip.com/blog/destin-desde-texas/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/blog/destin-desde-texas/thumb.jpg</image:loc>
+      <image:title>Destin Florida desde Texas 2026 — Playas Esmeralda del Golfo</image:title>
+      <image:caption>La playa con agua más clara del sur de Estados Unidos, accesible en carro desde Dallas o Houston</image:caption>
     </image:image>
   </url>
 </urlset>

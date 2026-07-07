@@ -1,0 +1,32 @@
+{
+  "name": "XploraTrip — Agencia de Viajes en Plano, Texas",
+  "short_name": "XploraTrip",
+  "description": "Vuelos, hoteles, cruceros y paquetes a Cancún, Punta Cana y más desde Texas. Cotiza gratis por WhatsApp.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1d3a",
+  "theme_color": "#0b1d3a",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    }
+  ],
+  "categories": ["travel", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/og.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "label": "XploraTrip — Agencia de Viajes desde Texas"
+    }
+  ]
+}

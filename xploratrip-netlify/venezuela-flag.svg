@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="200" fill="#FFD900"/>
+  <rect y="200" width="900" height="200" fill="#003087"/>
+  <rect y="400" width="900" height="200" fill="#CF142B"/>
+  <defs>
+    <path id="st" d="M0-28 6.3-8.6 26.6-8.6 10.2 3.3 16.4 22.7 0 10.7-16.4 22.7-10.2 3.3-26.6-8.6-6.3-8.6Z"/>
+  </defs>
+  <use href="#st" fill="#fff" transform="translate(135,320)"/>
+  <use href="#st" fill="#fff" transform="translate(225,305)"/>
+  <use href="#st" fill="#fff" transform="translate(315,296)"/>
+  <use href="#st" fill="#fff" transform="translate(405,291)"/>
+  <use href="#st" fill="#fff" transform="translate(495,291)"/>
+  <use href="#st" fill="#fff" transform="translate(585,296)"/>
+  <use href="#st" fill="#fff" transform="translate(675,305)"/>
+  <use href="#st" fill="#fff" transform="translate(765,320)"/>
+</svg>

@@ -13,7 +13,7 @@
 <link rel="icon" type="image/jpeg" href="/logo.jpg">
 <link rel="apple-touch-icon" href="/logo.jpg">
 <title>Nosotros | XploraTrip — Agencia de Viajes en Plano, Texas</title>
-<meta name="description" content="Conoce a las personas detrás de XploraTrip — venezolanos en Plano, Texas, especializados en hacer que cada viaje sea posible sin complicaciones.">
+<meta name="description" content="Conoce a las personas detrás de XploraTrip — venezolanos en Plano, Texas, especializados en hacer que cada viaje sea posible sin complicaciones ni sorpresas.">
 <meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="Plano, Texas">
 <meta name="geo.position" content="33.0198;-96.6989">
@@ -23,7 +23,8 @@
 <link rel="alternate" hreflang="es-US" href="https://www.xploratrip.com/nosotros/">
 <link rel="alternate" hreflang="x-default" href="https://www.xploratrip.com/nosotros/">
 <link rel="preload" as="image" href="/logo.webp" type="image/webp">
-<link rel="preload" as="image" href="/nosotros/FotoRomer.jpg" type="image/jpeg">
+<link rel="preload" as="image" href="/nosotros/FotoRomer.webp" fetchpriority="high" type="image/webp">
+<link rel="manifest" href="/manifest.json">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="XploraTrip">
 <meta property="og:title" content="Sobre Nosotros — El equipo detrás de XploraTrip | Agencia de Viajes Plano, Texas">
@@ -245,7 +246,7 @@ footer{background:#060f1f;padding:60px 0 32px}
 </head>
 <body>
 <a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:99999;padding:8px 16px;background:var(--gold2);color:var(--navy);font-weight:700;border-radius:4px;text-decoration:none;font-size:14px" onfocus="this.style.left='4px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=251873825469297&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=251873825469297&ev=PageView&noscript=1" alt=""/></noscript>
 
 <!-- NAV -->
 <nav id="mainNav" aria-label="Navegación principal">
@@ -311,7 +312,7 @@ footer{background:#060f1f;padding:60px 0 32px}
         <div class="founder-photo">
           <picture>
             <source srcset="/nosotros/FotoRomer.webp" type="image/webp">
-            <img src="/nosotros/FotoRomer.jpg" alt="Romer Urbina — Fundador de XploraTrip" fetchpriority="high" loading="eager">
+            <img src="/nosotros/FotoRomer.jpg" alt="Romer Urbina — Fundador de XploraTrip" fetchpriority="high" loading="eager" width="1280" height="720">
           </picture>
         </div>
         <a class="founder-badge" href="https://wa.me/14696798282" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'founder_badge'})">
@@ -640,8 +641,9 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
   </div>
 </div>
 <script>
-document.addEventListener('click',function(e){var a=e.target.closest('a[href*="wa.me"],a[href*="wha.link"]');if(a){if(typeof fbq!=='undefined')fbq('track','Lead');if(typeof gtag!=='undefined')gtag('event','generate_lead',{'event_category':'whatsapp'});}});
-function loadTrackers(){if(window._xtLoaded)return;window._xtLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-0G4DLPE9ZL';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('config','G-0G4DLPE9ZL');!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','251873825469297');fbq('track','PageView');}
+function _xcapi(en,eid,cd){try{fetch('/.netlify/functions/capi',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_name:en,event_id:eid,event_source_url:location.href,custom_data:cd||{}}),keepalive:true});}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href*="wa.me"],a[href*="wha.link"]');if(a){var _leid='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);if(typeof fbq!=='undefined')fbq('track','Lead',{'content_name':'nosotros'},{'eventID':_leid});_xcapi('Lead',_leid,{'content_name':'nosotros'});if(typeof gtag!=='undefined')gtag('event','generate_lead',{'event_category':'whatsapp','event_label':'nosotros'});}});
+function loadTrackers(){if(window._xtLoaded)return;window._xtLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-0G4DLPE9ZL';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('config','G-0G4DLPE9ZL');!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','251873825469297');var _pvid='pv_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);fbq('track','PageView',{},{'eventID':_pvid});_xcapi('PageView',_pvid,{});}
 function dismissCookies(accept){accept=accept!==false;if(accept){localStorage.setItem('xt-cookies','1');loadTrackers();}else{localStorage.setItem('xt-cookies','0');}var b=document.getElementById('cookieBar');if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}var wa=document.querySelector('.wa-float');if(wa)wa.style.bottom='';}
 (function(){
   var b=document.getElementById('cookieBar');var wa=document.querySelector('.wa-float');

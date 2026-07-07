@@ -5,16 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://connect.facebook.net">
 <meta name="theme-color" content="#0b1d3a">
+<meta name="color-scheme" content="light">
 <title>Página no encontrada · XploraTrip</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/jpeg" href="/logo.jpg">
 <link rel="apple-touch-icon" href="/logo.jpg">
 <meta name="description" content="Página no encontrada. Vuelve al inicio de XploraTrip — agencia de viajes en Plano, Texas.">
+<meta property="og:title" content="Página no encontrada · XploraTrip">
+<meta property="og:description" content="Esta página no existe, pero tu próximo viaje sí. Vuelve al inicio de XploraTrip.">
+<meta property="og:image" content="https://www.xploratrip.com/og.jpg">
+<meta property="og:url" content="https://www.xploratrip.com/404.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.xploratrip.com/og.jpg">
 <meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="Plano, Texas">
 <meta name="geo.position" content="33.0198;-96.6989">
 <meta name="ICBM" content="33.0198, -96.6989">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="manifest" href="/manifest.json">
 <meta name="robots" content="noindex, nofollow">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -72,13 +84,13 @@ p{font-size:16px;color:var(--txt2);line-height:1.7;margin-bottom:36px}
 </head>
 <body>
 <a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:99999;padding:8px 16px;background:var(--gold2);color:var(--navy);font-weight:700;border-radius:4px;text-decoration:none;font-size:14px" onfocus="this.style.left='4px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=251873825469297&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=251873825469297&ev=PageView&noscript=1" alt=""/></noscript>
 <div class="bg"></div>
 <div class="orb oa"></div>
 <div class="orb ob"></div>
 <main id="main-content"><div class="content">
   <a href="/" class="logo-wrap" style="text-decoration:none">
-    <picture style="display:contents"><source srcset="/logo.webp" type="image/webp"><img src="/logo.jpg" alt="XploraTrip"></picture>
+    <picture style="display:contents"><source srcset="/logo.webp" type="image/webp"><img src="/logo.jpg" alt="XploraTrip" width="36" height="36"></picture>
     <span class="brand"><span>XPLORA<span class="accent">TRIP</span></span></span>
   </a>
   <span class="plane" aria-hidden="true">✈️</span>
@@ -124,10 +136,17 @@ p{font-size:16px;color:var(--txt2);line-height:1.7;margin-bottom:36px}
   }
   document.addEventListener('DOMContentLoaded',function(){hxt(document.body);});
 })();
-document.addEventListener('click',function(e){var a=e.target.closest('a[href*="wa.me"],a[href*="wha.link"]');if(a&&typeof fbq!=='undefined')fbq('track','Lead');});
-function loadTrackers(){if(window._xtLoaded)return;window._xtLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-0G4DLPE9ZL';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('config','G-0G4DLPE9ZL');gtag('event','page_404',{'page_location':window.location.href,'page_title':'404 — '+window.location.pathname});!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','251873825469297');fbq('track','PageView');}
+function _xcapi(en,eid,cd){try{fetch('/.netlify/functions/capi',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_name:en,event_id:eid,event_source_url:location.href,custom_data:cd||{}}),keepalive:true});}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href*="wa.me"],a[href*="wha.link"]');if(a){var _leid='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);if(typeof fbq!=='undefined')fbq('track','Lead',{'content_name':'404_page'},{'eventID':_leid});_xcapi('Lead',_leid,{'content_name':'404_page'});if(typeof gtag!=='undefined')gtag('event','generate_lead',{'event_category':'whatsapp','event_label':'404_page'});}});
+function loadTrackers(){if(window._xtLoaded)return;window._xtLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-0G4DLPE9ZL';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('config','G-0G4DLPE9ZL');gtag('event','page_404',{'page_location':window.location.href,'page_title':'404 — '+window.location.pathname});!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','251873825469297');var _pvid='pv_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);fbq('track','PageView',{},{'eventID':_pvid});_xcapi('PageView',_pvid,{});}
 function dismissCookies(accept){accept=accept!==false;if(accept){localStorage.setItem('xt-cookies','1');loadTrackers();}else{localStorage.setItem('xt-cookies','0');}var b=document.getElementById('cookieBar');if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}}
-(function(){var v=localStorage.getItem('xt-cookies');var b=document.getElementById('cookieBar');if(v==='1'){if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}loadTrackers();}else if(v==='0'){if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}}})();
+(function(){
+  var v=localStorage.getItem('xt-cookies');
+  var b=document.getElementById('cookieBar');
+  if(v==='1'){if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}loadTrackers();}
+  else if(v==='0'){if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}}
+  else{if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');setTimeout(function(){b.classList.remove('hidden');b.setAttribute('aria-hidden','false');},4000);}}
+})();
 </script>
 </body>
 </html>
