@@ -138,8 +138,6 @@ a{text-decoration:none;color:inherit}
 .ob{width:320px;height:320px;background:rgba(200,137,10,.06);bottom:-60px;left:-60px}
 .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;padding:120px 0 80px}
 
-.h-flag{display:flex;height:4px;width:48px;border-radius:999px;overflow:hidden;margin-bottom:22px}
-.h-flag div{flex:1}
 .h-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(8,145,178,.08);border:1px solid rgba(8,145,178,.18);color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:16px}
 .hero h1{font-size:clamp(40px,5vw,64px);font-weight:800;letter-spacing:-2px;line-height:1.04;color:var(--navy);margin-bottom:20px}
 .hero h1 .gold{color:var(--gold2)}
@@ -357,8 +355,7 @@ footer{background:#060f1f;padding:60px 0 32px}
   .wa-float .wa-label{display:none}.wa-float{padding:16px;border-radius:50%}
   .cookie-bar{padding:14px 18px}.cookie-btns{width:100%}.cookie-accept,.cookie-decline{flex:1;text-align:center}
 }
-.vz-flag{display:inline-flex;flex-direction:column;width:18px;height:12px;border-radius:2px;overflow:hidden;flex-shrink:0;vertical-align:middle}
-.vz-flag span{flex:1;display:block}
+.vz-flag{display:inline-block;width:18px;height:12px;border-radius:2px;overflow:hidden;flex-shrink:0;vertical-align:middle}
 .xt-brand{font-weight:800;color:#0b1d3a}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
@@ -415,13 +412,11 @@ footer{background:#060f1f;padding:60px 0 32px}
   <div class="w">
     <div class="hero-in">
       <div>
-        <div class="h-flag" aria-hidden="true"><div style="background:#FFD900"></div><div style="background:#003087"></div><div style="background:#CF142B"></div></div>
-        <div class="h-eyebrow"><span class="vz-flag"><span style="background:#FFD900"></span><span style="background:#003087"></span><span style="background:#CF142B"></span></span> Para venezolanos en USA · Regreso a casa</div>
+        <div class="h-eyebrow"><img src="/venezuela-flag.svg" class="vz-flag" alt="" aria-hidden="true" width="18" height="12"> Para venezolanos en USA · Regreso a casa</div>
         <h1>Regresa a Venezuela<br>desde <span class="gold">USA</span> sin importar tus documentos</h1>
         <p class="hero-sub">Sin importar si tienes pasaporte vigente, vencido, solo cédula o ningún documento — te ayudamos a llegar. Asesoría completa + Documento de Viaje MPPRE + logística desde tu ciudad.</p>
         <div class="h-ctas">
           <a class="btn-wa-hero" href="https://wha.link/dyPRzb" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'hero_btn'})">💬 Consultar mi caso gratis</a>
-          <a class="btn-ghost" href="#tu-situacion">Ver mi situación →</a>
         </div>
         <div class="h-trust">
           <span class="ht"><span class="ht-dot"></span>Consulta inicial gratuita</span>
@@ -458,9 +453,9 @@ footer{background:#060f1f;padding:60px 0 32px}
   </div>
 </div>
 
-<!-- URGENCY -->
+<!-- PRUEBA SOCIAL -->
 <div class="urgency">
-  <p><span aria-hidden="true">⚡</span> <strong>Asesoría inicial completamente gratuita</strong> — escríbenos hoy y respondemos en menos de 1 hora</p>
+  <p><span aria-hidden="true">⭐</span> <strong>Wilmer llegó de Dallas a Maracaibo</strong> con salvoconducto y boletos gestionados por nosotros — <a href="#testimonios" style="color:var(--gold);font-weight:700">mira su historia ↓</a></p>
 </div>
 
 <!-- STATS BAND -->
@@ -500,29 +495,29 @@ footer{background:#060f1f;padding:60px 0 32px}
         <span class="dsc-badge b-green"><span aria-hidden="true">✓</span> Más sencillo</span>
         <div class="dsc-icon" aria-hidden="true">🛂</div>
         <h3>Pasaporte vigente</h3>
-        <p>Tienes el documento principal en regla. El proceso es más directo — buscamos la mejor ruta aérea desde tu ciudad en USA hasta tu destino final en Venezuela.</p>
-        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Comparamos rutas y aerolíneas, conseguimos el mejor precio y coordinamos toda la logística de principio a fin.</div>
+        <p>El caso más directo: solo necesitas la ruta correcta al mejor precio.</p>
+        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Comparamos rutas y aerolíneas y coordinamos todo de principio a fin.</div>
       </div>
       <div class="dsc s2">
         <span class="dsc-badge b-gold">⚠ Vencido</span>
         <div class="dsc-icon" aria-hidden="true">📋</div>
         <h3>Pasaporte vencido</h3>
-        <p>Dependiendo del tiempo de vencimiento y la aerolínea, existen rutas que permiten el retorno al país de origen con pasaporte vencido. Evaluamos tu caso específico.</p>
-        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Identificamos aerolíneas y rutas que aplican para tu situación y coordinamos el viaje sin que tengas que renovar el pasaporte primero.</div>
+        <p>Algunas aerolíneas permiten el retorno con pasaporte vencido — depende del caso.</p>
+        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Encontramos la ruta que aplica sin que renueves el pasaporte primero.</div>
       </div>
       <div class="dsc s3">
         <span class="dsc-badge b-gold">📄 El más solicitado</span>
         <div class="dsc-icon" aria-hidden="true">🪪</div>
         <h3>Solo cédula venezolana</h3>
-        <p>Sin pasaporte, el Documento de Viaje emitido por el MPPRE (Cancillería venezolana) es el documento que necesitas para viajar. Es el caso más frecuente entre venezolanos en el exterior que quieren regresar.</p>
-        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Te guiamos paso a paso en el trámite del Documento de Viaje ante el MPPRE a través del portal oficial, y una vez aprobado, organizamos toda la logística del viaje.</div>
+        <p>Necesitas el Documento de Viaje del MPPRE — el caso más frecuente.</p>
+        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Te guiamos en el trámite y organizamos el viaje cuando esté aprobado.</div>
       </div>
       <div class="dsc s4">
         <span class="dsc-badge b-red">⚠ Sin documentos</span>
         <div class="dsc-icon" aria-hidden="true">🆘</div>
         <h3>Sin ningún documento</h3>
-        <p>La situación más compleja, pero tiene solución. El Documento de Viaje es la vía para venezolanos sin cédula ni pasaporte. El proceso es más largo, pero sí es posible.</p>
-        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Asesoramos en el proceso de obtención del Documento de Viaje, evaluamos tu situación específica y acompañamos en cada paso.</div>
+        <p>El proceso es más largo, pero tiene solución con el Documento de Viaje.</p>
+        <div class="dsc-action"><b>Lo que XploraTrip hace</b>Evaluamos tu caso y te acompañamos en cada paso del trámite.</div>
       </div>
     </div>
     <div style="text-align:center;margin-top:36px" class="reveal d2">
@@ -615,11 +610,8 @@ footer{background:#060f1f;padding:60px 0 32px}
         <div class="salvo-warning"><span aria-hidden="true">⚠️</span> Los requisitos varían según tu situación. <strong>Te asesoramos para tu caso específico</strong> — no hay un proceso único para todos.</div>
       </div>
       <div class="salvo-steps-card">
-        <h4>Cómo te acompañamos en el trámite</h4>
-        <div class="ss-item"><div class="ss-n">1</div><div class="ss-t"><b>Evaluamos si aplicas</b><span>Revisamos tu documentación y determinamos qué trámite necesitas exactamente.</span></div></div>
-        <div class="ss-item"><div class="ss-n">2</div><div class="ss-t"><b>Te explicamos el proceso</b><span>Te llevamos de la mano por el portal oficial del MPPRE: qué formularios llenar, qué archivos adjuntar, tiempos y costos.</span></div></div>
-        <div class="ss-item"><div class="ss-n">3</div><div class="ss-t"><b>Revisamos tu solicitud</b><span>Antes de enviar en el portal del MPPRE, verificamos que todo esté correcto para evitar rechazos.</span></div></div>
-        <div class="ss-item"><div class="ss-n">4</div><div class="ss-t"><b>Coordinamos el vuelo</b><span>Cuando el Salvoconducto esté aprobado, buscamos la ruta que lo acepta y reservamos.</span></div></div>
+        <h4>Te acompañamos en el trámite</h4>
+        <div class="ss-item"><div class="ss-n">✓</div><div class="ss-t"><b>Del portal del MPPRE al vuelo</b><span>Revisamos tu solicitud antes de enviarla para evitar rechazos, y cuando el documento esté aprobado reservamos la ruta que lo acepta. El paso a paso completo está <a href="#proceso" style="color:var(--cyan);font-weight:700">aquí arriba ↑</a>.</span></div></div>
         <div style="margin-top:22px">
           <a class="btn-wa-hero" style="width:100%;justify-content:center;font-size:15px;padding:14px" href="https://wha.link/dyPRzb" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'salvoconducto_cta'})">💬 Necesito asesoría para el Salvoconducto</a>
         </div>
@@ -746,7 +738,7 @@ footer{background:#060f1f;padding:60px 0 32px}
       <div class="trust-chips">
         <span class="chip"><span aria-hidden="true">✅</span> Consulta gratis</span>
         <span class="chip"><span aria-hidden="true">⚡</span> Respuesta &lt;1 hora</span>
-        <span class="chip"><span class="vz-flag"><span style="background:#FFD900"></span><span style="background:#003087"></span><span style="background:#CF142B"></span></span> Especialistas en el proceso</span>
+        <span class="chip"><img src="/venezuela-flag.svg" class="vz-flag" alt="" aria-hidden="true" width="18" height="12"> Especialistas en el proceso</span>
         <span class="chip"><span aria-hidden="true">🤝</span> Acompañamiento completo</span>
       </div>
     </div>
