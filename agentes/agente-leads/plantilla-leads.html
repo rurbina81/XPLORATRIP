@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leads — {{NICHO}} · {{CIUDAD}}</title>
+<!--
+  PLANTILLA reusable del Agente Leads (AIBX).
+  Reemplaza {{TOKENS}}. Las tarjetas van ordenadas por score de oportunidad (0-100, mayor arriba).
+  Pills: p-hi (>=80), p-md (50-79), p-lo (<50).
+  Incluye SIEMPRE: stats, filtros, tarjetas con botón "Enviar email" (mailto: con asunto+cuerpo
+  pre-escritos), propuesta tipo y export JSON (los datos van en el <script id="leads-data">).
+  Canal accionable = email. Teléfono/Instagram se muestran como INFO, nunca como botón.
+  Sin CDNs: debe abrir sin internet.
+-->
+<style>
+  :root{--bg:#0b0b0f;--card:#15151d;--line:#262633;--txt:#f4f4f6;--muted:#9a9aab;--red:#e23b3b;--red-soft:#ff5a5a;--green:#33c481;--amber:#f5a623;--font:'Inter',system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1.55;padding:40px 20px}
+  .wrap{max-width:980px;margin:0 auto}
+  .kicker{color:var(--red-soft);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+  h1{font-size:32px;font-weight:800;margin:6px 0 4px}.sub{color:var(--muted);font-size:15px;margin-bottom:26px}
+  .stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 22px;flex:1;min-width:140px}
+  .stat b{display:block;font-size:26px;font-weight:800}.stat span{color:var(--muted);font-size:13px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+  .filters button{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font)}
+  .filters button.on{background:rgba(226,59,59,.16);border-color:var(--red);color:var(--red-soft)}
+  .lead{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:14px}
+  .lead-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+  .lead h2{font-size:18px;font-weight:800}
+  .lead .meta{color:var(--muted);font-size:13px;margin-top:2px}
+  .pill{display:inline-block;padding:4px 11px;border-radius:999px;font-size:13px;font-weight:800}
+  .p-hi{background:rgba(226,59,59,.18);color:var(--red-soft)}.p-md{background:rgba(245,166,35,.16);color:var(--amber)}.p-lo{background:rgba(51,196,129,.16);color:var(--green)}
+  .lead .debil{margin:10px 0 12px;font-size:14px}.lead .debil b{color:var(--red-soft)}
+  .contactos{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:14px}
+  .contactos span b{color:var(--txt);font-weight:600}
+  details{border-top:1px solid var(--line);padding-top:12px}
+  summary{cursor:pointer;color:var(--muted);font-size:13px;font-weight:600}
+  .email-prev{background:#0f0f15;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:10px;font-size:13px;white-space:pre-wrap;color:var(--txt)}
+  .btn-mail{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 20px;border-radius:999px;text-decoration:none;margin-top:12px}
+  .btn-mail.off{background:#23232f;color:var(--muted);pointer-events:none}
+  .propuesta{background:linear-gradient(135deg,#1c1015,#15151d);border:1px solid var(--red);border-radius:18px;padding:26px;margin-top:26px}
+  .propuesta h3{color:var(--red-soft);font-size:13px;letter-spacing:.1em;margin-bottom:8px}.propuesta .price{font-size:26px;font-weight:800;margin-top:12px}
+  .export{margin-top:18px;text-align:center}
+  .export button{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:9px 18px;font-size:13px;cursor:pointer;font-family:var(--font)}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Buscador de leads + prospección · AIBuilderX</div>
+  <h1>{{NICHO}} · {{CIUDAD}}</h1>
+  <div class="sub">Servicio a ofrecer: {{SERVICIO}} · {{N}} leads · {{FECHA}}</div>
+
+  <div class="stats">
+    <div class="stat"><b>{{N}}</b><span>leads encontrados</span></div>
+    <div class="stat"><b>{{N_DEBIL}}</b><span>con la debilidad clave</span></div>
+    <div class="stat"><b>{{TICKET}}</b><span>ticket potencial</span></div>
+  </div>
+
+  <div class="filters">
+    <button class="on" data-f="todos">Todos</button>
+    <button data-f="sin-web">Sin web</button>
+    <button data-f="top">Top oportunidad (80+)</button>
+  </div>
+
+  <!-- Repetir .lead por cada negocio, ordenados por score desc.
+       data-sinweb="1" si no tiene web · data-score con el número.
+       Si NO se encontró email público: quitar el botón o usar .btn-mail.off con texto
+       "Sin email público — contactar por {{CANAL_ALT}}". NUNCA inventar un email. -->
+  <div class="lead" data-score="{{SCORE_1}}" data-sinweb="{{SINWEB_1}}">
+    <div class="lead-top">
+      <div>
+        <h2>{{LEAD_1}}</h2>
+        <div class="meta">{{ZONA_1}} · ⭐ {{RATING_1}} ({{RESENAS_1}} reseñas) · Web: {{ESTADO_WEB_1}} · IG: {{IG_1}} · Tel: {{TEL_1}}</div>
+      </div>
+      <span class="pill p-hi">{{SCORE_1}}/100</span>
+    </div>
+    <div class="debil"><b>Debilidad:</b> {{DEBIL_1}}</div>
+    <details>
+      <summary>Ver email de prospección</summary>
+      <div class="email-prev"><b>Asunto:</b> {{ASUNTO_1}}
+
+{{CUERPO_1}}</div>
+    </details>
+    <a class="btn-mail" href="mailto:{{EMAIL_1}}?subject={{ASUNTO_1_URLENC}}&body={{CUERPO_1_URLENC}}">✉️ Enviar email a {{LEAD_1}}</a>
+  </div>
+  <!-- ... más tarjetas ... -->
+
+  <div class="propuesta"><h3>PROPUESTA DE SERVICIO (plantilla)</h3><p>{{PROPUESTA_TEXTO}}</p><div class="price">{{PROPUESTA_PRECIO}}</div></div>
+
+  <div class="export"><button onclick="exportJSON()">⬇ Exportar leads (JSON)</button></div>
+  <footer>Leads y mensajes generados con un agente de IA · datos públicos · AIBuilderX</footer>
+</div>
+
+<script id="leads-data" type="application/json">
+[
+  {"negocio":"{{LEAD_1}}","zona":"{{ZONA_1}}","rating":"{{RATING_1}}","telefono":"{{TEL_1}}","email":"{{EMAIL_1}}","web":"{{ESTADO_WEB_1}}","instagram":"{{IG_1}}","debilidad":"{{DEBIL_1}}","score":"{{SCORE_1}}"}
+]
+</script>
+<script>
+  document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    const f=b.dataset.f;
+    document.querySelectorAll('.lead').forEach(l=>{
+      const show = f==='todos' || (f==='sin-web' && l.dataset.sinweb==='1') || (f==='top' && +l.dataset.score>=80);
+      l.style.display = show ? '' : 'none';
+    });
+  }));
+  function exportJSON(){
+    const data=document.getElementById('leads-data').textContent.trim();
+    const a=document.createElement('a');
+    a.href='data:application/json;charset=utf-8,'+encodeURIComponent(data);
+    a.download='leads-{{NICHO}}-{{CIUDAD}}.json';
+    a.click();
+  }
+</script>
+</body>
+</html>

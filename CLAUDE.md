@@ -6,10 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Colección de **4 skills de Claude Code** orientados a la venta de servicios de IA (agencia digital). Cada skill es un agente especializado que se activa por frases clave y entrega un output tangible — dashboard HTML, pack de contenido, lista de leads.
 
+**Dónde viven las skills:** la copia versionada (fuente de verdad) está en `agentes/` dentro de este repo. La copia **instalada** que Claude Code realmente ejecuta está en `~/.claude/skills/agente-*`. Tras editar una skill en el repo, sincroniza copiando la carpeta a `~/.claude/skills/` (y viceversa si se editó la instalada).
+
 ## Estructura de cada skill
 
 ```
-agente-<nombre>/
+agentes/agente-<nombre>/
   SKILL.md                  ← frontmatter (name, description/triggers) + instrucciones del agente
   plantilla-<nombre>.html   ← template HTML de referencia para el output del agente
   (archivos de apoyo .md)   ← guías específicas referenciadas desde SKILL.md
@@ -43,9 +45,9 @@ El diagnóstico devuelve datos que `agente-web` reutiliza sin volver a preguntar
 
 ## Herramientas externas que usan los agentes
 
-- **IG Scraper CLI:** `node ~/tools/ig-scraper/build/index.js profile <usuario>` — para obtener perfil/bio/links de Instagram.
+- **IG Scraper CLI (opcional):** `node ~/tools/ig-scraper/build/index.js profile <usuario>` — para obtener perfil/bio/links de Instagram. **No está instalado en esta máquina:** verificar que exista antes de usarlo; si no existe, usar la skill `firecrawl-scrape` sobre el perfil o WebSearch.
 - **HeyGen + ElevenLabs:** producción de Reels con avatar/clon de voz (ver `agente-contenido/setup-reel-heygen-elevenlabs.md` para el flujo exacto). No renderizar en vivo — siempre pre-producir.
-- **nano-banana-pro:** skill aparte para generar imágenes con Gemini (`python3 ~/.claude/skills/nano-banana-pro/scripts/generate.py`).
+- **nano-banana-pro:** skill aparte para generar imágenes con Gemini (`python ~/.claude/skills/nano-banana-pro/scripts/generate.py` — en Windows es `python`, no `python3`).
 - **WebFetch / WebSearch:** enriquecimiento de datos de negocios; si una herramienta falla, continuar con lo disponible — nunca bloquear el flujo.
 
 ## Reglas de demos en vivo
