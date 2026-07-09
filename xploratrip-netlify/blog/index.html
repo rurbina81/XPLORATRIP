@@ -50,9 +50,11 @@
 ]}
 </script>
 <style>
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700 800;font-display:swap;src:url('/fonts/plus-jakarta-sans-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122}
+h1,h2,h3,h4,.stat-num,.st-num,.vz-stat-num{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-:root{--navy:#0b1d3a;--gold:#c8890a;--gold2:#eabe48;--cyan:#0891b2;--cyan2:#00c2cb;--white:#fff;--bg:#f7f9ff;--bg2:#eef2ff;--txt:#0b1d3a;--txt2:#374151;--txt3:#6b7280;--line:#e2e8f0;--radius:20px;--radius-sm:12px;--shadow:0 2px 20px rgba(11,29,58,.07);--shadow-hover:0 10px 40px rgba(11,29,58,.14);--transition:all .25s cubic-bezier(.4,0,.2,1)}
+:root{--navy:#0b1d3a;--gold:#c8890a;--gold2:#eabe48;--cyan:#0891b2;--cyan2:#00c2cb;--white:#fff;--bg:#f7f9ff;--bg2:#eef2ff;--txt:#0b1d3a;--txt2:#374151;--txt3:#6b7280;--line:#e2e8f0;--radius:20px;--radius-sm:12px;--shadow:0 2px 20px rgba(11,29,58,.07);--shadow-hover:0 10px 40px rgba(11,29,58,.14);--transition:transform .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,color .2s ease,border-color .2s ease}
 body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--txt2);background:var(--white);line-height:1.65}
 a{text-decoration:none;color:inherit}
 .container{max-width:1160px;margin:0 auto;padding:0 28px}
@@ -67,11 +69,11 @@ a{text-decoration:none;color:inherit}
 .nav-logo img{height:36px;width:36px;border-radius:10px;object-fit:cover}
 .nav-logo .accent{color:var(--gold2)}
 .nav-links{display:flex;align-items:center;gap:6px}
-.nav-links a{font-size:14px;font-weight:500;color:var(--txt3);padding:8px 14px;border-radius:12px;transition:all .25s cubic-bezier(.4,0,.2,1)}
+.nav-links a{font-size:14px;font-weight:500;color:var(--txt3);padding:8px 14px;border-radius:12px;transition:transform .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,color .2s ease,border-color .2s ease}
 .nav-links a:hover{color:var(--navy);background:var(--bg)}
 .nav-links a.active{color:var(--navy);font-weight:700;position:relative}
 .nav-links a.active::after{content:'';position:absolute;bottom:2px;left:14px;right:14px;height:2px;background:var(--gold2);border-radius:2px}
-.nav-cta{background:var(--gold2);color:var(--navy);font-size:14px;font-weight:700;padding:10px 22px;border-radius:999px;transition:all .25s cubic-bezier(.4,0,.2,1);white-space:nowrap}
+.nav-cta{background:var(--gold2);color:var(--navy);font-size:14px;font-weight:700;padding:10px 22px;border-radius:999px;transition:transform .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,color .2s ease,border-color .2s ease;white-space:nowrap}
 .nav-cta:hover{background:var(--gold);transform:translateY(-1px);box-shadow:0 4px 16px rgba(234,190,72,.4)}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--navy)}
 .burger svg{width:24px;height:24px;display:block}
@@ -154,6 +156,16 @@ footer{background:#060f1f;padding:60px 0 32px}
 .cookie-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
 .cookie-decline{background:rgba(255,255,255,.1);border:none;color:#fff;padding:9px 18px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit}
 .cookie-accept{background:var(--gold2);color:var(--navy);padding:9px 18px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:700;border:none;font-family:inherit}
+
+/* auditoria jul 2026: paridad motion y a11y */
+html{-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+[id]{scroll-margin-top:90px}
+h1,h2,.sec-h,.section-title{text-wrap:balance}
+a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:active{transform:scale(.97)}
+@media(hover:none){a:hover,button:hover,div:hover,article:hover{transform:none!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}html{scroll-behavior:auto!important}}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>

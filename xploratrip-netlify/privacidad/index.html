@@ -43,9 +43,11 @@
 <meta name="twitter:description" content="Cómo XploraTrip recopila, usa y protege tus datos personales.">
 <meta name="twitter:image" content="https://www.xploratrip.com/og.jpg">
 <style>
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700 800;font-display:swap;src:url('/fonts/plus-jakarta-sans-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122}
+h1,h2,h3,h4,.stat-num,.st-num,.vz-stat-num{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-:root{--gold:#c8890a;--gold2:#eabe48;--navy:#0b1d3a;--cyan:#0891b2;--cyan2:#00c2cb;--white:#fff;--bg:#f7f9ff;--bg2:#eef2ff;--txt:#0b1d3a;--txt2:#374151;--txt3:#6b7280;--line:#e2e8f0;--shadow:0 2px 20px rgba(11,29,58,.07);--transition:all .25s cubic-bezier(.4,0,.2,1)}
+:root{--gold:#c8890a;--gold2:#eabe48;--navy:#0b1d3a;--cyan:#0891b2;--cyan2:#00c2cb;--white:#fff;--bg:#f7f9ff;--bg2:#eef2ff;--txt:#0b1d3a;--txt2:#374151;--txt3:#6b7280;--line:#e2e8f0;--shadow:0 2px 20px rgba(11,29,58,.07);--transition:transform .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,color .2s ease,border-color .2s ease}
 body{background:var(--bg);color:var(--txt2);font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.75}
 a{color:var(--cyan);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -81,6 +83,16 @@ footer a{color:var(--gold2)}
 .cookie-accept{background:var(--gold2);color:var(--navy);border:none;padding:8px 20px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer}
 .cookie-decline{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);padding:8px 20px;border-radius:999px;font-weight:600;font-size:13px;cursor:pointer}
 @media(max-width:600px){.wa-float{bottom:80px;right:16px}}
+
+/* auditoria jul 2026: paridad motion y a11y */
+html{-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+[id]{scroll-margin-top:90px}
+h1,h2,.sec-h,.section-title{text-wrap:balance}
+a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:active{transform:scale(.97)}
+@media(hover:none){a:hover,button:hover,div:hover,article:hover{transform:none!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}html{scroll-behavior:auto!important}}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>

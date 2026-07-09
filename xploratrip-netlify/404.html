@@ -29,6 +29,8 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="robots" content="noindex, nofollow">
 <style>
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700 800;font-display:swap;src:url('/fonts/plus-jakarta-sans-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122}
+h1,h2,h3,h4,.stat-num,.st-num,.vz-stat-num{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 :root{
@@ -36,7 +38,7 @@ html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
   --white:#ffffff;--bg:#f7f9ff;--bg2:#eef2ff;
   --txt2:#374151;--txt3:#6b7280;--line:#e2e8f0;
   --shadow:0 2px 20px rgba(11,29,58,.07);--shadow-hover:0 10px 40px rgba(11,29,58,.14);
-  --transition:all .25s cubic-bezier(.4,0,.2,1);
+  --transition:transform .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,color .2s ease,border-color .2s ease;
 }
 body{background:var(--bg);color:var(--navy);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;overflow:hidden}
 .bg{position:fixed;inset:0;z-index:0;
@@ -68,7 +70,7 @@ p{font-size:16px;color:var(--txt2);line-height:1.7;margin-bottom:36px}
 @media(prefers-reduced-motion:reduce){.plane{animation:none}.btn-home:hover,.btn-wa:hover,.wa-float:hover{transform:none}.wa-float{animation:none}}
 @media(max-width:600px){.wa-float{bottom:80px;right:16px}}
 .xt-brand{font-weight:800;color:#0b1d3a}
-.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s;font-family:inherit}
+.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,bottom .3s ease;font-family:inherit}
 .wa-float:hover{background:#1ebe5d;transform:translateY(-2px)}
 .wa-float svg{width:22px;height:22px;flex-shrink:0}
 .wa-label{font-size:14px;font-weight:700}
@@ -79,6 +81,16 @@ p{font-size:16px;color:var(--txt2);line-height:1.7;margin-bottom:36px}
 .cookie-btns{display:flex;gap:10px;flex-shrink:0}
 .cookie-decline{background:rgba(255,255,255,.1);border:none;color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;cursor:pointer;font-family:inherit}
 .cookie-accept{background:#eabe48;color:#0b1d3a;font-weight:700;font-size:13px;padding:10px 20px;border-radius:999px;border:none;cursor:pointer;font-family:inherit}
+
+/* auditoria jul 2026: paridad motion y a11y */
+html{-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+[id]{scroll-margin-top:90px}
+h1,h2,.sec-h,.section-title{text-wrap:balance}
+a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:active{transform:scale(.97)}
+@media(hover:none){a:hover,button:hover,div:hover,article:hover{transform:none!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}html{scroll-behavior:auto!important}}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>
