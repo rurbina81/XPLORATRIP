@@ -34,6 +34,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.xploratrip.com/emprende/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.xploratrip.com/emprende/og-emprende.jpg</image:loc>
+      <image:title>Emprende en Turismo — Tu negocio digital desde $81 | XploraTrip</image:title>
+      <image:caption>Inicia tu propio negocio de turismo digital con plataforma 24/7 y comisiones sin techo</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.xploratrip.com/blog/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
