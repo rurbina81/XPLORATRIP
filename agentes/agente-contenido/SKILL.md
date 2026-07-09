@@ -35,8 +35,8 @@ El alumno no edita video ni diseña: describe el tema y el agente arma todo list
    - Ver `setup-reel-heygen-elevenlabs.md` para los pasos concretos.
 4. **Carrusel (6 slides) con IMÁGENES REALES generadas con IA** (no mockups):
    - Genera cada slide como imagen con **nano-banana (Gemini)** vía la skill `nano-banana-pro`:
-     `python ~/.claude/skills/nano-banana-pro/scripts/generate.py "<prompt food/diseño + texto corto sobreimpreso>" -o slide-N.png --ratio 4:5 --size 2K`
-     (en Windows el comando es `python`; en Mac/Linux puede ser `python3`)
+     `python ~/.claude/skills/nano-banana-pro/scripts/generate.py --prompt "<prompt food/diseño + texto corto sobreimpreso>" --output slide-N.jpg --width 1080 --height 1350`
+     (en Windows el comando es `python`; en Mac/Linux puede ser `python3`. Requiere `GEMINI_API_KEY` o `GOOGLE_API_KEY` en el entorno.)
    - Slide 1 = cover con título, último = CTA. Texto corto (≤25 caracteres por frase) para que Gemini lo renderice limpio. Verifica cada imagen y regenera si el texto sale mal (ojo con ñ/tildes).
    - Alternativa: ChatGPT/Ideogram. NUNCA entregues slides como cajas de HTML con texto: el WOW son imágenes reales listas para postear.
    - Muéstralas en un visor HTML tipo carrusel: un solo archivo autosuficiente (sin CDNs) con las imágenes referenciadas por ruta relativa, flechas ← → y contador de slide.
