@@ -152,7 +152,7 @@ section{padding:88px 0}
 .fc3{animation-delay:.8s,5.5s}
 /* ONE2TRIP: dúo desktop + teléfono con 3D sutil */
 .o2t-scene{display:block;position:relative;perspective:1400px}
-.o2t-group{position:relative;width:100%;aspect-ratio:1200/980;transform-style:preserve-3d;animation:o2tPan 16s ease-in-out infinite}
+.o2t-group{position:relative;width:100%;aspect-ratio:1200/700;transform-style:preserve-3d;animation:o2tPan 16s ease-in-out infinite}
 @keyframes o2tPan{0%,100%{transform:rotateY(-3deg) rotateX(1deg)}50%{transform:rotateY(3deg) rotateX(-1deg)}}
 .o2t-card{position:absolute;border-radius:14px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.14);background:#0f172a}
 .o2t-card img{display:block;width:100%;height:auto}
@@ -261,6 +261,13 @@ h1 .gold{color:var(--gold)}
 .plat-chk{width:22px;height:22px;border-radius:50%;background:rgba(234,190,72,.15);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;margin-top:1px}
 .plat-note{margin-top:22px;font-size:13px;color:rgba(255,255,255,.55)}
 .plat-note a{color:var(--gold2);font-weight:700}
+
+.panel-proof{margin-top:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px}
+.pp-head h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:6px}
+.pp-head p{font-size:14px;color:rgba(255,255,255,.65);margin-bottom:18px}
+.pp-head strong{color:var(--gold2)}
+.pp-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pp-chip{font-size:13px;font-weight:700;color:rgba(255,255,255,.85);background:rgba(234,190,72,.12);border:1px solid rgba(234,190,72,.25);padding:7px 15px;border-radius:999px}
 .plat-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
 .pt-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:20px}
 .pt-card h4{font-size:14.5px;font-weight:700;color:#fff;margin:10px 0 5px}
@@ -370,6 +377,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
 .cookie-btns{display:flex;gap:8px;flex-wrap:wrap}
 .cookie-accept{background:var(--gold2);color:var(--navy);border:none;padding:8px 20px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit}
 .cookie-decline{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);padding:8px 20px;border-radius:999px;font-weight:600;font-size:13px;cursor:pointer;font-family:inherit}
+.i-svg{display:inline-flex;vertical-align:-2px}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>
@@ -617,10 +625,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
               <span class="bdot" style="background:#ef4444"></span><span class="bdot" style="background:#eab308"></span><span class="bdot" style="background:#22c55e"></span>
               <span class="browser-url">one2trip.net/41395</span>
             </div>
-            <img src="o2t-desktop.webp" alt="Plataforma One2trip de XploraTrip en escritorio — buscador de alojamientos, vuelos, circuitos y cruceros" loading="lazy" width="1200" height="900">
+            <img src="o2t-desktop.webp" alt="Panel real de One2trip con la sesión de XploraTrip iniciada — buscador de alojamientos, vuelos, circuitos y cruceros" loading="lazy" width="1200" height="614">
           </div>
           <div class="o2t-card o2t-phone">
-            <img src="o2t-movil.webp" alt="Plataforma One2trip de XploraTrip en el teléfono" loading="lazy" width="420" height="880">
+            <img src="o2t-movil.webp" alt="Plataforma One2trip de XploraTrip en el teléfono, con sesión iniciada" loading="lazy" width="420" height="590">
           </div>
         </div>
         <span class="o2t-cap">Toca para explorar la plataforma real →</span>
@@ -633,6 +641,20 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
           <li><span class="plat-chk">✓</span><span><b style="color:#fff">Sin inventario ni operación</b> — la empresa procesa reservas, pagos y soporte al viajero.</span></li>
         </ul>
         <p class="plat-note">¿Quieres verla en vivo? <a href="https://one2trip.net/41395" target="_blank" rel="noopener noreferrer">Explora una plataforma real en one2trip.net →</a></p>
+      </div>
+    </div>
+
+    <div class="panel-proof reveal d2">
+      <div class="pp-head">
+        <h3>Esto no es teoría — es nuestro panel</h3>
+        <p>Captura real del sistema administrativo de XploraTrip en One2trip: <strong>886 reservas emitidas</strong> desde que empezamos.</p>
+      </div>
+      <img src="panel-resultados.webp" alt="Panel de resultados de XploraTrip: total de ventas, fee personalizado, comisiones y business volume de reservas emitidas" loading="lazy" width="1200" height="202" style="display:block;width:100%;height:auto;border-radius:12px">
+      <div class="pp-chips">
+        <span class="pp-chip">✈ 711 vuelos</span>
+        <span class="pp-chip">🏨 70 hoteles</span>
+        <span class="pp-chip">🛡 53 seguros</span>
+        <span class="pp-chip">🎟 21 actividades</span>
       </div>
     </div>
     <div class="plat-tools reveal d2">
@@ -818,7 +840,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
         <a class="btn-wa-xl" href="https://wa.me/14696798282?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20iniciar%20mi%20negocio%20de%20turismo" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cta_main'})">💬 Agendar mi llamada gratis</a>
       </div>
       <div class="trust-chips">
-        <span class="chip"><span aria-hidden="true">✅</span> Llamada sin compromiso</span>
+        <span class="chip"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span> Llamada sin compromiso</span>
         <span class="chip"><span aria-hidden="true">💵</span> Inversión desde $81</span>
         <span class="chip"><span aria-hidden="true">🌎</span> Desde cualquier país</span>
         <span class="chip"><span aria-hidden="true">🤝</span> Mentoría incluida</span>

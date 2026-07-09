@@ -516,9 +516,11 @@ footer{background:#060f1f;padding:60px 0 32px}
 @media(max-width:600px){.faq-q{font-size:15px;padding:18px 38px 18px 0}.faq-a p{font-size:15px;padding:0 38px 18px 0}}
 
 /* BANNER EMPRENDE */
-.svc-banner{margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:linear-gradient(120deg,var(--navy),#1a3a6b);border-radius:20px;padding:30px 36px;box-shadow:var(--shadow)}
+.svc-banner{margin-top:18px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px 40px;background:linear-gradient(120deg,var(--navy),#1a3a6b);border-radius:20px;padding:32px 40px;box-shadow:var(--shadow)}
+@media(max-width:760px){.svc-banner{grid-template-columns:1fr;padding:26px 24px}}
+.svc-banner .xt-brand{color:var(--gold2)}
 .svc-banner h3{font-size:clamp(19px,2.4vw,25px);font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.01em}
-.svc-banner h3 span{color:var(--gold2)}
+.svc-banner h3 span{color:var(--gold2);display:block}
 .svc-banner p{font-size:14px;color:rgba(255,255,255,.72);margin:0;max-width:520px;line-height:1.6}
 .svc-banner-cta{background:var(--gold2);color:var(--navy);font-weight:800;font-size:14.5px;padding:13px 26px;border-radius:999px;white-space:nowrap;transition:var(--transition)}
 .svc-banner-cta:hover{background:var(--gold);transform:translateY(-2px)}
@@ -532,6 +534,7 @@ h1,h2,.sec-h,.section-title{text-wrap:balance}
 a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:active{transform:scale(.97)}
 @media(hover:none){a:hover,button:hover,div:hover,article:hover{transform:none!important}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}html{scroll-behavior:auto!important}}
+.i-svg{display:inline-flex;vertical-align:-2px}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>
@@ -585,13 +588,13 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
     <div class="hero-content">
       <div class="hero-badge">
         <span class="dot"></span>
-        <span aria-hidden="true">✈</span> Agencia de viajes · Plano, Texas
+        <span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span> Agencia de viajes · Plano, Texas
       </div>
       <h1>Tu agencia de viajes en Plano, Texas<br><em>sin complicaciones.</em></h1>
       <p class="hero-sub">Vuelos, hoteles y cruceros desde Texas. Cotiza gratis por WhatsApp y recibe tu presupuesto en menos de 1 hora.</p>
       <div class="hero-trust">
-        <span class="hero-trust-badge"><span aria-hidden="true">⭐</span> <strong>500+ viajeros felices</strong></span>
-        <span class="hero-trust-badge"><span aria-hidden="true">⚡</span> <strong>Respuesta en &lt;1 hora</strong></span>
+        <span class="hero-trust-badge"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <strong>500+ viajeros felices</strong></span>
+        <span class="hero-trust-badge"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span> <strong>Respuesta en &lt;1 hora</strong></span>
       </div>
       <div class="hero-btns">
         <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noopener noreferrer" class="btn-gold" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'hero_btn'})"><span aria-hidden="true">💬</span> Cotizar por WhatsApp</a>
@@ -711,17 +714,17 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
     </div>
     <div class="pills">
       <button type="button" class="pill on" data-filter="all" aria-pressed="true">Todos</button>
-      <button type="button" class="pill" data-filter="playas" aria-pressed="false"><span aria-hidden="true">🏖</span> Playas</button>
+      <button type="button" class="pill" data-filter="playas" aria-pressed="false"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v13M5 21h14"/><path d="M12 8c-3 0-6 1.5-7 4 2-.8 4.5-.8 7 0 2.5-.8 5-.8 7 0-1-2.5-4-4-7-4z"/></svg></span> Playas</button>
       <button type="button" class="pill" data-filter="cruceros" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4M12 2v3"/></svg> Cruceros</button>
       <button type="button" class="pill" data-filter="ciudades" aria-pressed="false"><span aria-hidden="true">🏙</span> Ciudades</button>
       <button type="button" class="pill" data-filter="familia" aria-pressed="false"><span aria-hidden="true">👨‍👩‍👧</span> Familia</button>
-      <button type="button" class="pill" data-filter="luna-de-miel" aria-pressed="false"><span aria-hidden="true">💑</span> Luna de miel</button>
+      <button type="button" class="pill" data-filter="luna-de-miel" aria-pressed="false"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span> Luna de miel</button>
     </div>
     <div class="dest-grid">
       <div class="dcard reveal" data-cat="playas familia">
         <div class="dcard-bg bg-cancun" data-bg="img/dest-cancun.webp" role="img" aria-label="Zona hotelera de Cancún, México"></div>
         <div class="dcard-overlay"></div>
-        <div class="dcard-rating"><span aria-hidden="true">⭐</span> 4.9</div>
+        <div class="dcard-rating"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.9</div>
         <div class="dcard-body">
           <span class="dcard-emoji" aria-hidden="true">🏖</span>
           <div class="dcard-name">Cancún</div>
@@ -732,7 +735,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <div class="dcard reveal" data-cat="playas luna-de-miel">
         <div class="dcard-bg bg-punta" data-bg="img/dest-punta-cana.webp" role="img" aria-label="Playa de Punta Cana, República Dominicana"></div>
         <div class="dcard-overlay"></div>
-        <div class="dcard-rating"><span aria-hidden="true">⭐</span> 4.8</div>
+        <div class="dcard-rating"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.8</div>
         <div class="dcard-body">
           <span class="dcard-emoji" aria-hidden="true">🌴</span>
           <div class="dcard-name">Punta Cana</div>
@@ -743,7 +746,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <div class="dcard reveal" data-cat="ciudades">
         <div class="dcard-bg bg-miami" data-bg="img/dest-miami.webp" role="img" aria-label="Skyline de Miami, Florida"></div>
         <div class="dcard-overlay"></div>
-        <div class="dcard-rating"><span aria-hidden="true">⭐</span> 4.7</div>
+        <div class="dcard-rating"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.7</div>
         <div class="dcard-body">
           <span class="dcard-emoji" aria-hidden="true">🌆</span>
           <div class="dcard-name">Miami</div>
@@ -754,7 +757,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <div class="dcard reveal" data-cat="ciudades luna-de-miel">
         <div class="dcard-bg bg-europa" data-bg="img/dest-europa.webp" role="img" aria-label="Ciudades y monumentos de Europa"></div>
         <div class="dcard-overlay"></div>
-        <div class="dcard-rating"><span aria-hidden="true">⭐</span> 5.0</div>
+        <div class="dcard-rating"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 5.0</div>
         <div class="dcard-body">
           <span class="dcard-emoji" aria-hidden="true">🗺</span>
           <div class="dcard-name">Europa</div>
@@ -765,7 +768,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <div class="dcard reveal" data-cat="cruceros familia">
         <div class="dcard-bg bg-cruceros" data-bg="img/dest-cruceros.webp" role="img" aria-label="Crucero en el mar Caribe"></div>
         <div class="dcard-overlay"></div>
-        <div class="dcard-rating"><span aria-hidden="true">⭐</span> 4.9</div>
+        <div class="dcard-rating"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.9</div>
         <div class="dcard-body">
           <span class="dcard-emoji" aria-hidden="true">🛳</span>
           <div class="dcard-name">Cruceros Caribe</div>
@@ -776,7 +779,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <div class="dcard reveal" data-cat="familia">
         <div class="dcard-bg bg-disney" data-bg="img/dest-disney.webp" role="img" aria-label="Parques de Disney en Orlando, Florida"></div>
         <div class="dcard-overlay"></div>
-        <div class="dcard-rating"><span aria-hidden="true">⭐</span> 4.8</div>
+        <div class="dcard-rating"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.8</div>
         <div class="dcard-body">
           <span class="dcard-emoji" aria-hidden="true">🎡</span>
           <div class="dcard-name">Disney / Orlando</div>
@@ -1096,7 +1099,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <a href="/blog/regresar-venezuela-desde-usa/" class="blog-card blog-card-vzla reveal" style="color:inherit">
         <div class="blog-card-img">
           <picture style="display:contents"><source srcset="/blog/regresar-venezuela-desde-usa/thumb.webp" type="image/webp"><img src="/blog/regresar-venezuela-desde-usa/thumb.jpg" alt="Ciudad colonial venezolana con arquitectura histórica al atardecer" loading="lazy" width="400" height="225"></picture>
-          <span class="blog-badge blog-badge-popular"><span aria-hidden="true">📌</span> Más leído</span>
+          <span class="blog-badge blog-badge-popular"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span> Más leído</span>
         </div>
         <div class="blog-card-body">
           <div class="blog-cat">Venezuela · Documentos</div>
@@ -1174,10 +1177,10 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <p>Cotización gratis · Respuesta en menos de 1 hora · Sin compromiso</p>
       <div class="cta-btns">
         <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noopener noreferrer" class="btn-white" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cta_main'})"><span aria-hidden="true">💬</span> Escribir por WhatsApp</a>
-        <a href="mailto:info@xploratrip.com" class="btn-outline" style="border-color:rgba(255,255,255,.3);color:#fff"><span aria-hidden="true">✉</span> info@xploratrip.com</a>
+        <a href="mailto:info@xploratrip.com" class="btn-outline" style="border-color:rgba(255,255,255,.3);color:#fff"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span> info@xploratrip.com</a>
       </div>
       <div class="cta-contact">
-        <div class="cta-contact-item"><span aria-hidden="true">📍</span> <a href="https://maps.google.com/?q=Plano,+Texas" target="_blank" rel="noopener noreferrer">Plano, Texas</a></div>
+        <div class="cta-contact-item"><span class="i-svg" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span> <a href="https://maps.google.com/?q=Plano,+Texas" target="_blank" rel="noopener noreferrer">Plano, Texas</a></div>
       </div>
       <div class="cta-socials">
         <a href="mailto:info@xploratrip.com" class="cta-social-btn">
