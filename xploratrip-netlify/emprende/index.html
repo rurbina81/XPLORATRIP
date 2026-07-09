@@ -72,7 +72,9 @@ html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
   --line:#e2e8f0;--radius:20px;--radius-sm:12px;
   --shadow:0 2px 20px rgba(11,29,58,.07);
   --shadow-hover:0 10px 40px rgba(11,29,58,.14);
-  --transition:all .25s cubic-bezier(.4,0,.2,1);
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-in-out:cubic-bezier(.77,0,.175,1);
+  --transition:transform .2s var(--ease-out),box-shadow .2s var(--ease-out),background-color .2s ease,color .2s ease,border-color .2s ease;
   --wa:#25d366;--wa-dk:#1da051;
 }
 body{background:var(--white);color:var(--txt2);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;overflow-x:hidden}
@@ -103,7 +105,15 @@ section{padding:88px 0}
 .nav-links a.active{color:var(--navy);font-weight:700;position:relative}
 .nav-links a.active::after{content:'';position:absolute;bottom:2px;left:14px;right:14px;height:2px;background:var(--gold2);border-radius:2px}
 .nav-cta{background:var(--gold2);color:var(--navy);font-size:14px;font-weight:700;padding:10px 22px;border-radius:999px;transition:var(--transition);white-space:nowrap}
+.nav-cta:active,.btn-wa-hero:active,.btn-wa-xl:active,.faq-q:active{transform:scale(.97)}
+@media(hover:hover) and (pointer:fine){
 .nav-cta:hover{background:var(--gold);transform:translateY(-1px);box-shadow:0 4px 16px rgba(234,190,72,.4)}
+.btn-wa-hero:hover{background:var(--wa-dk);transform:translateY(-2px);box-shadow:0 10px 32px rgba(37,211,102,.45)}
+.btn-wa-xl:hover{background:var(--wa-dk);transform:translateY(-2px)}
+.rec-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.gana-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:transparent}
+.wa-float:hover{background:var(--wa-dk);transform:translateY(-2px)}
+}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--navy)}
 .burger svg{width:24px;height:24px;display:block}
 .mob-menu{display:none;position:fixed;inset:0;z-index:500;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;transition:opacity .25s ease;overscroll-behavior:contain}
@@ -114,10 +124,35 @@ section{padding:88px 0}
 @media(max-width:760px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}
 .reveal.visible{opacity:1;transform:none}
 .reveal.d1{transition-delay:.1s}
 .reveal.d2{transition-delay:.2s}
+/* STAGGER: los grids se revelan tarjeta por tarjeta */
+.stagger{opacity:1!important;transform:none!important}
+.stagger>*{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}
+.stagger.visible>*{opacity:1;transform:none}
+.stagger.visible>*:nth-child(2){transition-delay:60ms}
+.stagger.visible>*:nth-child(3){transition-delay:120ms}
+.stagger.visible>*:nth-child(4){transition-delay:180ms}
+.stagger.visible>*:nth-child(5){transition-delay:240ms}
+.stagger.visible>*:nth-child(6){transition-delay:300ms}
+/* HERO: secuencia de entrada al cargar */
+@keyframes heroIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fcIn{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes fcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.hero .h-eyebrow,.hero h1,.hero .hero-sub,.hero .h-ctas,.hero .h-trust{opacity:0;animation:heroIn .6s var(--ease-out) forwards}
+.hero h1{animation-delay:.08s}
+.hero .hero-sub{animation-delay:.16s}
+.hero .h-ctas{animation-delay:.24s}
+.hero .h-trust{animation-delay:.32s}
+.float-card{opacity:0;animation:fcIn .5s var(--ease-out) forwards,fcFloat 6s ease-in-out infinite}
+.fc1{animation-delay:.55s,1.5s}
+.fc2{animation-delay:.68s,3.5s}
+.fc3{animation-delay:.8s,5.5s}
+/* ONE2TRIP: reveal con clip-path al entrar al viewport */
+.plat-grid .browser{clip-path:inset(0 0 100% 0);transition:clip-path .9s var(--ease-in-out) .15s}
+.plat-grid.visible .browser{clip-path:inset(0 0 0 0)}
 @media(prefers-reduced-motion:reduce){
   .reveal{transition:none!important;opacity:1!important;transform:none!important}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
@@ -133,7 +168,6 @@ h1{font-size:clamp(38px,4.8vw,60px);font-weight:800;letter-spacing:-.03em;line-h
 h1 .gold{color:var(--gold)}
 .hero-sub{font-size:17px;color:var(--txt2);max-width:520px;line-height:1.75;margin-bottom:30px}
 .btn-wa-hero{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;font-weight:800;font-size:16px;padding:17px 32px;border-radius:999px;transition:var(--transition);box-shadow:0 6px 24px rgba(37,211,102,.35)}
-.btn-wa-hero:hover{background:var(--wa-dk);transform:translateY(-2px);box-shadow:0 10px 32px rgba(37,211,102,.45)}
 .h-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px}
 .ht{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--txt3);font-weight:600}
 .ht-dot{width:7px;height:7px;border-radius:50%;background:var(--gold2);flex-shrink:0}
@@ -178,7 +212,6 @@ h1 .gold{color:var(--gold)}
 .recibes-sec{background:var(--bg)}
 .recibes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
 .rec-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:var(--transition)}
-.rec-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
 .rec-ico{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:var(--cyanbg);color:var(--cyan);margin-bottom:16px}
 .rec-card h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .rec-card p{font-size:14px;color:var(--txt3);line-height:1.65}
@@ -189,7 +222,6 @@ h1 .gold{color:var(--gold)}
 .ganas-sec{background:var(--white)}
 .ganas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
 .gana-card{border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;background:var(--white);position:relative;transition:var(--transition)}
-.gana-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:transparent}
 .gana-num{position:absolute;top:22px;right:22px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:38px;font-weight:800;color:var(--bg2);line-height:1}
 .gana-ico{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:var(--goldbg);color:var(--gold);margin-bottom:16px}
 .gana-card h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px}
@@ -271,12 +303,13 @@ h1 .gold{color:var(--gold)}
 /* FAQ */
 .faq-sec{background:var(--bg);border-top:1px solid var(--line)}
 .faq-list{max-width:760px;margin:40px auto 0;display:flex;flex-direction:column;gap:10px}
-.faq-item{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 0fr;transition:grid-template-rows .24s var(--ease-out)}
+.faq-item.open{grid-template-rows:auto 1fr}
 .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:none;border:none;padding:18px 24px;font-size:15px;font-weight:700;color:var(--navy);text-align:left;cursor:pointer;font-family:inherit}
 .faq-icon{font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .25s ease}
 .faq-item.open .faq-icon{transform:rotate(45deg)}
-.faq-a{padding:0 24px 20px;font-size:15px;color:var(--txt2);line-height:1.75;display:none}
-.faq-item.open .faq-a{display:block}
+.faq-a{padding:0 24px;font-size:15px;color:var(--txt2);line-height:1.75;overflow:hidden;min-height:0;opacity:0;transition:opacity .2s ease,padding .24s var(--ease-out)}
+.faq-item.open .faq-a{padding:0 24px 20px;opacity:1}
 
 /* CTA FINAL */
 .cta-sec{background:linear-gradient(160deg,var(--navy) 0%,#122a52 100%);position:relative;overflow:hidden}
@@ -287,7 +320,6 @@ h1 .gold{color:var(--gold)}
 .cta-box h2 span{color:var(--gold2)}
 .cta-box p{font-size:16.5px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:30px}
 .btn-wa-xl{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;font-weight:800;font-size:17px;padding:18px 38px;border-radius:999px;transition:var(--transition);box-shadow:0 8px 30px rgba(37,211,102,.4)}
-.btn-wa-xl:hover{background:var(--wa-dk);transform:translateY(-2px)}
 .trust-chips{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
 .chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.8);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:7px 15px;border-radius:999px}
 
@@ -312,8 +344,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
 .plat-sec .xt-brand,.cta-sec .xt-brand{color:#fff}
 
 /* WA FLOAT + COOKIES */
-.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:14px 20px;border-radius:999px;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s;font-family:inherit}
-.wa-float:hover{background:var(--wa-dk);transform:translateY(-2px)}
+.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:14px 20px;border-radius:999px;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s var(--ease-out),background-color .2s ease,bottom .3s ease;font-family:inherit}
 .wa-float svg{width:22px;height:22px;flex-shrink:0}
 .wa-label{font-size:14px;font-weight:700}
 @media(max-width:600px){.wa-float{bottom:80px;right:16px}}
@@ -408,7 +439,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
     <div class="stats-grid">
       <div><div class="st-num">2006</div><div class="st-lbl">Año de fundación del modelo</div></div>
       <div><div class="st-num" data-count="6">6</div><div class="st-lbl">Países con registro legal</div></div>
-      <div><div class="st-num" data-count="1" data-suffix="M+">1M+</div><div class="st-lbl">Clientes satisfechos en 5 continentes</div></div>
+      <div><div class="st-num">1M+</div><div class="st-lbl">Clientes satisfechos en 5 continentes</div></div>
       <div><div class="st-num" data-prefix="$" data-count="81">$81</div><div class="st-lbl">Inversión inicial para empezar</div></div>
     </div>
   </div>
@@ -422,7 +453,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
       <h2 class="sec-h">¿Y tú dónde te encuentras hoy?</h2>
       <p class="sec-sub tc">La mayoría cambia tiempo por dinero toda su vida. Los que construyen algo distinto eligen otro cuadrante.</p>
     </div>
-    <div class="donde-grid reveal d1">
+    <div class="donde-grid reveal d1 stagger">
       <div class="donde-card">
         <div class="dc-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <h3>Empleado</h3>
@@ -456,7 +487,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
       <h2 class="sec-h">Una franquicia digital llave en mano</h2>
       <p class="sec-sub tc">No partes de cero: recibes el negocio armado. Tu trabajo es moverlo — el sistema hace el resto.</p>
     </div>
-    <div class="recibes-grid reveal d1">
+    <div class="recibes-grid reveal d1 stagger">
       <div class="rec-card">
         <div class="rec-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
         <h3>Tu plataforma de reservas</h3>
@@ -499,7 +530,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
       <h2 class="sec-h">5 formas de generar ingresos</h2>
       <p class="sec-sub tc">Un mismo negocio, varias fuentes. Combinas las que van con tu estilo — vender viajes, construir comunidad, o ambas.</p>
     </div>
-    <div class="ganas-grid reveal d1">
+    <div class="ganas-grid reveal d1 stagger">
       <div class="gana-card">
         <span class="gana-num">1</span>
         <div class="gana-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
@@ -667,7 +698,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 28px}
       <div class="sec-ey">El camino</div>
       <h2 class="sec-h">Empiezas en 3 pasos</h2>
     </div>
-    <div class="pasos-grid reveal d1">
+    <div class="pasos-grid reveal d1 stagger">
       <div class="paso-card">
         <div class="paso-num">1</div>
         <h3>Escríbenos por WhatsApp</h3>
