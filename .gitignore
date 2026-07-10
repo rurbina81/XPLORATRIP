@@ -1,1 +1,33 @@
 .claude/
+
+# Espejos de skills que crea `npx skills add` para agentes que no usamos.
+# La copia canónica versionada es .agents/skills/ — el resto es duplicado.
+.adal/
+.augment/
+.bob/
+.codebuddy/
+.commandcode/
+.continue/
+.cortex/
+.crush/
+.factory/
+.goose/
+.iflow/
+.junie/
+.kilocode/
+.kiro/
+.kode/
+.mcpjam/
+.mux/
+.neovate/
+.openhands/
+.pi/
+.pochi/
+.qoder/
+.qwen/
+.roo/
+.trae/
+.vibe/
+.windsurf/
+.zencoder/
+agent/
