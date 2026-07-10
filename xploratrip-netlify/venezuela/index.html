@@ -384,6 +384,32 @@ footer{background:#060f1f;padding:60px 0 32px}
 .city-chip{font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);color:var(--txt2);cursor:pointer;font-family:inherit;transition:border-color .2s ease,background-color .2s ease,color .2s ease}
 .city-chip.on{border-color:var(--cyan);background:var(--cyanbg);color:var(--cyan)}
 
+/* COMPARADOR: tu documento decide tu ruta */
+.cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px;align-items:stretch}
+.cmp-card{position:relative;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:28px 26px;transition:var(--transition)}
+.cmp-card.featured{border:2px solid var(--gold2);box-shadow:0 14px 44px rgba(200,137,10,.16);background:linear-gradient(170deg,#fffdf5,#fff)}
+@media(min-width:861px){.cmp-card.featured{transform:translateY(-8px)}}
+.cmp-pill{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold2);color:var(--navy);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:5px 16px;border-radius:999px;white-space:nowrap}
+.cmp-badge{display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.cmp-cyan{background:var(--cyanbg);color:var(--cyan);border:1px solid rgba(8,145,178,.2)}
+.cmp-gold{background:var(--goldbg);color:var(--gold);border:1px solid rgba(200,137,10,.2)}
+.cmp-card h3{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.cmp-desc{font-size:13.5px;color:var(--txt3);line-height:1.55;margin-bottom:18px}
+.cmp-lbl{font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--txt3);margin-bottom:7px}
+.cmp-ruta{display:flex;gap:8px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13px;font-weight:600;color:var(--txt2);line-height:1.5;margin-bottom:18px}
+.cmp-ruta svg{flex-shrink:0;margin-top:3px;color:var(--cyan)}
+.cmp-card.featured .cmp-ruta svg{color:var(--gold)}
+.cmp-reqs{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0 0 18px;padding:0}
+.cmp-reqs li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--txt2);line-height:1.5}
+.cmp-chk{flex-shrink:0;margin-top:2px;color:var(--cyan)}
+.cmp-card.featured .cmp-chk{color:var(--gold)}
+.cmp-time{display:flex;gap:7px;align-items:center;font-size:12.5px;font-weight:700;color:var(--txt3);border-top:1px solid var(--line);padding-top:14px;margin-top:auto;margin-bottom:16px}
+.cmp-cta{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--wa);color:var(--wa-dk);background:var(--white);font-weight:800;font-size:14px;padding:13px 20px;border-radius:999px;transition:var(--transition)}
+.cmp-cta:hover{background:rgba(37,211,102,.08)}
+.cmp-cta.solid{background:var(--wa);color:#fff;border-color:var(--wa);box-shadow:0 6px 20px rgba(37,211,102,.3)}
+.cmp-cta.solid:hover{background:var(--wa-dk)}
+@media(max-width:860px){.cmp-grid{grid-template-columns:1fr;gap:24px}}
+
 /* auditoria jul 2026: paridad motion y a11y */
 html{-webkit-tap-highlight-color:transparent}
 a,button{touch-action:manipulation}
@@ -672,31 +698,49 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
 <section class="rutas-sec" id="rutas">
   <div class="w">
     <div class="reveal tc">
-      <div class="sec-ey">Opciones de vuelo</div>
-      <h2 class="sec-h">Rutas desde USA a Venezuela</h2>
-      <p class="sec-sub tc">Distintas opciones según tu ciudad de salida y tu documento. Encontramos la que te funciona.</p>
+      <div class="sec-ey">Compara tu caso</div>
+      <h2 class="sec-h">Tu documento decide tu ruta</h2>
+      <p class="sec-sub tc">Tres puntos de partida, tres caminos distintos — todos llegan a Venezuela.</p>
     </div>
-    <div class="rutas-grid reveal d1 stagger">
-      <div class="ruta-card">
-        <div class="ruta-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22h20"/><path d="M6.36 17.4 4 17l-2-4 1.1-.55a2 2 0 0 1 1.8 0l.17.1a2 2 0 0 0 1.8 0L8 12 5 6l.9-.45a2 2 0 0 1 2.09.2l4.02 3a2 2 0 0 0 2.1.2l4.19-2.06a2.41 2.41 0 0 1 1.73-.17L21 7a1.4 1.4 0 0 1 .87 1.99l-.38.76c-.23.46-.6.84-1.07 1.08L7.58 17.2a2 2 0 0 1-1.22.18Z"/></svg></div>
-        <h4>Vuelo directo</h4>
-        <p>Rutas desde Miami, Nueva York, Houston y otras ciudades directamente a Venezuela. Ideal con pasaporte vigente.</p>
-        <span class="ruta-tag rt-cyan">Pasaporte vigente</span>
+    <div class="cmp-grid reveal d1 stagger">
+      <div class="cmp-card">
+        
+        <span class="cmp-badge cmp-cyan">Ruta directa</span>
+        <h3>Pasaporte vigente</h3>
+        <p class="cmp-desc">El documento en regla — solo falta la ruta correcta al mejor precio.</p>
+        <div class="cmp-lbl">Tu ruta</div>
+        <div class="cmp-ruta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span>Tu ciudad en USA → Venezuela, en vuelo directo o con escala</span></div>
+        <div class="cmp-lbl">Requisitos</div>
+        <ul class="cmp-reqs"><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pasaporte vigente</li><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Boleto aéreo</li><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Nada más — nosotros hacemos el resto</li></ul>
+        <div class="cmp-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Sales en días, según disponibilidad</span></div>
+        <a class="cmp-cta" href="https://wha.link/dyPRzb" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cmp_vigente'})">💬 Cotizar mi vuelo</a>
       </div>
-      <div class="ruta-card">
-        <div class="ruta-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
-        <h4>Ruta con escala</h4>
-        <p>Conexión en Bogotá, Panamá, Lima u otras ciudades. Amplía las opciones y puede ser viable con diferentes documentos.</p>
-        <span class="ruta-tag rt-gold">Varias situaciones</span>
+      <div class="cmp-card">
+        
+        <span class="cmp-badge cmp-gold">Caso por caso</span>
+        <h3>Pasaporte vencido</h3>
+        <p class="cmp-desc">Algunas aerolíneas aceptan el retorno con pasaporte vencido.</p>
+        <div class="cmp-lbl">Tu ruta</div>
+        <div class="cmp-ruta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span>Tu ciudad → escala selectiva (Bogotá, Panamá…) → Venezuela</span></div>
+        <div class="cmp-lbl">Requisitos</div>
+        <ul class="cmp-reqs"><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pasaporte, aunque esté vencido</li><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cédula venezolana (recomendable)</li><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Evaluamos el tiempo de vencimiento</li></ul>
+        <div class="cmp-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>1–2 semanas para confirmar tu ruta</span></div>
+        <a class="cmp-cta" href="https://wha.link/dyPRzb" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cmp_vencido'})">💬 Evaluar mi pasaporte</a>
       </div>
-      <div class="ruta-card">
-        <div class="ruta-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M15 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
-        <h4>Ruta con Salvoconducto</h4>
-        <p>Aerolíneas y rutas específicas que aceptan el Salvoconducto Online como documento válido de viaje.</p>
-        <span class="ruta-tag rt-cyan">Con Salvoconducto</span>
+      <div class="cmp-card featured">
+        <span class="cmp-pill">El más solicitado</span>
+        <span class="cmp-badge cmp-gold">Documento de Viaje</span>
+        <h3>Solo cédula</h3>
+        <p class="cmp-desc">Tramitamos tu Documento de Viaje MPPRE y volamos con él.</p>
+        <div class="cmp-lbl">Tu ruta</div>
+        <div class="cmp-ruta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span>Trámite MPPRE en línea → ruta que acepta salvoconducto → Venezuela</span></div>
+        <div class="cmp-lbl">Requisitos</div>
+        <ul class="cmp-reqs"><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cédula (puede estar vencida)</li><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Justificativo del motivo de retorno</li><li><svg class="cmp-chk" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Datos de contacto en Venezuela</li></ul>
+        <div class="cmp-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>2–6 semanas de trámite + el vuelo</span></div>
+        <a class="cmp-cta solid" href="https://wha.link/dyPRzb" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cmp_cedula'})">💬 Iniciar mi trámite</a>
       </div>
     </div>
-    <p style="text-align:center;margin-top:24px;font-size:14px;color:var(--txt3)" class="reveal">Las rutas disponibles cambian según temporada y aerolínea. <strong style="color:var(--cyan)">Te cotizamos la opción exacta para tu caso, sin costo.</strong></p>
+    <p style="text-align:center;margin-top:26px;font-size:14px;color:var(--txt3)" class="reveal">¿Sin ningún documento? También hay camino. <a href="https://wha.link/dyPRzb" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:700" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cmp_sindoc'})">Cuéntanos tu caso →</a> · Las rutas cambian según temporada y aerolínea — <strong style="color:var(--cyan)">te cotizamos la opción exacta sin costo.</strong></p>
   </div>
 </section>
 
