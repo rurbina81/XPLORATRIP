@@ -290,24 +290,30 @@ nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit
 .paso h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .paso p{font-size:14px;color:var(--txt3);line-height:1.65;max-width:240px;margin:0 auto}
 
-/* ── TESTIMONIOS ─────────────────── */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
-.testi-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:32px;transition:var(--transition)}
-.testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:transparent}
-.testi-stars{color:var(--gold2);font-size:15px;letter-spacing:2px;margin-bottom:16px}
-.testi-quote{font-size:15px;color:var(--txt2);line-height:1.75;font-style:italic;margin-bottom:24px}
-.testi-author{display:flex;align-items:center;gap:12px}
-.testi-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--white);flex-shrink:0}
-.av1{background:linear-gradient(135deg,var(--gold2),#f59e0b)}
-.av2{background:linear-gradient(135deg,var(--cyan2),#0891b2)}
-.av3{background:linear-gradient(135deg,#7b2d8b,#c77dff)}
-.testi-name{font-size:14px;font-weight:700;color:var(--navy)}
-.testi-trip{font-size:12px;color:var(--txt3)}
-.testi-source{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:14px}
-.testi-source-google{background:#f8f9fa;color:#5f6368;border:1px solid #e8eaed}
-.testi-source-google::before{content:'G';font-weight:900;color:#4285f4;font-size:12px}
-.testi-source-wa{background:#e7f7ee;color:#128c7e;border:1px solid #b7dfca}
-.testi-source-wa::before{content:'💬';font-size:10px}
+/* ── MURO DE TESTIMONIOS (estilo dcard) ─────────────────── */
+.twall-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;grid-template-rows:260px 260px;gap:18px;margin-top:56px}
+.twall-video{grid-column:1;grid-row:1/3;position:relative;border-radius:var(--radius);overflow:hidden;background:#0f172a;box-shadow:var(--shadow);transition:var(--transition)}
+.twall-video:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.twall-video video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+.twall-vbadge{position:absolute;top:14px;left:14px;z-index:2;display:inline-flex;align-items:center;gap:6px;background:rgba(11,29,58,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:999px}
+.twall-vbadge .dot{width:6px;height:6px;border-radius:50%;background:#ef4444;animation:twpulse 1.8s ease-in-out infinite}
+@keyframes twpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.twall-vcap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;background:linear-gradient(to top,rgba(11,29,58,.92) 0%,rgba(11,29,58,.55) 55%,transparent 100%);color:#fff;pointer-events:none}
+.twall-vname{font-size:16px;font-weight:800;letter-spacing:-.2px}
+.twall-vtrip{font-size:12.5px;color:rgba(255,255,255,.8);margin-top:2px}
+.twall-card{position:relative;border-radius:var(--radius);overflow:hidden;cursor:default;transition:opacity .25s ease,transform .25s ease,box-shadow .25s ease}
+.twall-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.twall-card:nth-child(4){grid-column:2/4;grid-row:2}
+.twall-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 6s ease}
+.twall-card:hover .twall-bg{transform:scale(1.08)}
+.twall-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,29,58,.9) 0%,rgba(11,29,58,.45) 55%,rgba(11,29,58,.1) 100%)}
+.twall-rating{position:absolute;top:14px;right:14px;z-index:2;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:4px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.twall-source{position:absolute;top:14px;left:14px;z-index:2;font-size:10.5px;font-weight:700;color:#fff;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:4px 11px;border-radius:999px}
+.twall-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;color:#fff}
+.twall-quote{font-size:13.5px;line-height:1.55;margin-bottom:14px}
+.twall-name{font-size:15px;font-weight:800;letter-spacing:-.2px}
+.twall-trip{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
+@media(max-width:900px){.twall-grid{grid-template-columns:1fr;grid-template-rows:none}.twall-video{grid-column:1;grid-row:auto;aspect-ratio:9/12}.twall-card{aspect-ratio:5/4}.twall-card:nth-child(4){grid-column:1;grid-row:auto}}
 
 /* ── CTA FINAL ─────────────────────── */
 .cta-section{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:100px 0;text-align:center;position:relative;overflow:hidden}
@@ -407,7 +413,6 @@ footer{background:#060f1f;padding:60px 0 32px}
   .burger{display:flex}
   .hero h1{letter-spacing:-1.5px}
   .dest-grid{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
   .proceso-grid{grid-template-columns:1fr;gap:40px}
   .proceso-grid::before{display:none}
   .vzla-cards{grid-template-columns:1fr}
@@ -1041,41 +1046,49 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <h2 class="section-title">Lo que dicen quienes<br>viajaron con nosotros</h2>
       <p class="section-sub" style="margin:14px auto 0">⭐ 4.9 promedio · Reseñas verificadas en Google · <a href="https://maps.google.com/?q=XploraTrip+Plano+TX" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;font-weight:600">Ver reseñas →</a></p>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <span class="testi-source testi-source-google">Google</span>
-        <div class="testi-stars" aria-hidden="true">★★★★★</div>
-        <p class="testi-quote">"Organizaron nuestra luna de miel en Cancún perfectamente. Reservamos en 2 días y todo llegó confirmado. Desde el vuelo hasta el resort en orden, respondieron cada duda al instante por WhatsApp."</p>
-        <div class="testi-author">
-          <div class="testi-avatar av1" aria-hidden="true">M</div>
-          <div>
-            <div class="testi-name">María G.</div>
-            <div class="testi-trip">Luna de miel · Cancún</div>
-          </div>
+    <div class="twall-grid">
+      <div class="twall-video reveal">
+        <span class="twall-vbadge"><span class="dot" aria-hidden="true"></span> Historia real</span>
+        <video controls preload="none" playsinline poster="/venezuela/testimonio-wilmer-poster.jpg" aria-label="Video testimonio de Wilmer Polanco llegando al aeropuerto de Maiquetía">
+          <source src="/venezuela/testimonio-wilmer.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="twall-vcap">
+          <div class="twall-vname">Wilmer Polanco</div>
+          <div class="twall-vtrip">Dallas → Caracas → Maracaibo · Salvoconducto gestionado</div>
         </div>
       </div>
-      <div class="testi-card reveal">
-        <span class="testi-source testi-source-google">Google</span>
-        <div class="testi-stars" aria-hidden="true">★★★★★</div>
-        <p class="testi-quote">"Viajamos en familia a Disney y todo salió perfecto. Ahorramos más de $400 comparado con lo que encontramos solos en internet. El paquete incluía hotel, tickets y traslados — la mejor inversión."</p>
-        <div class="testi-author">
-          <div class="testi-avatar av2" aria-hidden="true">C</div>
-          <div>
-            <div class="testi-name">Carlos R.</div>
-            <div class="testi-trip">Viaje familiar · Orlando</div>
-          </div>
+      <div class="twall-card reveal">
+        <div class="twall-bg" data-bg="img/dest-cancun.webp" role="img" aria-label="Zona hotelera de Cancún, México"></div>
+        <div class="twall-overlay"></div>
+        <span class="twall-source">Google</span>
+        <div class="twall-rating"><span class="i-svg" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 5.0</div>
+        <div class="twall-body">
+          <p class="twall-quote">"Organizaron nuestra luna de miel en Cancún perfectamente. Reservamos en 2 días y todo llegó confirmado."</p>
+          <div class="twall-name">María G.</div>
+          <div class="twall-trip">Luna de miel · Cancún</div>
         </div>
       </div>
-      <div class="testi-card reveal">
-        <span class="testi-source testi-source-wa">WhatsApp</span>
-        <div class="testi-stars" style="color:var(--gold2)" aria-hidden="true">★★★★<span style="color:#d1d5db">★</span></div>
-        <p class="testi-quote">"Me cotizaron el crucero en menos de una hora con varias opciones y precio real. Escogí el que más me convenía y en dos semanas ya estaba a bordo. Sin trucos, sin letra pequeña."</p>
-        <div class="testi-author">
-          <div class="testi-avatar av3" aria-hidden="true">A</div>
-          <div>
-            <div class="testi-name">Ana P.</div>
-            <div class="testi-trip">Crucero · Caribe</div>
-          </div>
+      <div class="twall-card reveal">
+        <div class="twall-bg" data-bg="img/dest-disney.webp" role="img" aria-label="Castillo de Cenicienta en Disney World, Orlando"></div>
+        <div class="twall-overlay"></div>
+        <span class="twall-source">Google</span>
+        <div class="twall-rating"><span class="i-svg" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.9</div>
+        <div class="twall-body">
+          <p class="twall-quote">"Viajamos en familia a Disney y todo salió perfecto. Ahorramos más de $400 versus buscar por nuestra cuenta."</p>
+          <div class="twall-name">Carlos R.</div>
+          <div class="twall-trip">Viaje familiar · Orlando</div>
+        </div>
+      </div>
+      <div class="twall-card reveal">
+        <div class="twall-bg" data-bg="img/dest-cruceros.webp" role="img" aria-label="Crucero navegando el Caribe"></div>
+        <div class="twall-overlay"></div>
+        <span class="twall-source">WhatsApp</span>
+        <div class="twall-rating"><span class="i-svg" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> 4.8</div>
+        <div class="twall-body">
+          <p class="twall-quote">"Me cotizaron el crucero en menos de una hora con varias opciones y precio real. En dos semanas ya estaba a bordo — sin trucos, sin letra pequeña."</p>
+          <div class="twall-name">Ana P.</div>
+          <div class="twall-trip">Crucero · Caribe</div>
         </div>
       </div>
     </div>
@@ -1353,6 +1366,17 @@ document.querySelectorAll('.dcard').forEach(function(c){
     entries.forEach(function(e){if(e.isIntersecting){e.target.style.backgroundImage='url('+e.target.dataset.bg+')';io.unobserve(e.target);}});
   },{rootMargin:'200px'});
   dbs.forEach(function(d){io.observe(d);});
+})();
+
+// Lazy load testimonial wall background images
+(function(){
+  var tbs=document.querySelectorAll('.twall-bg[data-bg]');
+  if(!tbs.length)return;
+  if(!('IntersectionObserver' in window)){tbs.forEach(function(d){d.style.backgroundImage='url('+d.dataset.bg+')';});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.style.backgroundImage='url('+e.target.dataset.bg+')';io.unobserve(e.target);}});
+  },{rootMargin:'200px'});
+  tbs.forEach(function(d){io.observe(d);});
 })();
 
 // Hamburger
