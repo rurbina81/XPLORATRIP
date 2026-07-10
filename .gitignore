@@ -31,3 +31,9 @@
 .windsurf/
 .zencoder/
 agent/
+
+# Salidas regenerables de proyectos de video HyperFrames
+videos/*/renders/
+videos/*/capture/
+videos/*/snapshots/
+videos/*/node_modules/

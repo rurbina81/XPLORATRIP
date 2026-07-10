@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>01-hook — Volvieron los directos</title>
+    <!-- head is metadata only; the runtime clones <template> contents exclusively -->
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: "Inter";
+          src: url("assets/fonts/inter-400.woff2") format("woff2");
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        /* Root styled via #root — never a class on the data-composition-id element */
+        #root {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1080px;
+          height: 1920px;
+          overflow: hidden;
+          font-family: "Inter", sans-serif;
+        }
+
+        .clip {
+          position: absolute;
+        }
+
+        /* ---- Layer 1: full-bleed ground (on a clip, never on #root) ---- */
+        #hook-bg {
+          inset: 0;
+          background: #0b1d3a;
+          isolation: isolate;
+        }
+        .sky {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 60%;
+          filter: grayscale(1) brightness(0.6) contrast(1.05);
+          will-change: transform;
+        }
+        .tint {
+          position: absolute;
+          inset: 0;
+          background: #0b1d3a;
+          mix-blend-mode: color;
+        }
+        .veil {
+          position: absolute;
+          inset: 0;
+          background: #0b1d3a;
+          opacity: 0.65;
+        }
+
+        /* ---- Layer 3: kinetic type — one shared seat, tokens swap in place ---- */
+        .beat {
+          top: 560px;
+          left: 54px;
+          right: 54px;
+          height: 320px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .beat-word {
+          font-weight: 400;
+          color: #ffffff;
+          text-transform: uppercase;
+          line-height: 0.95;
+          letter-spacing: 0.035em;
+          white-space: nowrap;
+          text-align: center;
+          will-change: transform;
+        }
+        #hook-w1 {
+          font-size: 165px;
+        }
+        #hook-w2 {
+          font-size: 150px;
+        }
+        #hook-w3 {
+          font-size: 178px;
+        }
+
+        /* ---- Payoff: MIAMI → CARACAS in gold, arrow drawn between the cities ---- */
+        #hook-payoff {
+          top: 420px;
+          left: 54px;
+          right: 54px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          will-change: transform;
+        }
+        .payoff-word {
+          font-weight: 400;
+          font-size: 150px;
+          line-height: 0.95;
+          color: #eabe48;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          white-space: nowrap;
+        }
+        #hook-city-a {
+          align-self: flex-start;
+        }
+        #hook-city-b {
+          align-self: flex-end;
+        }
+        .arrow-svg {
+          display: block;
+          width: 100%;
+          height: 140px;
+        }
+        .arrow-svg path {
+          fill: none;
+          stroke: #eabe48;
+          stroke-width: 14;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+      </style>
+
+      <div
+        id="root"
+        data-composition-id="01-hook"
+        data-width="1080"
+        data-height="1920"
+        data-duration="4"
+      >
+        <!-- 3 capas: skyline / veladura navy / tipografía -->
+        <div id="hook-bg" class="clip" data-start="0" data-duration="4" data-track-index="0">
+          <img id="hook-sky" class="sky" src="assets/skyline-de-miami-florida.webp" alt="" />
+          <div class="tint"></div>
+          <div id="hook-veil" class="veil"></div>
+        </div>
+
+        <!-- Scene 1 (0.0–0.9s): "VOLVIERON" — window boundary IS the hard snap -->
+        <div id="hook-b1" class="clip beat" data-start="0" data-duration="0.9" data-track-index="1">
+          <div id="hook-w1" class="beat-word">VOLVIERON</div>
+        </div>
+
+        <!-- Scene 2 (0.9–1.8s): in-place token swap, same seat -->
+        <div id="hook-b2" class="clip beat" data-start="0.9" data-duration="0.9" data-track-index="1">
+          <div id="hook-w2" class="beat-word">LOS VUELOS</div>
+        </div>
+
+        <!-- Scene 3 (1.8–2.6s): "DIRECTOS" — the heaviest beat -->
+        <div id="hook-b3" class="clip beat" data-start="1.8" data-duration="0.8" data-track-index="1">
+          <div id="hook-w3" class="beat-word">DIRECTOS</div>
+        </div>
+
+        <!-- Scene 4 (2.6–4.0s): payoff spring-pop, gold, arrow draws left→right -->
+        <div id="hook-payoff" class="clip" data-start="2.6" data-duration="1.4" data-track-index="1">
+          <div id="hook-city-a" class="payoff-word">MIAMI</div>
+          <svg class="arrow-svg" viewBox="0 0 972 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- dash lengths hardcoded (measured geometry + ~2% margin) so the initial
+                 hidden state is pure static markup — no runtime measurement needed -->
+            <path
+              id="hook-arrow-shaft"
+              d="M 20 70 L 880 70"
+              style="stroke-dasharray: 880; stroke-dashoffset: 880"
+            />
+            <path
+              id="hook-arrow-head"
+              d="M 810 22 L 892 70 L 810 118"
+              style="stroke-dasharray: 200; stroke-dashoffset: 200"
+            />
+          </svg>
+          <div id="hook-city-b" class="payoff-word">CARACAS</div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        // Macro move underneath: slow skyline push that decelerates into stillness
+        // by 3.5s, so the final held read is fully quiet.
+        tl.fromTo(
+          "#hook-sky",
+          { scale: 1 },
+          { scale: 1.05, duration: 3.5, ease: "power1.out" },
+          0
+        );
+
+        // Scene 1 (0.0–0.9): "VOLVIERON" snaps in on its clip window; micro-settle.
+        tl.fromTo(
+          "#hook-w1",
+          { scale: 1.09 },
+          { scale: 1, duration: 0.38, ease: "power3.out" },
+          0
+        );
+
+        // Scene 2 (0.9–1.8): hard cut in the same seat (window boundary);
+        // micro-settle on scale (transform-only — the tracking holds its
+        // final value statically; letterSpacing reflows and snaps under seek).
+        tl.fromTo(
+          "#hook-w2",
+          { scale: 1.06 },
+          { scale: 1, duration: 0.5, ease: "power2.out" },
+          0.9
+        );
+
+        // Scene 3 (1.8–2.6): heaviest beat — scale 1.15 → 1.0 on power3.
+        tl.fromTo(
+          "#hook-w3",
+          { scale: 1.15 },
+          { scale: 1, duration: 0.6, ease: "power3.out" },
+          1.8
+        );
+        // The skyline lifts its brightness one step, a beat behind the cut.
+        tl.fromTo(
+          "#hook-veil",
+          { opacity: 0.65 },
+          { opacity: 0.47, duration: 0.5, ease: "power2.out" },
+          2.05
+        );
+
+        // Scene 4 (2.6–4.0): payoff spring-pop — falls to center, smooth
+        // long-tail settle (power3, no overshoot).
+        tl.fromTo(
+          "#hook-payoff",
+          { y: -130, scale: 0.92 },
+          { y: 0, scale: 1, duration: 0.55, ease: "power3.out" },
+          2.6
+        );
+        tl.fromTo(
+          "#hook-payoff",
+          { opacity: 0 },
+          { opacity: 1, duration: 0.22, ease: "power1.out" },
+          2.6
+        );
+
+        // The "→" draws left→right as a stroke crossing between both cities.
+        tl.fromTo(
+          "#hook-arrow-shaft",
+          { strokeDashoffset: 880 },
+          { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" },
+          2.95
+        );
+        tl.fromTo(
+          "#hook-arrow-head",
+          { strokeDashoffset: 200 },
+          { strokeDashoffset: 0, duration: 0.26, ease: "power2.out" },
+          3.32
+        );
+        // 3.58 → 4.0: held read, total stillness. No exit — the root transition owns it.
+
+        window.__timelines["01-hook"] = tl;
+      </script>
+    </template>
+  </body>
+</html>
