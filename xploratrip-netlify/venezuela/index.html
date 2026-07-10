@@ -51,12 +51,14 @@
       "@type": "FAQPage",
       "@id": "https://www.xploratrip.com/venezuela/#faq",
       "mainEntity": [
-        {"@type":"Question","name":"¿Puedo viajar a Venezuela con pasaporte vencido?","acceptedAnswer":{"@type":"Answer","text":"Depende de cuánto tiempo lleva vencido y de la aerolínea. Algunas permiten el ingreso a Venezuela con pasaporte vencido para ciudadanos en retorno. Evaluamos tu caso específico y te decimos qué opciones tienes antes de que tomes cualquier decisión."}},
-        {"@type":"Question","name":"¿Cuánto tiempo tarda el trámite del Documento de Viaje?","acceptedAnswer":{"@type":"Answer","text":"El tiempo varía según el volumen de solicitudes del MPPRE (Cancillería venezolana). El trámite se realiza en línea a través del portal oficial documentodeviaje.mppre.gob.ve. En condiciones normales puede tardar entre 2 y 6 semanas. Casos humanitarios urgentes pueden procesarse más rápido."}},
-        {"@type":"Question","name":"¿Atienden familias con diferentes tipos de documentos?","acceptedAnswer":{"@type":"Answer","text":"Sí. Atendemos grupos familiares donde cada miembro tiene una situación documental diferente. Coordinamos para que todos viajen juntos o en la combinación más conveniente."}},
-        {"@type":"Question","name":"¿Puedo llegar a ciudades distintas a Caracas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Gestionamos rutas a Caracas (Maiquetía), Maracaibo, Valencia, Barcelona, Barquisimeto y otras ciudades."}},
-        {"@type":"Question","name":"¿Cobran por la asesoría inicial?","acceptedAnswer":{"@type":"Answer","text":"No. La primera consulta para evaluar tu situación documental y orientarte es completamente gratuita. Solo pagas cuando decides avanzar con el trámite o la reserva de tiquetes."}},
-        {"@type":"Question","name":"¿Desde qué ciudades de USA pueden ayudarme a regresar a Venezuela?","acceptedAnswer":{"@type":"Answer","text":"Desde cualquier ciudad de los Estados Unidos — Miami, Houston, Nueva York, Dallas, Los Ángeles, Orlando, Atlanta, Chicago y más."}}
+        {"@type":"Question","name":"¿Qué es el DEV y cuándo lo necesito?","acceptedAnswer":{"@type":"Answer","text":"El DEV (Documento de Viaje) es el documento que emite el MPPRE (Cancillería venezolana) para venezolanos que quieren regresar sin pasaporte vigente. Lo necesitas si tu pasaporte está vencido hace mucho tiempo, lo perdiste, o solo tienes cédula. Te acompañamos en todo el trámite."}},
+        {"@type":"Question","name":"¿Cuánto tarda el trámite del DEV?","acceptedAnswer":{"@type":"Answer","text":"En condiciones normales, entre 2 y 6 semanas desde que se envía la solicitud en el portal oficial documentodeviaje.mppre.gob.ve. El tiempo depende del volumen de solicitudes del MPPRE. Casos humanitarios urgentes pueden procesarse más rápido — te asesoramos para que tu solicitud esté completa desde el primer intento."}},
+        {"@type":"Question","name":"¿El DEV sirve para entrar y salir de Venezuela?","acceptedAnswer":{"@type":"Answer","text":"El DEV está diseñado para autorizar tu ingreso a Venezuela cuando no tienes pasaporte vigente — no reemplaza al pasaporte para salir del país nuevamente. Si planeas regresar a USA después, te explicamos qué necesitas para ese segundo tramo según tu situación migratoria."}},
+        {"@type":"Question","name":"¿Mi hijo nacido en USA necesita documento venezolano para viajar?","acceptedAnswer":{"@type":"Answer","text":"En general, un menor nacido en USA puede viajar a Venezuela con su pasaporte americano vigente, igual que cualquier ciudadano de EE.UU. No es obligatorio tramitarle documentos venezolanos para el viaje. Si además quieres que la Cancillería lo reconozca como venezolano por ser hijo de venezolanos, es un trámite aparte y voluntario — te explicamos las dos rutas en tu consulta."}},
+        {"@type":"Question","name":"¿Puedo inscribir a mi hijo como venezolano antes del viaje?","acceptedAnswer":{"@type":"Answer","text":"Sí. Venezuela reconoce como venezolanos a los hijos de padre o madre venezolana nacidos en el exterior. La inscripción se hace ante un consulado venezolano y no es un requisito para viajar — es una decisión de la familia sobre la nacionalidad del menor a futuro. Te orientamos sobre el proceso si te interesa."}},
+        {"@type":"Question","name":"¿Necesita visa un menor con pasaporte americano para entrar a Venezuela?","acceptedAnswer":{"@type":"Answer","text":"Los ciudadanos de Estados Unidos, incluyendo menores, generalmente no necesitan visa para estadías cortas como turistas en Venezuela. Te recomendamos confirmar los requisitos vigentes antes de tu viaje, ya que las políticas de entrada pueden cambiar — revisamos esto contigo en la asesoría."}},
+        {"@type":"Question","name":"¿Hay vuelos directos a Venezuela desde USA?","acceptedAnswer":{"@type":"Answer","text":"Sí, existen rutas directas desde ciudades como Miami hacia Caracas y otros destinos, aunque la disponibilidad cambia según temporada y aerolínea. Si no hay vuelo directo desde tu ciudad, buscamos la mejor conexión — usualmente vía Bogotá, Panamá o Miami."}},
+        {"@type":"Question","name":"¿Cuánto dura un vuelo directo a Venezuela?","acceptedAnswer":{"@type":"Answer","text":"Un vuelo directo desde Miami a Caracas toma aproximadamente 3 horas y media a 4 horas. Desde otras ciudades de USA, el tiempo total depende de si hay escala. Te damos el itinerario exacto cuando cotizamos tu ruta."}}
       ]
     },
     {
@@ -383,6 +385,9 @@ footer{background:#060f1f;padding:60px 0 32px}
 .dg-cities-lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3);margin:14px 0 8px;display:block}
 .city-chip{font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);color:var(--txt2);cursor:pointer;font-family:inherit;transition:border-color .2s ease,background-color .2s ease,color .2s ease}
 .city-chip.on{border-color:var(--cyan);background:var(--cyanbg);color:var(--cyan)}
+
+.faq-qtext{display:flex;flex-wrap:wrap;align-items:center;gap:10px;text-align:left}
+.faq-cat{flex-shrink:0;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 
 /* COMPARADOR: tu documento decide tu ruta */
 .cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px;align-items:stretch}
@@ -782,31 +787,64 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <h2 class="sec-h">Preguntas frecuentes</h2>
       <p class="sec-sub tc">Si tu pregunta no está aquí, escríbenos — te respondemos hoy.</p>
     </div>
-    <div class="faq-list reveal d1">
+    <div class="faq-list reveal d1 stagger">
       <div class="faq-item">
-        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-1">¿Puedo viajar a Venezuela con pasaporte vencido?<span class="faq-icon">+</span></button>
-        <div class="faq-a" aria-hidden="true" id="faq-a-1">Depende de cuánto tiempo lleva vencido y de la aerolínea. Algunas permiten el ingreso a Venezuela con pasaporte vencido para ciudadanos en retorno. Evaluamos tu caso específico y te decimos qué opciones tienes antes de que tomes cualquier decisión.</div>
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-1">
+          <span class="faq-qtext"><span class="faq-cat cmp-cyan">DEV</span>¿Qué es el DEV y cuándo lo necesito?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-1">El DEV (Documento de Viaje) es el documento que emite el MPPRE (Cancillería venezolana) para venezolanos que quieren regresar sin pasaporte vigente. Lo necesitas si tu pasaporte está vencido hace mucho tiempo, lo perdiste, o solo tienes cédula. Te acompañamos en todo el trámite.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-2">¿Cuánto tiempo tarda el trámite del Documento de Viaje?<span class="faq-icon">+</span></button>
-        <div class="faq-a" aria-hidden="true" id="faq-a-2">El tiempo varía según el volumen de solicitudes del MPPRE (Cancillería venezolana) y la completitud de tu documentación. El trámite se realiza en línea a través del portal oficial documentodeviaje.mppre.gob.ve. En condiciones normales puede tardar entre 2 y 6 semanas. Casos humanitarios urgentes pueden procesarse más rápido. Te asesoramos para que la solicitud esté correcta desde el primer intento y no haya retrasos evitables.</div>
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-2">
+          <span class="faq-qtext"><span class="faq-cat cmp-cyan">DEV</span>¿Cuánto tarda el trámite del DEV?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-2">En condiciones normales, entre 2 y 6 semanas desde que se envía la solicitud en el portal oficial documentodeviaje.mppre.gob.ve. El tiempo depende del volumen de solicitudes del MPPRE. Casos humanitarios urgentes pueden procesarse más rápido — te asesoramos para que tu solicitud esté completa desde el primer intento.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-3">¿Atienden familias con diferentes tipos de documentos?<span class="faq-icon">+</span></button>
-        <div class="faq-a" aria-hidden="true" id="faq-a-3">Sí. Atendemos grupos familiares donde cada miembro tiene una situación documental diferente — por ejemplo, padre con pasaporte vigente, madre con pasaporte vencido e hijos con cédula. Coordinamos para que todos viajen juntos o en la combinación más conveniente.</div>
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-3">
+          <span class="faq-qtext"><span class="faq-cat cmp-cyan">DEV</span>¿El DEV sirve para entrar y salir de Venezuela?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-3">El DEV está diseñado para autorizar tu ingreso a Venezuela cuando no tienes pasaporte vigente — no reemplaza al pasaporte para salir del país nuevamente. Si planeas regresar a USA después, te explicamos qué necesitas para ese segundo tramo según tu situación migratoria.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-4">¿Puedo llegar a ciudades distintas a Caracas?<span class="faq-icon">+</span></button>
-        <div class="faq-a" aria-hidden="true" id="faq-a-4">Sí. Gestionamos rutas a Caracas (Maiquetía), Maracaibo, Valencia, Barcelona, Barquisimeto y otras ciudades, dependiendo de las opciones disponibles. Si necesitas llegar a un destino interior, también coordinamos transporte terrestre o vuelo doméstico desde el aeropuerto de llegada.</div>
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-4">
+          <span class="faq-qtext"><span class="faq-cat cmp-gold">Menores</span>¿Mi hijo nacido en USA necesita documento venezolano para viajar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-4">En general, un menor nacido en USA puede viajar a Venezuela con su pasaporte americano vigente, igual que cualquier ciudadano de EE.UU. No es obligatorio tramitarle documentos venezolanos para el viaje. Si además quieres que la Cancillería lo reconozca como venezolano por ser hijo de venezolanos, es un trámite aparte y voluntario — te explicamos las dos rutas en tu consulta.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-5">¿Cobran por la asesoría inicial?<span class="faq-icon">+</span></button>
-        <div class="faq-a" aria-hidden="true" id="faq-a-5">No. La primera consulta para evaluar tu situación documental y orientarte es completamente gratuita. Solo pagas cuando decides avanzar con el trámite o la reserva de tiquetes.</div>
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-5">
+          <span class="faq-qtext"><span class="faq-cat cmp-gold">Menores</span>¿Puedo inscribir a mi hijo como venezolano antes del viaje?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-5">Sí. Venezuela reconoce como venezolanos a los hijos de padre o madre venezolana nacidos en el exterior. La inscripción se hace ante un consulado venezolano y no es un requisito para viajar — es una decisión de la familia sobre la nacionalidad del menor a futuro. Te orientamos sobre el proceso si te interesa.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-6">¿Desde qué ciudades de USA pueden ayudarme?<span class="faq-icon">+</span></button>
-        <div class="faq-a" aria-hidden="true" id="faq-a-6">Desde cualquier ciudad de los Estados Unidos — Miami, Houston, Nueva York, Dallas, Los Ángeles, Orlando, Atlanta, Chicago y más. Buscamos la ruta más conveniente desde tu ubicación actual.</div>
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-6">
+          <span class="faq-qtext"><span class="faq-cat cmp-gold">Menores</span>¿Necesita visa un menor con pasaporte americano para entrar a Venezuela?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-6">Los ciudadanos de Estados Unidos, incluyendo menores, generalmente no necesitan visa para estadías cortas como turistas en Venezuela. Te recomendamos confirmar los requisitos vigentes antes de tu viaje, ya que las políticas de entrada pueden cambiar — revisamos esto contigo en la asesoría.</div>
       </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-7">
+          <span class="faq-qtext"><span class="faq-cat cmp-cyan">Vuelos</span>¿Hay vuelos directos a Venezuela desde USA?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-7">Sí, existen rutas directas desde ciudades como Miami hacia Caracas y otros destinos, aunque la disponibilidad cambia según temporada y aerolínea. Si no hay vuelo directo desde tu ciudad, buscamos la mejor conexión — usualmente vía Bogotá, Panamá o Miami.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tog(this)" type="button" aria-expanded="false" aria-controls="faq-a-8">
+          <span class="faq-qtext"><span class="faq-cat cmp-cyan">Vuelos</span>¿Cuánto dura un vuelo directo a Venezuela?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" aria-hidden="true" id="faq-a-8">Un vuelo directo desde Miami a Caracas toma aproximadamente 3 horas y media a 4 horas. Desde otras ciudades de USA, el tiempo total depende de si hay escala. Te damos el itinerario exacto cuando cotizamos tu ruta.</div>
+      </div>
+
     </div>
   </div>
 </section>
