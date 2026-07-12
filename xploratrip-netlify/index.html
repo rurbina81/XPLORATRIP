@@ -211,6 +211,16 @@ nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit
 .stat-num{font-size:clamp(32px,4vw,46px);font-weight:800;color:var(--gold2);letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
 .stat-lbl{font-size:13px;color:rgba(255,255,255,.65);margin-top:6px;font-weight:500}
 
+/* ── BARRA DE CONFIANZA (aerolíneas) ── */
+.trustbar{background:var(--white);border-bottom:1px solid var(--line);padding:26px 0}
+.trustbar-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
+.trustbar-lbl{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);white-space:nowrap}
+.trustbar-marks{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center;opacity:.85}
+.trustbar-mark{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:15.5px;letter-spacing:-.01em;color:var(--txt3);white-space:nowrap;transition:color .2s ease}
+.trustbar-mark:hover{color:var(--navy)}
+.trustbar-more{font-size:12.5px;color:var(--txt3);font-weight:600;white-space:nowrap}
+@media(max-width:700px){.trustbar-inner{flex-direction:column;gap:14px}.trustbar-marks{gap:20px}.trustbar-mark{font-size:14px}}
+
 /* ── SERVICIOS ─────────────────────── */
 .section{padding:100px 0}
 .section-alt{background:var(--bg)}
@@ -361,7 +371,14 @@ footer{background:#060f1f;padding:60px 0 32px}
 .wa-float svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
 .wa-float .wa-label{font-size:14px;font-weight:700}
 @keyframes wa-pulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.45)}50%{box-shadow:0 4px 28px rgba(37,211,102,.65),0 0 0 10px rgba(37,211,102,.1)}}
-@media(max-width:600px){.wa-float .wa-label{display:none}.wa-float{padding:16px;border-radius:50%;animation:none}}
+@media(max-width:600px){.wa-float{display:none}}
+
+/* ── STICKY CTA MÓVIL ── */
+.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1)}
+.mcta.show{transform:translateY(0)}
+.mcta svg{width:20px;height:20px;flex-shrink:0}
+@media(max-width:600px){.mcta{display:flex}}
+@media(prefers-reduced-motion:reduce){.mcta{transition:none}}
 @media(prefers-reduced-motion:reduce){.wa-float{animation:none}.hero-content{animation:none}.hero-visual{animation:none}.hero h1 em::after{animation:none}.hero-badge .dot{animation:none}.hero-chips>*{opacity:1;animation:none}.wa-notif{animation:none}.wa-b1,.wa-b2,.wa-b3,.wa-b4,.wa-b5,.wa-b6{opacity:1;animation:none}.wa-t1,.wa-t2{opacity:1;animation:none}.wa-typing-dot{animation:none}.wa-mockup-status::before{animation:none}}
 
 /* ── COOKIE BANNER ─────────────────── */
@@ -716,6 +733,21 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
     </div>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trustbar">
+  <div class="container trustbar-inner">
+    <span class="trustbar-lbl">Cotizamos y reservamos con</span>
+    <div class="trustbar-marks">
+      <span class="trustbar-mark">American Airlines</span>
+      <span class="trustbar-mark">United</span>
+      <span class="trustbar-mark">Southwest</span>
+      <span class="trustbar-mark">Copa Airlines</span>
+      <span class="trustbar-mark">Avianca</span>
+    </div>
+    <span class="trustbar-more">y más de 20 aerolíneas</span>
+  </div>
+</div>
 
 <!-- DESTINOS -->
 <section class="section section-alt" id="destinos">
@@ -1285,6 +1317,12 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
   <span class="wa-label">Cotizar gratis</span>
 </a>
 
+<!-- STICKY CTA MÓVIL -->
+<a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noopener noreferrer" class="mcta" id="mobileCta" aria-label="Cotizar viaje gratis por WhatsApp" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'sticky_bar'})">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Cotiza gratis por WhatsApp</span>
+</a>
+
 <!-- COOKIE BANNER -->
 <div class="cookie-bar" id="cookieBar" role="alertdialog" aria-labelledby="cookieTxt" aria-modal="false">
   <p id="cookieTxt">🍪 Usamos cookies y el Pixel de Meta para mejorar tu experiencia y mostrarte publicidad relevante. Al continuar, aceptas nuestra <a href="/privacidad/">Política de Privacidad</a>.</p>
@@ -1477,6 +1515,7 @@ function _xcapi(en,eid,cd){try{fetch('/.netlify/functions/capi',{method:'POST',h
 document.addEventListener('click',function(e){var a=e.target.closest('a[href*="wa.me"],a[href*="wha.link"]');if(a){var txt=decodeURIComponent((a.href.match(/[?&]text=([^&#]+)/)||['',''])[1]).toLowerCase();var lbl='general';if(txt.indexOf('cancun')>-1||txt.indexOf('cancún')>-1)lbl='cancun';else if(txt.indexOf('venezuela')>-1)lbl='venezuela';else if(txt.indexOf('crucero')>-1)lbl='cruceros';else if(txt.indexOf('disney')>-1||txt.indexOf('orlando')>-1)lbl='disney';else if(txt.indexOf('miami')>-1)lbl='miami';else if(txt.indexOf('europa')>-1)lbl='europa';else if(txt.indexOf('paquete')>-1)lbl='paquete';else if(txt.indexOf('viaje')>-1)lbl='cotizar';var _leid='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);if(typeof fbq!=='undefined')fbq('track','Lead',{'content_name':lbl},{'eventID':_leid});_xcapi('Lead',_leid,{'content_name':lbl});if(a.classList.contains('dcard-cta')){var _dc=a.closest('.dcard');var _dn=_dc?(_dc.querySelector('.dcard-name')||{}).textContent||'':'';var _dvm={'Cancún':650,'Punta Cana':750,'Miami':399,'Europa':1200,'Cruceros Caribe':899,'Disney / Orlando':599};var _icid='ic_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{'content_name':_dn||lbl,'content_category':'viaje','value':_dvm[_dn]||350,'currency':'USD','num_items':1},{'eventID':_icid});_xcapi('InitiateCheckout',_icid,{'content_name':_dn||lbl,'value':_dvm[_dn]||350,'currency':'USD','num_items':1});}if(typeof gtag!=='undefined')gtag('event','generate_lead',{'event_category':'whatsapp','event_label':lbl});}});
 document.addEventListener('click',function(e){var a=e.target.closest('a[href^="mailto:"]');if(a){if(typeof gtag!=='undefined')gtag('event','contact_click',{'event_category':'engagement','method':'email'});var _coid='contact_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);if(typeof fbq!=='undefined')fbq('track','Contact',{},{'eventID':_coid});_xcapi('Contact',_coid,{});}});
 (function(){var marks={25:false,50:false,75:false,100:false};window.addEventListener('scroll',function(){var h=document.body.scrollHeight-window.innerHeight;if(h<=0)return;var pct=Math.round(window.scrollY/h*100);[25,50,75,100].forEach(function(m){if(!marks[m]&&pct>=m){marks[m]=true;if(typeof gtag!=='undefined')gtag('event','scroll_depth',{percent:m});}});},{passive:true});})();
+(function(){var mc=document.getElementById('mobileCta');if(!mc)return;var shown=false;window.addEventListener('scroll',function(){if(!shown&&window.scrollY>450){shown=true;mc.classList.add('show');}else if(shown&&window.scrollY<=450){shown=false;mc.classList.remove('show');}},{passive:true});})();
 function loadTrackers(){if(window._xtLoaded)return;window._xtLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-0G4DLPE9ZL';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('config','G-0G4DLPE9ZL');!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','251873825469297');var _pvid='pv_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);fbq('track','PageView',{},{'eventID':_pvid});_xcapi('PageView',_pvid,{});}
 function dismissCookies(accept){accept=accept!==false;if(accept){localStorage.setItem('xt-cookies','1');loadTrackers();}else{localStorage.setItem('xt-cookies','0');}var b=document.getElementById('cookieBar');if(b){b.classList.add('hidden');b.setAttribute('aria-hidden','true');}var wa=document.querySelector('.wa-float');if(wa)wa.style.bottom='';}
 (function(){
