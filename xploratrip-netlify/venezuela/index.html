@@ -449,6 +449,18 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
 .mcta svg{width:20px;height:20px;flex-shrink:0}
 @media(max-width:600px){.mcta{display:flex}}
 @media(prefers-reduced-motion:reduce){.mcta{transition:none}}
+
+/* -- TRUST BAR AEROLINEAS -- */
+.trustbar{background:var(--white);border-bottom:1px solid var(--line);padding:26px 0}
+.trustbar-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
+.trustbar-lbl{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);white-space:nowrap}
+.trustbar-marks{display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:center}
+.trustbar-logo{height:15px;width:auto;display:block;filter:grayscale(1) opacity(.55);transition:filter .2s ease}
+.trustbar-logo:hover{filter:grayscale(0) opacity(1)}
+.trustbar-mark{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:15.5px;letter-spacing:-.01em;color:var(--txt3);white-space:nowrap;opacity:.85;transition:color .2s ease,opacity .2s ease}
+.trustbar-mark:hover{color:var(--navy);opacity:1}
+.trustbar-more{font-size:12.5px;color:var(--txt3);font-weight:600;white-space:nowrap}
+@media(max-width:700px){.trustbar-inner{flex-direction:column;gap:14px}.trustbar-marks{gap:22px}.trustbar-logo{height:14px}.trustbar-mark{font-size:14px}}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});</script>
 </head>
@@ -582,6 +594,21 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
         <div class="vz-stat-lbl">Pasos para llegar a Venezuela</div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trustbar">
+  <div class="container trustbar-inner">
+    <span class="trustbar-lbl">Cotizamos y reservamos con</span>
+    <div class="trustbar-marks">
+      <img class="trustbar-logo" src="/images/airlines/american-airlines.svg" alt="American Airlines" width="151" height="15" loading="lazy">
+      <span class="trustbar-mark">United</span>
+      <img class="trustbar-logo" src="/images/airlines/southwest.svg" alt="Southwest" width="98" height="15" loading="lazy">
+      <img class="trustbar-logo" src="/images/airlines/copa.png" alt="Copa Airlines" width="99" height="15" loading="lazy">
+      <img class="trustbar-logo" src="/images/airlines/avianca.svg" alt="Avianca" width="66" height="15" loading="lazy">
+    </div>
+    <span class="trustbar-more">y más de 20 aerolíneas</span>
   </div>
 </div>
 
