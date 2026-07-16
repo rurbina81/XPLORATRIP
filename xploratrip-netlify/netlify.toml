@@ -1,6 +1,12 @@
 [build]
   functions = "netlify/functions"
 
+# English 404 page for unmatched /en/* paths
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
+
 # Security headers — all pages
 [[headers]]
   for = "/*"
