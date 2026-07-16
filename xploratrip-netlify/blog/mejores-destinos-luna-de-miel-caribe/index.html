@@ -78,7 +78,7 @@ a{text-decoration:none;color:inherit}
 .nav-links a.active{color:#fff}
 #mainNav.scrolled .nav-links a.active{color:var(--navy)}
 .nav-links a.active::after{content:'';position:absolute;bottom:2px;left:14px;right:14px;height:2px;background:var(--gold2);border-radius:2px}
-.nav-cta{background:var(--gold2);color:var(--navy);font-weight:700;font-size:14px;padding:10px 20px;border-radius:999px;transition:var(--transition)}
+.nav-cta{background:var(--gold2);color:var(--navy);font-weight:700;font-size:14px;padding:10px 20px;border-radius:999px;transition:var(--transition)}.nav-links a.lang-switch{background:var(--gold2);color:var(--navy);font-weight:800;padding:6px 14px;border-radius:999px}.nav-links a.lang-switch:hover{filter:brightness(.95)}
 .nav-cta:hover{background:var(--gold)}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:#fff;border-radius:8px}
 #mainNav.scrolled .burger{color:var(--navy)}
@@ -86,7 +86,7 @@ a{text-decoration:none;color:inherit}
 .mob-menu{display:none;position:fixed;inset:0;z-index:500;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:30px;opacity:0;transition:opacity .25s ease}
 .mob-menu.open{display:flex;opacity:1}
 .mob-menu a{font-size:20px;font-weight:700;color:var(--navy);text-decoration:none}
-.mob-menu .mob-cta{background:var(--gold2);color:var(--navy);padding:13px 32px;border-radius:999px;font-size:15px}
+.mob-menu .mob-cta{background:var(--gold2);color:var(--navy);padding:13px 32px;border-radius:999px;font-size:15px}.mob-menu a.lang-switch{background:var(--gold2);color:var(--navy);padding:10px 26px;border-radius:999px;font-size:15px;display:inline-block}
 .mob-close{position:absolute;top:22px;right:24px;background:none;border:none;cursor:pointer;font-size:26px;color:var(--txt3)}
 @media(max-width:860px){.nav-links{display:none}.burger{display:flex}}
 .art-hero{background:linear-gradient(135deg,#f72585,#7209b7);padding:80px 0 72px;position:relative;overflow:hidden}
@@ -229,7 +229,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <a href="/venezuela/">Venezuela</a>
       <a href="/emprende/">Emprende</a>
       <a href="/blog/" class="active">Blog</a>
-      <a href="/en/blog/mejores-destinos-luna-de-miel-caribe/" hreflang="en" style="font-weight:700">EN</a>
+      <a href="/en/blog/mejores-destinos-luna-de-miel-caribe/" hreflang="en" class="lang-switch">EN</a>
     </div>
     <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20una%20luna%20de%20miel%20en%20el%20Caribe" target="_blank" rel="noopener noreferrer" class="nav-cta" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'nav_cta'})"><span aria-hidden="true">💬</span> Cotizar</a>
     <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobMenu">
@@ -245,7 +245,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
   <a href="/emprende/">Emprende</a>
   <a href="/blog/">Blog</a>
   <a href="https://wa.me/14696798282?text=Hola%2C%20quiero%20cotizar%20una%20luna%20de%20miel%20en%20el%20Caribe" target="_blank" rel="noopener noreferrer" class="mob-cta">💬 Cotizar luna de miel</a>
-  <a href="/en/blog/mejores-destinos-luna-de-miel-caribe/" hreflang="en">English</a>
+  <a href="/en/blog/mejores-destinos-luna-de-miel-caribe/" hreflang="en" class="lang-switch">English</a>
 </div>
 
 <main id="main-content" style="padding-top:72px">

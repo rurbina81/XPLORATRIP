@@ -107,7 +107,7 @@ nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit
 .nav-links a:hover{color:var(--navy);background:var(--bg)}
 .nav-links a.nav-active{color:var(--navy);font-weight:700;background:var(--bg);position:relative}
 .nav-links a.nav-active::after{content:'';position:absolute;bottom:2px;left:14px;right:14px;height:2px;background:var(--gold2);border-radius:2px}
-.nav-cta{background:var(--gold2);color:var(--navy);font-size:16px;font-weight:700;padding:10px 22px;border-radius:999px;transition:var(--transition);white-space:nowrap}
+.nav-cta{background:var(--gold2);color:var(--navy);font-size:16px;font-weight:700;padding:10px 22px;border-radius:999px;transition:var(--transition);white-space:nowrap}.nav-links a.lang-switch{background:var(--gold2);color:var(--navy);font-weight:800;padding:6px 14px;border-radius:999px}.nav-links a.lang-switch:hover{filter:brightness(.95)}
 .nav-cta:hover{background:var(--gold);transform:translateY(-1px);box-shadow:0 4px 16px rgba(234,190,72,.4)}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--navy)}
 .burger svg{width:24px;height:24px;display:block}
@@ -116,7 +116,7 @@ nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit
 .mob-menu{display:none;position:fixed;inset:0;z-index:500;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;transition:opacity .25s ease}
 .mob-menu.open{display:flex;opacity:1}
 .mob-menu a{font-size:22px;font-weight:700;color:var(--navy)}
-.mob-menu .mob-cta{background:var(--gold2);color:var(--navy);padding:14px 36px;border-radius:999px;font-size:16px}
+.mob-menu .mob-cta{background:var(--gold2);color:var(--navy);padding:14px 36px;border-radius:999px;font-size:16px}.mob-menu a.lang-switch{background:var(--gold2);color:var(--navy);padding:10px 26px;border-radius:999px;font-size:15px;display:inline-block}
 .mob-close{position:absolute;top:24px;right:28px;background:none;border:none;cursor:pointer;font-size:28px;color:var(--txt3)}
 
 /* ── HERO ─────────────────────────── */
@@ -590,7 +590,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
       <a href="/en/nosotros/">About Us</a>
       <a href="/en/blog/">Blog</a>
       <a href="#contacto">Contact</a>
-      <a href="/" hreflang="es" style="font-weight:700">ES</a>
+      <a href="/" hreflang="es" class="lang-switch">ES</a>
     </div>
     <a href="https://wa.me/14696798282?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20trip" target="_blank" rel="noopener noreferrer" class="nav-cta" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'nav_cta'})"><span aria-hidden="true">💬</span> Get a Free Quote</a>
     <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobMenu" type="button">
@@ -609,7 +609,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
   <a href="/en/nosotros/" onclick="closeMobAria()">About Us</a>
   <a href="/en/blog/" onclick="closeMobAria()">Blog</a>
   <a href="#contacto" onclick="closeMobAria()">Contact</a>
-  <a href="/" onclick="closeMobAria()" hreflang="es">Español</a>
+  <a href="/" onclick="closeMobAria()" hreflang="es" class="lang-switch">Español</a>
   <a href="https://wa.me/14696798282?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20trip" target="_blank" rel="noopener noreferrer" class="mob-cta" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'mob_cta'})"><span aria-hidden="true">💬</span> Get a Free Quote</a>
 </div>
 
