@@ -1,9 +1,19 @@
 const PIXEL_ID = '251873825469297';
 const API_URL = `https://graph.facebook.com/v21.0/${PIXEL_ID}/events`;
 
+const ALLOWED_ORIGINS = new Set(['https://www.xploratrip.com', 'https://xploratrip.com']);
+const ALLOWED_EVENTS = new Set(['Lead', 'PageView', 'ViewContent', 'Contact', 'InitiateCheckout']);
+
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  const origin = (event.headers.origin || '').replace(/\/$/, '');
+  const referer = event.headers.referer || event.headers.referrer || '';
+  const fromAllowedOrigin = ALLOWED_ORIGINS.has(origin) || [...ALLOWED_ORIGINS].some(o => referer.startsWith(o));
+  if (!fromAllowedOrigin) {
+    return { statusCode: 403, body: 'Forbidden' };
   }
 
   const token = process.env.META_CAPI_TOKEN;
@@ -22,8 +32,13 @@ exports.handler = async function (event) {
   if (!event_name || !event_id) {
     return { statusCode: 400, body: 'Missing event_name or event_id' };
   }
+  if (!ALLOWED_EVENTS.has(event_name)) {
+    return { statusCode: 400, body: 'Invalid event_name' };
+  }
 
-  const ip = (event.headers['x-forwarded-for'] || event.headers['client-ip'] || '').split(',')[0].trim();
+  // x-nf-client-connection-ip is set by Netlify's own edge and can't be spoofed by the client;
+  // x-forwarded-for is client-influenceable and kept only as a fallback.
+  const ip = event.headers['x-nf-client-connection-ip'] || (event.headers['x-forwarded-for'] || '').split(',')[0].trim();
 
   const payload = {
     data: [{
@@ -49,7 +64,8 @@ exports.handler = async function (event) {
     });
     const result = await res.json();
     if (!res.ok) {
-      console.error('Meta CAPI error:', JSON.stringify(result));
+      const err = result.error || {};
+      console.error('Meta CAPI error:', err.message, err.code, err.fbtrace_id);
       return { statusCode: 502, body: 'CAPI error' };
     }
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
