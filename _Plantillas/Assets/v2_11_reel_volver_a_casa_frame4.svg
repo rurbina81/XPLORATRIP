@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
-<rect width="1080" height="1920" fill="#1a1a1a"/>
-<text x="540" y="820" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="80" font-weight="800" text-anchor="middle">Escríbenos</text>
-<text x="540" y="930" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="80" font-weight="800" text-anchor="middle">cuando estés</text>
-<text x="540" y="1040" fill="#eabe48" font-family="Inter, sans-serif" font-size="80" font-weight="800" text-anchor="middle">listo.</text>
-<line x1="380" y1="1120" x2="700" y2="1120" stroke="#eabe48" stroke-width="3"/>
-<text x="540" y="1240" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="36" font-weight="500" text-anchor="middle" opacity="0.7">WhatsApp en bio</text>
-<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
-</svg>

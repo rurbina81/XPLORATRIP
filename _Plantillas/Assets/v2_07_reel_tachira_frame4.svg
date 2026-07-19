@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
-<rect width="1080" height="1920" fill="#303030"/>
-<text x="540" y="780" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="80" font-weight="800" text-anchor="middle">No te dejamos</text>
-<text x="540" y="880" fill="#eabe48" font-family="Inter, sans-serif" font-size="80" font-weight="800" text-anchor="middle">sola en frontera.</text>
-<line x1="380" y1="950" x2="700" y2="950" stroke="#FFFFFF" stroke-width="4"/>
-<rect x="290" y="1080" width="500" height="120" fill="#eabe48" rx="60"/>
-<text x="540" y="1160" fill="#303030" font-family="Inter, sans-serif" font-size="40" font-weight="800" text-anchor="middle">WHATSAPP EN BIO</text>
-<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
-</svg>

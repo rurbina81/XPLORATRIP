@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
-<rect width="1080" height="1920" fill="#303030"/>
-<rect x="240" y="780" width="600" height="80" fill="#FFFFFF"/>
-<text x="540" y="838" fill="#303030" font-family="Inter, sans-serif" font-size="50" font-weight="800" text-anchor="middle">ANTES DE COMPRAR</text>
-<text x="540" y="1100" fill="#eabe48" font-family="Inter, sans-serif" font-size="120" font-weight="800" text-anchor="middle">REVISA TU</text>
-<text x="540" y="1230" fill="#eabe48" font-family="Inter, sans-serif" font-size="120" font-weight="800" text-anchor="middle">DOCUMENTO.</text>
-<text x="540" y="1750" fill="#eabe48" font-family="Inter, sans-serif" font-size="42" font-weight="400" text-anchor="middle" letter-spacing="6">XPLORATRIP</text>
-</svg>
