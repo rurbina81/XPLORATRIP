@@ -74,7 +74,7 @@ ul li{margin-bottom:6px}
 footer{background:var(--navy);border-top:1px solid var(--line);padding:28px;text-align:center;font-size:13px;color:rgba(255,255,255,.6)}
 footer a{color:var(--gold2)}
 .xt-brand{font-weight:700;color:var(--navy)}
-.wa-float{position:fixed;bottom:28px;right:28px;background:#25d366;border-radius:999px;padding:10px 20px 10px 14px;display:flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:13px;text-decoration:none;z-index:1000;box-shadow:0 4px 20px rgba(37,211,102,.45);animation:wa-pulse 2.5s infinite}
+.wa-float{position:fixed;bottom:28px;right:28px;background:#167e3d;border-radius:999px;padding:10px 20px 10px 14px;display:flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:13px;text-decoration:none;z-index:1000;box-shadow:0 4px 20px rgba(37,211,102,.45);animation:wa-pulse 2.5s infinite}
 @keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 28px rgba(37,211,102,.7)}}
 @media(prefers-reduced-motion:reduce){.wa-float{animation:none}}
 .cookie-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(11,29,58,.97);backdrop-filter:blur(12px);border-top:none;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;z-index:999;box-shadow:0 -4px 16px rgba(0,0,0,.3);transform:translateY(0);transition:transform .4s ease}
@@ -97,7 +97,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
 
 /* -- STICKY CTA MOVIL (rollout) -- */
 @media(max-width:600px){.wa-float{display:none!important}}
-.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1);font-family:inherit}
+.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#167e3d;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1);font-family:inherit}
 .mcta.show{transform:translateY(0)}
 .mcta svg{width:20px;height:20px;flex-shrink:0}
 @media(max-width:600px){.mcta{display:flex}}

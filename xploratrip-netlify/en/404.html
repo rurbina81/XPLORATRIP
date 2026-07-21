@@ -63,14 +63,14 @@ p{font-size:16px;color:var(--txt2);line-height:1.7;margin-bottom:36px}
 .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-home{background:var(--gold2);color:var(--navy);font-weight:700;font-size:15px;padding:14px 28px;border-radius:999px;text-decoration:none;transition:var(--transition)}
 .btn-home:hover{background:var(--gold);transform:translateY(-2px)}
-.btn-wa{background:transparent;border:1.5px solid #25d366;color:#25d366;font-weight:600;font-size:15px;padding:14px 28px;border-radius:999px;text-decoration:none;display:flex;align-items:center;gap:8px;transition:var(--transition)}
+.btn-wa{background:transparent;border:1.5px solid #167e3d;color:#167e3d;font-weight:600;font-size:15px;padding:14px 28px;border-radius:999px;text-decoration:none;display:flex;align-items:center;gap:8px;transition:var(--transition)}
 .btn-wa:hover{background:rgba(37,211,102,.08);transform:translateY(-2px)}
 .plane{font-size:80px;margin-bottom:16px;display:block;animation:drift 4s ease-in-out infinite}
 @keyframes drift{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-14px) rotate(3deg)}}
 @media(prefers-reduced-motion:reduce){.plane{animation:none}.btn-home:hover,.btn-wa:hover,.wa-float:hover{transform:none}.wa-float{animation:none}}
 @media(max-width:600px){.wa-float{bottom:80px;right:16px}}
 .xt-brand{font-weight:800;color:#0b1d3a}
-.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,bottom .3s ease;font-family:inherit}
+.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;display:flex;align-items:center;gap:10px;background:#167e3d;color:#fff;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,bottom .3s ease;font-family:inherit}
 .wa-float:hover{background:#1ebe5d;transform:translateY(-2px)}
 .wa-float svg{width:22px;height:22px;flex-shrink:0}
 .wa-label{font-size:14px;font-weight:700}
@@ -94,7 +94,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
 
 /* -- STICKY CTA MOVIL (rollout) -- */
 @media(max-width:600px){.wa-float{display:none!important}}
-.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1);font-family:inherit}
+.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#167e3d;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1);font-family:inherit}
 .mcta.show{transform:translateY(0)}
 .mcta svg{width:20px;height:20px;flex-shrink:0}
 @media(max-width:600px){.mcta{display:flex}}

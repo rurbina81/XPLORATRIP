@@ -56,6 +56,12 @@ exports.handler = async function (event) {
     access_token: token
   };
 
+  // Only set when diagnosing Pixel/CAPI dedup in Meta's Test Events tool.
+  // Must stay unset in normal production use, or real events get flagged as test traffic.
+  if (process.env.META_TEST_EVENT_CODE) {
+    payload.test_event_code = process.env.META_TEST_EVENT_CODE;
+  }
+
   try {
     const res = await fetch(API_URL, {
       method: 'POST',

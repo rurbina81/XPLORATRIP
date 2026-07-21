@@ -143,14 +143,14 @@ img{max-width:100%;height:auto}
 .overlay-chip{font-size:10.5px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:3px 9px;border-radius:99px;border:1px solid rgba(255,255,255,.25);white-space:nowrap}
 .card-tag{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#fff;background:rgba(5,20,45,.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:3px 9px;border-radius:99px}
 .port-card-body{padding:14px}
-.port-card-body h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.port-card-body h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .port-card-body p{font-size:12.5px;color:var(--txt3);line-height:1.5;margin:0}
 /* CABINS */
 .cabin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
 .cabin-card{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--bg);position:relative}
 .cabin-card.featured{border-color:var(--teal);background:linear-gradient(135deg,#f0fdfa,#ccfbf1)}
 .cabin-badge{position:absolute;top:10px;right:10px;background:var(--teal);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:99px}
-.cabin-card h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.cabin-card h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
 .cabin-price{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px}
 .cabin-price span{font-size:12px;font-weight:400;color:var(--txt3)}
 .cabin-card p{font-size:12.5px;color:var(--txt3);line-height:1.5;margin:0}
@@ -167,7 +167,7 @@ img{max-width:100%;height:auto}
 .sidebar-card{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:24px}
 .sidebar-card h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .sidebar-card p{font-size:14px;color:var(--txt3);line-height:1.6;margin-bottom:16px}
-.btn-wa-full{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#fff;font-weight:700;font-size:14px;padding:13px 20px;border-radius:999px;transition:var(--transition);text-decoration:none}
+.btn-wa-full{display:flex;align-items:center;justify-content:center;gap:8px;background:#167e3d;color:#fff;font-weight:700;font-size:14px;padding:13px 20px;border-radius:999px;transition:var(--transition);text-decoration:none}
 .btn-wa-full:hover{background:#1fba58;transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.35)}
 .toc{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
 .toc li::before{display:none}
@@ -190,7 +190,7 @@ img{max-width:100%;height:auto}
 .share-sub{font-size:14px;color:#64748b;margin-bottom:20px;display:block}
 .share-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .share-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;transition:transform .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),background-color .2s ease,color .2s ease,border-color .2s ease;box-shadow:0 2px 8px rgba(0,0,0,.1);border:none;cursor:pointer;font-family:inherit}
-.share-wa{background:#25d366;color:#fff}.share-fb{background:#1877f2;color:#fff}.share-copy{background:var(--navy);color:#fff}
+.share-wa{background:#167e3d;color:#fff}.share-fb{background:#1877f2;color:#fff}.share-copy{background:var(--navy);color:#fff}
 /* FOOTER */
 footer{background:#060f1f;padding:60px 0 32px}
 .ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -210,7 +210,7 @@ footer{background:#060f1f;padding:60px 0 32px}
 .ft-legal a{font-size:12px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
 .ft-legal a:hover{color:var(--gold2)}
 @media(max-width:680px){.ft-grid{grid-template-columns:1fr;gap:28px}}
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:300;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;border-radius:999px;padding:14px 20px 14px 16px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;white-space:nowrap;animation:wa-pulse 3s ease-in-out infinite}
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:300;display:flex;align-items:center;gap:10px;background:#167e3d;color:#fff;border-radius:999px;padding:14px 20px 14px 16px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;white-space:nowrap;animation:wa-pulse 3s ease-in-out infinite}
 .wa-float:hover{transform:scale(1.07);animation:none}
 .wa-float svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
 .wa-float .wa-label{font-size:14px}
@@ -244,7 +244,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
 
 /* -- STICKY CTA MOVIL (rollout) -- */
 @media(max-width:600px){.wa-float{display:none!important}}
-.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1);font-family:inherit}
+.mcta{position:fixed;left:0;right:0;bottom:0;z-index:400;display:none;align-items:center;justify-content:center;gap:10px;background:#167e3d;color:#fff;font-weight:800;font-size:15px;padding:15px 20px calc(15px + env(safe-area-inset-bottom));text-decoration:none;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .35s cubic-bezier(.23,1,.32,1);font-family:inherit}
 .mcta.show{transform:translateY(0)}
 .mcta svg{width:20px;height:20px;flex-shrink:0}
 @media(max-width:600px){.mcta{display:flex}}
@@ -423,23 +423,23 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
 
       <div class="cabin-grid">
         <div class="cabin-card">
-          <h4>Cabina Interior</h4>
+          <h3>Cabina Interior</h3>
           <div class="cabin-price">Desde $409<span> / persona</span></div>
           <p>Sin ventana. Ideal para quienes pasan la mayoría del tiempo fuera del camarote. Incluye todas las comidas en restaurante principal, entretenimiento y acceso a instalaciones.</p>
         </div>
         <div class="cabin-card">
-          <h4>Cabina con Vista al Mar</h4>
+          <h3>Cabina con Vista al Mar</h3>
           <div class="cabin-price">Desde $1,099<span> / persona</span></div>
           <p>Ventana fija con vistas al océano. Más luminosa que la interior. Mismas inclusiones que interior.</p>
         </div>
         <div class="cabin-card">
-          <h4>Cabina con Balcón</h4>
+          <h3>Cabina con Balcón</h3>
           <div class="cabin-price">Desde $1,299<span> / persona</span></div>
           <p>Balcón privado para disfrutar del amanecer y los puertos. La opción más popular para parejas. Incluye todas las comidas en restaurante principal.</p>
         </div>
         <div class="cabin-card featured">
           <div class="cabin-badge">⭐ Recomendado</div>
-          <h4>MSC Aurea Suite</h4>
+          <h3>MSC Aurea Suite</h3>
           <div class="cabin-price">Desde $1,799<span> / persona</span></div>
           <p>Suite con ubicación premium, acceso al spa MSC Aurea con ilimitado uso de las instalaciones termales, servicio prioritario y restaurante especializado incluido.</p>
         </div>
@@ -467,7 +467,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
             </div>
           </div>
           <div class="port-card-body">
-            <h4>Costa Maya, México</h4>
+            <h3>Costa Maya, México</h3>
             <p>Destino menos masificado que Cozumel. Arrecifes de coral vírgenes, la laguna de Bacalar a 2 horas, y el tranquilo pueblo de Mahahual.</p>
           </div>
         </div>
@@ -482,7 +482,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
             </div>
           </div>
           <div class="port-card-body">
-            <h4>Roatán, Honduras</h4>
+            <h3>Roatán, Honduras</h3>
             <p>Parte de la 2ª barrera de coral más grande del mundo. West Bay Beach es considerada una de las mejores playas del Caribe. Perfecta para buceo y snorkel.</p>
           </div>
         </div>
@@ -497,7 +497,7 @@ a[href*="wa.me"]:active,a[href*="wha.link"]:active,.nav-cta:active,.mob-cta:acti
             </div>
           </div>
           <div class="port-card-body">
-            <h4>Cozumel, México</h4>
+            <h3>Cozumel, México</h3>
             <p>El puerto más famoso del Caribe mexicano. Shopping, arrecife Palancar, parques acuáticos, margaritas y el mejor snorkel del Caribe.</p>
           </div>
         </div>
