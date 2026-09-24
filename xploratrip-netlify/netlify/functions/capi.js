@@ -28,7 +28,7 @@ exports.handler = async function (event) {
     return { statusCode: 400, body: 'Invalid JSON' };
   }
 
-  const { event_name, event_id, event_source_url, custom_data } = body;
+  const { event_name, event_id, event_source_url, custom_data, fbp, fbc } = body;
   if (!event_name || !event_id) {
     return { statusCode: 400, body: 'Missing event_name or event_id' };
   }
@@ -40,6 +40,15 @@ exports.handler = async function (event) {
   // x-forwarded-for is client-influenceable and kept only as a fallback.
   const ip = event.headers['x-nf-client-connection-ip'] || (event.headers['x-forwarded-for'] || '').split(',')[0].trim();
 
+  // fbp/fbc come from the _fbp/_fbc Meta Pixel cookies; sending them lifts Event Match Quality
+  // without collecting any new personal data. Omitted (not sent empty) when the cookie isn't set yet.
+  const userData = {
+    client_ip_address: ip,
+    client_user_agent: event.headers['user-agent'] || ''
+  };
+  if (fbp) userData.fbp = fbp;
+  if (fbc) userData.fbc = fbc;
+
   const payload = {
     data: [{
       event_name,
@@ -47,10 +56,7 @@ exports.handler = async function (event) {
       event_id,
       event_source_url: event_source_url || 'https://xploratrip.com/',
       action_source: 'website',
-      user_data: {
-        client_ip_address: ip,
-        client_user_agent: event.headers['user-agent'] || ''
-      },
+      user_data: userData,
       custom_data: custom_data || {}
     }],
     access_token: token
